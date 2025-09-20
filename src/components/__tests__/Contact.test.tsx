@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Contact from '../Contact'
 
@@ -58,10 +58,6 @@ describe('Contact Component', () => {
 
     it('renders contact icons', () => {
       // Check for Mail, Phone, and MapPin icons (via their container classes)
-      const mailIcon = document.querySelector('[data-lucide="mail"]') || document.querySelector('.lucide-mail')
-      const phoneIcon = document.querySelector('[data-lucide="phone"]') || document.querySelector('.lucide-phone')  
-      const mapIcon = document.querySelector('[data-lucide="map-pin"]') || document.querySelector('.lucide-map-pin')
-      
       // Since Lucide icons might render differently, check for blue colored elements that would be the icons
       const blueIcons = document.querySelectorAll('.text-blue-600')
       expect(blueIcons.length).toBeGreaterThanOrEqual(3) // At least mail, phone, and map icons
