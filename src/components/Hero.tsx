@@ -40,12 +40,17 @@ const Hero = () => {
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/profile.png"
+                    src="/profile-optimized.jpg"
                     alt="Ben H. - Full-Stack Software Engineer"
-                    width={224}
-                    height={224}
-                    className="object-cover rounded-full"
+                    width={400}
+                    height={400}
+                    className="object-cover rounded-full w-full h-full"
                     priority
+                    onError={(e) => {
+                      console.error('Image failed to load:', e);
+                      // Fallback to placeholder
+                      e.currentTarget.src = '/profile-placeholder.svg';
+                    }}
                   />
                 </div>
               </div>
