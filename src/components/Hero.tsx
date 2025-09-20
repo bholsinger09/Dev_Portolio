@@ -40,7 +40,7 @@ const Hero = () => {
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/profile.jpg"
+                    src="/profile.png"
                     alt="Ben H. - Full-Stack Software Engineer"
                     width={224}
                     height={224}
