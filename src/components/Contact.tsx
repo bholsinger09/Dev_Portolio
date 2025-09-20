@@ -39,8 +39,8 @@ const Contact = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get In Touch</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I'm always interested in hearing about new opportunities and exciting projects. 
-            Let's discuss how we can work together!
+            I&apos;m always interested in hearing about new opportunities and exciting projects. 
+            Let&apos;s discuss how we can work together!
           </p>
         </motion.div>
 
@@ -93,7 +93,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">What I'm Looking For</h4>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">What I&apos;m Looking For</h4>
               <ul className="space-y-2 text-gray-600">
                 <li>• Full-stack development opportunities</li>
                 <li>• Challenging technical projects</li>
