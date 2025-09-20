@@ -4,7 +4,9 @@ A modern, responsive portfolio website showcasing full-stack development skills 
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://dev-portfolio-bholsinger09.vercel.app](https://dev-portfolio-bholsinger09.vercel.app)
+🌐 **Portfolio URL**: [https://dev-portolio-bholsinger09.vercel.app](https://dev-portolio-bholsinger09.vercel.app)
+
+📱 **Mobile Optimized**: Fully responsive design that works on all devices
 
 ## 📋 Features
 
