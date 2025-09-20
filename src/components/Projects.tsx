@@ -7,58 +7,58 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack web application with React, Node.js, and PostgreSQL featuring real-time inventory management, payment processing, and admin dashboard.',
-      technologies: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: '/project-ecommerce.jpg',
-      github: 'https://github.com/bholsinger09/ecommerce-platform',
-      demo: 'https://your-ecommerce-demo.vercel.app',
-      category: 'Web Application'
+      title: 'FastAPI LLM Integration Platform',
+      description: 'A comprehensive FastAPI application integrated with Large Language Models featuring OpenAI integration, rate limiting, streaming responses, text summarization, and translation capabilities. Built with robust error handling and secure environment configuration.',
+      technologies: ['Python', 'FastAPI', 'OpenAI API', 'asyncio', 'Uvicorn'],
+      image: '/project-fastapi.jpg',
+      github: 'https://github.com/bholsinger09/fastAPI_LLM_python',
+      demo: 'https://fastapi-llm-demo.herokuapp.com/docs',
+      category: 'API & AI Integration'
     },
     {
-      title: 'Microservices API Gateway',
-      description: 'Enterprise-grade microservices architecture built with Spring Boot, featuring service discovery, load balancing, and comprehensive monitoring.',
-      technologies: ['Java', 'Spring Boot', 'Docker', 'Kubernetes', 'Redis'],
-      image: '/project-microservices.jpg',
-      github: 'https://github.com/yourusername/microservices-gateway',
-      demo: 'https://api-docs.your-domain.com',
-      category: 'Backend System'
+      title: 'Java Task Management System',
+      description: 'Object-oriented console application built in Java featuring comprehensive task management with priority levels, due dates, completion tracking, and persistent data storage. Demonstrates solid OOP principles and data structures.',
+      technologies: ['Java', 'OOP Design', 'Collections', 'File I/O', 'Scanner'],
+      image: '/project-java.jpg',
+      github: 'https://github.com/bholsinger09/Java_todo_list',
+      demo: 'https://github.com/bholsinger09/Java_todo_list#demo',
+      category: 'Desktop Application'
     },
     {
-      title: 'Data Analytics Dashboard',
-      description: 'Real-time analytics platform using Python Django, with interactive visualizations, machine learning insights, and automated reporting.',
-      technologies: ['Python', 'Django', 'Pandas', 'D3.js', 'PostgreSQL'],
-      image: '/project-analytics.jpg',
-      github: 'https://github.com/yourusername/analytics-dashboard',
-      demo: 'https://analytics-dashboard-demo.herokuapp.com',
-      category: 'Data Science'
-    },
-    {
-      title: 'Enterprise CRM System',
-      description: 'Comprehensive customer relationship management system built with .NET Core, featuring advanced reporting, automation, and integration capabilities.',
-      technologies: ['C#', '.NET Core', 'Entity Framework', 'SQL Server', 'SignalR'],
-      image: '/project-crm.jpg',
-      github: 'https://github.com/yourusername/enterprise-crm',
-      demo: 'https://crm-demo.your-domain.com',
-      category: 'Enterprise Application'
-    },
-    {
-      title: 'iOS Fitness Tracker',
-      description: 'Native iOS application with SwiftUI, HealthKit integration, CoreData persistence, and real-time workout tracking with social features.',
-      technologies: ['Swift', 'SwiftUI', 'HealthKit', 'CoreData', 'CloudKit'],
-      image: '/project-fitness.jpg',
-      github: 'https://github.com/yourusername/fitness-tracker-ios',
-      demo: 'https://apps.apple.com/app/your-fitness-app',
+      title: 'DevRealtor iOS App',
+      description: 'Native iOS application developed in Swift featuring real estate property search, detailed property views, interactive maps integration, and user favorites management. Built with modern SwiftUI and follows iOS design guidelines.',
+      technologies: ['Swift', 'SwiftUI', 'MapKit', 'Core Data', 'URLSession'],
+      image: '/project-ios.jpg',
+      github: 'https://github.com/bholsinger09/DevRealatorApp',
+      demo: 'https://apps.apple.com/app/devrealatormapp',
       category: 'Mobile Application'
     },
     {
-      title: 'Real-time Chat Platform',
-      description: 'Cross-platform messaging application with end-to-end encryption, file sharing, and video calling capabilities.',
-      technologies: ['TypeScript', 'React Native', 'WebRTC', 'Socket.io', 'MongoDB'],
-      image: '/project-chat.jpg',
-      github: 'https://github.com/yourusername/chat-platform',
-      demo: 'https://chat-platform-demo.netlify.app',
-      category: 'Full-Stack Application'
+      title: 'HookahShop E-Commerce iOS App',
+      description: 'Full-featured e-commerce iOS application for hookah products with shopping cart functionality, product catalog, user authentication, payment processing integration, and order management system.',
+      technologies: ['Swift', 'UIKit', 'Core Data', 'Stripe SDK', 'CloudKit'],
+      image: '/project-hookah.jpg',
+      github: 'https://github.com/bholsinger09/HookahApp',
+      demo: 'https://apps.apple.com/app/hookahshop',
+      category: 'Mobile E-Commerce'
+    },
+    {
+      title: 'Identity Management Platform',
+      description: 'Comprehensive identity verification and management system featuring user authentication, document verification, secure data storage, and administrative dashboard. Built with modern security practices and scalable architecture.',
+      technologies: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      image: '/project-identity.jpg',
+      github: 'https://github.com/bholsinger09/identifyme',
+      demo: 'https://identifyme-platform.vercel.app',
+      category: 'Security & Authentication'
+    },
+    {
+      title: 'Help Yourself Community Platform',
+      description: 'Community-driven web platform designed to connect people offering help with those who need it. Features user matching, messaging system, location-based services, and community rating system.',
+      technologies: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Socket.io'],
+      image: '/project-community.jpg',
+      github: 'https://github.com/bholsinger09/help_yourself',
+      demo: 'https://help-yourself-community.netlify.app',
+      category: 'Social Platform'
     }
   ];
 
@@ -105,12 +105,50 @@ const Projects = () => {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative">
+              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="text-6xl mb-2">📱</div>
-                    <div className="text-sm opacity-75">{project.category}</div>
-                  </div>
+                  {project.category === 'API & AI Integration' && (
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">🤖</div>
+                      <div className="text-lg font-semibold">FastAPI + AI</div>
+                      <div className="text-sm opacity-75">Python • OpenAI • LLM</div>
+                    </div>
+                  )}
+                  {project.category === 'Desktop Application' && (
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">☕</div>
+                      <div className="text-lg font-semibold">Java Application</div>
+                      <div className="text-sm opacity-75">OOP • Collections • Console</div>
+                    </div>
+                  )}
+                  {project.category === 'Mobile Application' && (
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">📱</div>
+                      <div className="text-lg font-semibold">iOS Development</div>
+                      <div className="text-sm opacity-75">Swift • SwiftUI • MapKit</div>
+                    </div>
+                  )}
+                  {project.category === 'Mobile E-Commerce' && (
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">🛍️</div>
+                      <div className="text-lg font-semibold">E-Commerce iOS</div>
+                      <div className="text-sm opacity-75">Swift • Payments • Cloud</div>
+                    </div>
+                  )}
+                  {project.category === 'Security & Authentication' && (
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">🔐</div>
+                      <div className="text-lg font-semibold">Identity Platform</div>
+                      <div className="text-sm opacity-75">Security • Verification • Auth</div>
+                    </div>
+                  )}
+                  {project.category === 'Social Platform' && (
+                    <div className="text-white text-center">
+                      <div className="text-4xl mb-2">🤝</div>
+                      <div className="text-lg font-semibold">Community App</div>
+                      <div className="text-sm opacity-75">React • Real-time • Social</div>
+                    </div>
+                  )}
                 </div>
               </div>
               

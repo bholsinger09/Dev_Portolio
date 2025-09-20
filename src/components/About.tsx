@@ -6,28 +6,28 @@ import { motion } from 'framer-motion';
 const About = () => {
   const skills = [
     {
-      category: 'Frontend',
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'SwiftUI'],
+      category: 'Mobile Development',
+      technologies: ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'MapKit'],
       color: 'blue'
     },
     {
-      category: 'Backend',
-      technologies: ['Node.js', 'Express', 'Spring Boot', '.NET Core', 'Django'],
+      category: 'Backend & APIs',
+      technologies: ['Python', 'FastAPI', 'Node.js', 'Express', 'OpenAI API'],
       color: 'green'
     },
     {
       category: 'Languages',
-      technologies: ['JavaScript', 'Java', 'Python', 'C#', 'Swift'],
+      technologies: ['Swift', 'Python', 'JavaScript', 'Java', 'TypeScript'],
       color: 'purple'
     },
     {
-      category: 'Databases',
-      technologies: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'SQLite'],
+      category: 'Frontend Web',
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'JavaScript'],
       color: 'orange'
     },
     {
-      category: 'Tools & DevOps',
-      technologies: ['Docker', 'AWS', 'Git', 'CI/CD', 'Kubernetes'],
+      category: 'Tools & Platforms',
+      technologies: ['Xcode', 'Git', 'Docker', 'VS Code', 'Uvicorn'],
       color: 'indigo'
     }
   ];
@@ -56,15 +56,16 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              I'm a passionate full-stack software engineer with extensive experience in developing 
-              scalable applications across multiple platforms and technologies. My diverse background 
-              allows me to tackle complex challenges from mobile iOS applications to enterprise-level 
-              web systems and data analytics platforms.
+              I'm a passionate full-stack software engineer with hands-on experience developing applications 
+              across mobile, web, and AI integration platforms. My portfolio includes iOS applications, 
+              FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms, 
+              showcasing my versatility in tackling diverse technical challenges.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              With a strong foundation in software engineering principles and a continuous learning mindset, 
-              I excel at architecting efficient solutions, optimizing performance, and delivering 
-              user-centric applications that drive business value and enhance user experiences.
+              From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities, 
+              I excel at selecting the right technology stack for each project. My experience spans real estate 
+              applications, e-commerce platforms, task management systems, and identity verification solutions, 
+              demonstrating my ability to deliver practical, user-focused applications.
             </p>
           </div>
         </motion.div>
