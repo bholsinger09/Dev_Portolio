@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import Image from 'next/image';
 
 const Hero = () => {
   const containerVariants = {
@@ -33,6 +34,28 @@ const Hero = () => {
           animate="visible"
           className="space-y-8"
         >
+          {/* Professional Photo */}
+          <motion.div variants={itemVariants} className="flex justify-center mb-8">
+            <div className="relative w-48 h-48 md:w-56 md:h-56">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
+                <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/profile-placeholder.svg"
+                    alt="Ben H. - Full-Stack Developer"
+                    width={224}
+                    height={224}
+                    className="object-cover rounded-full"
+                    priority
+                  />
+                  {/* To add your real photo:
+                  1. Save your headshot as 'profile.jpg' in the public folder
+                  2. Replace src="/profile-placeholder.svg" with src="/profile.jpg"
+                  */}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           <motion.div variants={itemVariants}>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
               Ben H.
