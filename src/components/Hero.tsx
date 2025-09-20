@@ -28,10 +28,10 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
-          {/* Professional Photo - DEBUG VERSION */}
-          <div className="flex justify-center mb-8 bg-red-500 p-4">
-            <div className="bg-yellow-400 p-8 text-black text-2xl font-bold">
-              DEBUG: BH AVATAR SHOULD BE HERE
+          {/* Professional Photo */}
+          <div className="flex justify-center mb-8">
+            <div className="w-48 h-48 md:w-56 md:h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-2xl border-4 border-white">
+              BH
             </div>
           </div>
 
