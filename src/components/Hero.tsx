@@ -30,8 +30,20 @@ const Hero = () => {
         <div className="space-y-8">
           {/* Professional Photo */}
           <div className="flex justify-center mb-8">
-            <div className="w-48 h-48 md:w-56 md:h-56 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-2xl border-4 border-white">
-              BH
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+              <img
+                src="/profile-small.png"
+                alt="Ben H. - Full-Stack Software Engineer"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback to BH initials if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold">BH</div>';
+                  }
+                }}
+              />
             </div>
           </div>
 
