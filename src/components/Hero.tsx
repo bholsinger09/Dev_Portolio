@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
-import Image from 'next/image';
 
 const Hero = () => {
   const containerVariants = {
@@ -39,17 +38,15 @@ const Hero = () => {
             <div className="relative w-48 h-48 md:w-56 md:h-56">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-                  <Image
-                    src="/profile-optimized.jpg"
+                  <img
+                    src="/profile-small.png"
                     alt="Ben H. - Full-Stack Software Engineer"
-                    width={400}
-                    height={400}
                     className="object-cover rounded-full w-full h-full"
-                    priority
                     onError={(e) => {
                       console.error('Image failed to load:', e);
                       // Fallback to placeholder
-                      e.currentTarget.src = '/profile-placeholder.svg';
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/profile-placeholder.svg';
                     }}
                   />
                 </div>
