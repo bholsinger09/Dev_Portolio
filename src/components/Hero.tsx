@@ -73,7 +73,7 @@ const Hero = () => {
 
           <motion.div variants={itemVariants} className="flex justify-center space-x-6 mt-8">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/bholsinger09"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 transition-colors"
@@ -81,7 +81,7 @@ const Hero = () => {
               <Github size={28} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/ben-holsinger"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -89,7 +89,7 @@ const Hero = () => {
               <Linkedin size={28} />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:ben.holsinger@example.com"
               className="text-gray-600 hover:text-red-600 transition-colors"
             >
               <Mail size={28} />

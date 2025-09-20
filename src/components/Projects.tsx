@@ -11,7 +11,7 @@ const Projects = () => {
       description: 'Full-stack web application with React, Node.js, and PostgreSQL featuring real-time inventory management, payment processing, and admin dashboard.',
       technologies: ['JavaScript', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],
       image: '/project-ecommerce.jpg',
-      github: 'https://github.com/yourusername/ecommerce-platform',
+      github: 'https://github.com/bholsinger09/ecommerce-platform',
       demo: 'https://your-ecommerce-demo.vercel.app',
       category: 'Web Application'
     },
