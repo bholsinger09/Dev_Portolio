@@ -37,32 +37,8 @@ const Hero = () => {
           <motion.div variants={itemVariants} className="flex justify-center mb-8">
             <div className="relative w-48 h-48 md:w-56 md:h-56">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-                <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
-                  {/* Try to load the image, fallback to initials */}
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl font-bold relative">
-                    <img
-                      src="/profile-small.png"
-                      alt="Ben H. - Full-Stack Software Engineer"
-                      className="absolute inset-0 object-cover rounded-full w-full h-full"
-                      onLoad={(e) => {
-                        // Hide the initials when image loads
-                        const target = e.target as HTMLImageElement;
-                        const parent = target.parentElement;
-                        if (parent) {
-                          const textElement = parent.querySelector('.initials-text');
-                          if (textElement) {
-                            (textElement as HTMLElement).style.display = 'none';
-                          }
-                        }
-                      }}
-                      onError={(e) => {
-                        // Hide the image and show initials
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                      }}
-                    />
-                    <span className="initials-text z-10">BH</span>
-                  </div>
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-lg">
+                  BH
                 </div>
               </div>
             </div>
