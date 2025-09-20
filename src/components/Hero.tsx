@@ -35,11 +35,9 @@ const Hero = () => {
         >
           {/* Professional Photo */}
           <motion.div variants={itemVariants} className="flex justify-center mb-8">
-            <div className="relative w-48 h-48 md:w-56 md:h-56">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-lg">
-                  BH
-                </div>
+            <div className="w-48 h-48 md:w-56 md:h-56">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-2xl border-4 border-white">
+                BH
               </div>
             </div>
           </motion.div>
