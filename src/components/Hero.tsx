@@ -30,10 +30,21 @@ const Hero = () => {
         <div className="space-y-8">
           {/* Professional Photo */}
           <div className="flex justify-center mb-8">
-            <div className="w-48 h-48 md:w-56 md:h-56">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-2xl border-4 border-white">
-                BH
-              </div>
+            <div style={{
+              width: '200px',
+              height: '200px',
+              backgroundColor: '#3B82F6',
+              borderRadius: '50%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'white',
+              fontSize: '48px',
+              fontWeight: 'bold',
+              border: '4px solid white',
+              boxShadow: '0 10px 25px rgba(0,0,0,0.2)'
+            }}>
+              BH
             </div>
           </div>
 
