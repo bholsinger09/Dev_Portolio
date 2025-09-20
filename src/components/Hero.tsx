@@ -28,23 +28,10 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
-          {/* Professional Photo */}
-          <div className="flex justify-center mb-8">
-            <div style={{
-              width: '200px',
-              height: '200px',
-              backgroundColor: '#3B82F6',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontSize: '48px',
-              fontWeight: 'bold',
-              border: '4px solid white',
-              boxShadow: '0 10px 25px rgba(0,0,0,0.2)'
-            }}>
-              BH
+          {/* Professional Photo - DEBUG VERSION */}
+          <div className="flex justify-center mb-8 bg-red-500 p-4">
+            <div className="bg-yellow-400 p-8 text-black text-2xl font-bold">
+              DEBUG: BH AVATAR SHOULD BE HERE
             </div>
           </div>
 
