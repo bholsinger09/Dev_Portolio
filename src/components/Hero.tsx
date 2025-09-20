@@ -40,17 +40,13 @@ const Hero = () => {
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                 <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/profile-placeholder.svg"
-                    alt="Ben H. - Full-Stack Developer"
+                    src="/profile.jpg"
+                    alt="Ben H. - Full-Stack Software Engineer"
                     width={224}
                     height={224}
                     className="object-cover rounded-full"
                     priority
                   />
-                  {/* To add your real photo:
-                  1. Save your headshot as 'profile.jpg' in the public folder
-                  2. Replace src="/profile-placeholder.svg" with src="/profile.jpg"
-                  */}
                 </div>
               </div>
             </div>
