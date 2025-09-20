@@ -70,17 +70,17 @@ describe('Footer Component', () => {
     })
 
     it('displays email contact link', () => {
-      const emailLinks = screen.getAllByText('ben.h@example.com')
+      const emailLinks = screen.getAllByText('bholsinger@gmail.com')
       expect(emailLinks).toHaveLength(1) // One in connect section, one in social icons
       
-      const emailLink = screen.getByRole('link', { name: 'ben.h@example.com' })
-      expect(emailLink).toHaveAttribute('href', 'mailto:ben.h@example.com')
+      const emailLink = screen.getByRole('link', { name: 'bholsinger@gmail.com' })
+      expect(emailLink).toHaveAttribute('href', 'mailto:bholsinger@gmail.com')
     })
 
     it('displays phone contact link', () => {
-      const phoneLink = screen.getByRole('link', { name: /\+1 \(234\) 567-8900/i })
+      const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
       expect(phoneLink).toBeInTheDocument()
-      expect(phoneLink).toHaveAttribute('href', 'tel:+1234567890')
+      expect(phoneLink).toHaveAttribute('href', 'tel:+12082841929')
     })
 
     it('renders social media icons', () => {
@@ -91,7 +91,7 @@ describe('Footer Component', () => {
       expect(document.querySelector('a[href="https://linkedin.com/in/yourusername"]')).toBeInTheDocument()
       
       // Check for Mail icon link (different from the text email link)
-      const mailLinks = document.querySelectorAll('a[href="mailto:ben.h@example.com"]')
+      const mailLinks = document.querySelectorAll('a[href="mailto:bholsinger@gmail.com"]')
       expect(mailLinks.length).toBe(2) // One text link and one icon link
     })
 
@@ -216,8 +216,8 @@ describe('Footer Component', () => {
 
   describe('Content Integrity', () => {
     it('displays comprehensive contact information', () => {
-      expect(screen.getByText('ben.h@example.com')).toBeInTheDocument()
-      expect(screen.getByText('+1 (234) 567-8900')).toBeInTheDocument()
+      expect(screen.getByText('bholsinger@gmail.com')).toBeInTheDocument()
+      expect(screen.getByText('+1 (208) 284-1929')).toBeInTheDocument()
     })
 
     it('includes relevant technology showcase', () => {

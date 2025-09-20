@@ -60,16 +60,16 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="space-y-2">
               <a
-                href="mailto:ben.h@example.com"
+                href="mailto:bholsinger@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                ben.h@example.com
+                bholsinger@gmail.com
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+12082841929"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                +1 (234) 567-8900
+                +1 (208) 284-1929
               </a>
             </div>
 
@@ -91,7 +91,7 @@ const Footer = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:ben.h@example.com"
+                href="mailto:bholsinger@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Mail size={24} />

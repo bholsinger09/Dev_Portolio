@@ -36,16 +36,19 @@ describe('Contact Component', () => {
       const contactSection = screen.getByText('Contact Information').parentElement
       expect(contactSection?.textContent).toContain('Email')
       
-      const emailLink = screen.getByRole('link', { name: /ben.h@example.com/i })
+      const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i })
       expect(emailLink).toBeInTheDocument()
-      expect(emailLink).toHaveAttribute('href', 'mailto:ben.h@example.com')
+      expect(emailLink).toHaveAttribute('href', 'mailto:bholsinger@gmail.com')
     })
 
     it('displays phone contact info', () => {
-      expect(screen.getByText('Phone')).toBeInTheDocument()
-      const phoneLink = screen.getByRole('link', { name: /\+1 \(234\) 567-8900/i })
+      // Look for the phone text in the contact information section specifically
+      const contactSection = screen.getByText('Contact Information').parentElement
+      expect(contactSection?.textContent).toContain('Phone')
+      
+      const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
       expect(phoneLink).toBeInTheDocument()
-      expect(phoneLink).toHaveAttribute('href', 'tel:+1234567890')
+      expect(phoneLink).toHaveAttribute('href', 'tel:+12082841929')
     })
 
     it('displays location contact info', () => {
@@ -269,8 +272,8 @@ describe('Contact Component', () => {
     })
 
     it('has accessible links', () => {
-      const emailLink = screen.getByRole('link', { name: /ben.h@example.com/i })
-      const phoneLink = screen.getByRole('link', { name: /\+1 \(234\) 567-8900/i })
+      const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i })
+      const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
       
       expect(emailLink).toHaveAttribute('href')
       expect(phoneLink).toHaveAttribute('href')
@@ -292,8 +295,8 @@ describe('Contact Component', () => {
 
   describe('Visual Elements', () => {
     it('applies hover effects to contact links', () => {
-      const emailLink = screen.getByRole('link', { name: /ben.h@example.com/i })
-      const phoneLink = screen.getByRole('link', { name: /\+1 \(234\) 567-8900/i })
+      const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i })
+      const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
       
       expect(emailLink).toHaveClass('hover:text-blue-600', 'transition-colors')
       expect(phoneLink).toHaveClass('hover:text-blue-600', 'transition-colors')
@@ -326,8 +329,8 @@ describe('Contact Component', () => {
 
   describe('Content Integrity', () => {
     it('displays comprehensive contact information', () => {
-      expect(screen.getByText('ben.h@example.com')).toBeInTheDocument()
-      expect(screen.getByText('+1 (234) 567-8900')).toBeInTheDocument()
+      expect(screen.getByText('bholsinger@gmail.com')).toBeInTheDocument()
+      expect(screen.getByText('+1 (208) 284-1929')).toBeInTheDocument()
       expect(screen.getByText('San Francisco, CA')).toBeInTheDocument()
     })
 
