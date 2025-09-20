@@ -27,34 +27,26 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8"
-        >
+        <div className="space-y-8">
           {/* Professional Photo */}
-          <motion.div variants={itemVariants} className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8">
             <div className="w-48 h-48 md:w-56 md:h-56">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold shadow-2xl border-4 border-white">
                 BH
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants}>
+          <div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
               Ben H.
               <span className="block text-3xl md:text-4xl text-blue-600 font-medium mt-2">
                 Full-Stack Software Engineer
               </span>
             </h1>
-          </motion.div>
+          </div>
 
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-          >
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Experienced software engineer specializing in full-stack development with expertise in{' '}
             <span className="text-blue-600 font-semibold">JavaScript/TypeScript</span>,{' '}
             <span className="text-red-600 font-semibold">Java</span>,{' '}
@@ -62,9 +54,9 @@ const Hero = () => {
             <span className="text-purple-600 font-semibold">C#</span>, and{' '}
             <span className="text-orange-600 font-semibold">Swift</span>. 
             Building scalable applications from web platforms to mobile solutions.
-          </motion.p>
+          </p>
 
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mt-8">
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
               href="#projects"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
@@ -78,9 +70,9 @@ const Hero = () => {
               <Download size={20} />
               Download Resume
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants} className="flex justify-center space-x-6 mt-8">
+          <div className="flex justify-center space-x-6 mt-8">
             <a
               href="https://github.com/bholsinger09"
               target="_blank"
@@ -103,8 +95,8 @@ const Hero = () => {
             >
               <Mail size={28} />
             </a>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
