@@ -3,6 +3,13 @@ function toggleTheme() {
   localStorage.setItem('theme', 
     document.documentElement.classList.contains('dark') ? 'dark' : 'light'
   );
+  
+  // Update button icon
+  const button = document.getElementById('theme-toggle-btn');
+  if (button) {
+    button.innerHTML = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+  }
+  
   console.log('Theme toggled! Dark mode is now: ' + document.documentElement.classList.contains('dark'));
 }
 
@@ -12,42 +19,89 @@ function toggleTheme() {
   if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark');
   }
+  
+  // Set initial icon when button is available
+  setTimeout(function() {
+    const button = document.getElementById('theme-toggle-btn');
+    if (button) {
+      button.innerHTML = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+  }, 100);
 })();
 
-// Multiple attempts to inject the button
+// Inject theme toggle into the navigation
 function injectThemeButton() {
   // Remove any existing theme buttons first
-  const existing = document.getElementById('force-theme-toggle');
+  const existing = document.getElementById('theme-toggle-btn');
   if (existing) existing.remove();
   
-  const button = document.createElement('button');
-  button.id = 'force-theme-toggle';
-  button.innerHTML = '🌙 THEME';
-  button.onclick = toggleTheme;
-  button.style.cssText = `
-    position: fixed !important;
-    top: 20px !important;
-    right: 20px !important;
-    background: #ff0000 !important;
-    color: white !important;
-    border: 3px solid #000000 !important;
-    border-radius: 8px !important;
-    padding: 15px 20px !important;
-    cursor: pointer !important;
-    z-index: 999999 !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    box-shadow: 0 0 20px rgba(255,0,0,0.8) !important;
-    font-family: system-ui !important;
-    pointer-events: auto !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  `;
+  // Look for navigation area to integrate properly
+  const nav = document.querySelector('nav') || document.querySelector('header') || document.querySelector('.header');
   
-  document.body.appendChild(button);
-  console.log('FORCE THEME BUTTON INJECTED!', button);
-  return button;
+  if (nav) {
+    const button = document.createElement('button');
+    button.id = 'theme-toggle-btn';
+    button.innerHTML = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    button.onclick = toggleTheme;
+    button.style.cssText = `
+      background: transparent !important;
+      color: currentColor !important;
+      border: 1px solid currentColor !important;
+      border-radius: 6px !important;
+      padding: 8px 12px !important;
+      cursor: pointer !important;
+      font-size: 18px !important;
+      margin-left: 12px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all 0.2s ease !important;
+      min-width: 44px !important;
+      height: 44px !important;
+    `;
+    
+    // Add hover effects
+    button.addEventListener('mouseenter', function() {
+      this.style.background = 'rgba(255,255,255,0.1)';
+    });
+    button.addEventListener('mouseleave', function() {
+      this.style.background = 'transparent';
+    });
+    
+    nav.appendChild(button);
+    console.log('Theme button integrated into navigation:', button);
+    return button;
+  } else {
+    // Fallback to a more subtle fixed position
+    const button = document.createElement('button');
+    button.id = 'theme-toggle-btn';
+    button.innerHTML = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    button.onclick = toggleTheme;
+    button.style.cssText = `
+      position: fixed !important;
+      top: 20px !important;
+      right: 20px !important;
+      background: rgba(0,0,0,0.1) !important;
+      color: currentColor !important;
+      border: 1px solid rgba(255,255,255,0.3) !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      cursor: pointer !important;
+      font-size: 20px !important;
+      width: 48px !important;
+      height: 48px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 1000 !important;
+      backdrop-filter: blur(10px) !important;
+      transition: all 0.2s ease !important;
+    `;
+    
+    document.body.appendChild(button);
+    console.log('Theme button added with subtle fixed positioning:', button);
+    return button;
+  }
 }
 
 // Try multiple times
