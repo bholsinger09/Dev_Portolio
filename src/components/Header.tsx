@@ -35,6 +35,26 @@ const Header = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* DEBUG: Direct theme toggle at top level */}
+        <div 
+          onClick={() => {
+            document.documentElement.classList.toggle('dark');
+          }}
+          style={{
+            position: 'absolute',
+            top: '10px',
+            right: '10px',
+            backgroundColor: '#ff0000',
+            color: 'white',
+            padding: '10px',
+            cursor: 'pointer',
+            zIndex: 9999,
+            fontSize: '16px',
+            border: '3px solid black'
+          }}
+        >
+          🌙 THEME
+        </div>
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
