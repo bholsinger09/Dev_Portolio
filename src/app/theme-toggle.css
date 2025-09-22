@@ -1,0 +1,52 @@
+/* CSS-only theme toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  background: #3b82f6;
+  border-radius: 15px;
+  border: 3px solid #000;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.theme-toggle::before {
+  content: "🌙";
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+
+.theme-toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* When dark class is present */
+html.dark .theme-toggle {
+  background: #fbbf24;
+}
+
+html.dark .theme-toggle::before {
+  content: "☀️";
+  left: 35px;
+  color: black;
+}
+
+html.dark .theme-toggle::after {
+  transform: translateX(30px);
+}
