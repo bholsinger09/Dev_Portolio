@@ -53,7 +53,7 @@ describe('Contact Component', () => {
 
     it('displays location contact info', () => {
       expect(screen.getByText('Location')).toBeInTheDocument()
-      expect(screen.getByText('San Francisco, CA')).toBeInTheDocument()
+      expect(screen.getByText('Boise, Idaho')).toBeInTheDocument()
     })
 
     it('renders contact icons', () => {
@@ -327,7 +327,7 @@ describe('Contact Component', () => {
     it('displays comprehensive contact information', () => {
       expect(screen.getByText('bholsinger@gmail.com')).toBeInTheDocument()
       expect(screen.getByText('+1 (208) 284-1929')).toBeInTheDocument()
-      expect(screen.getByText('San Francisco, CA')).toBeInTheDocument()
+      expect(screen.getByText('Boise, Idaho')).toBeInTheDocument()
     })
 
     it('provides clear call-to-action messaging', () => {
