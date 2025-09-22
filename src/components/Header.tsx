@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-// import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,57 +55,12 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            {/* More visible test button - works on all screen sizes */}
-            <div 
-              style={{
-                backgroundColor: '#ef4444',
-                color: 'white',
-                padding: '10px 15px',
-                borderRadius: '8px',
-                fontSize: '14px',
-                fontWeight: 'bold',
-                border: '2px solid #000',
-                position: 'relative',
-                zIndex: 9999
-              }}
-            >
-              🔴 THEME TEST BUTTON
-            </div>
-          </div>
-
-          {/* ALWAYS VISIBLE TEST - regardless of screen size */}
-          <div 
-            style={{
-              position: 'absolute',
-              top: '10px',
-              right: '10px',
-              backgroundColor: '#10b981',
-              color: 'white',
-              padding: '5px 10px',
-              borderRadius: '4px',
-              fontSize: '12px',
-              zIndex: 10000,
-              border: '2px solid #000'
-            }}
-          >
-            ✅ ALWAYS VISIBLE
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Temporary simple button to test mobile positioning */}
-            <button 
-              style={{
-                backgroundColor: '#3b82f6',
-                color: 'white',
-                padding: '6px',
-                borderRadius: '4px',
-                border: 'none',
-                fontSize: '10px'
-              }}
-            >
-              T
-            </button>
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
