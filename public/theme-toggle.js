@@ -120,4 +120,4 @@ document.addEventListener('visibilitychange', function() {
   }
 });
 
-console.log('Theme toggle script loaded successfully!');
+console.log('Theme toggle script loaded successfully! Updated for better layout.');
