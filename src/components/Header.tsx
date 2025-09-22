@@ -55,17 +55,47 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            {/* Debug: More visible theme toggle */}
+            {/* Debug: Simple inline theme toggle */}
             <div style={{ border: '2px solid red', padding: '4px' }}>
-              <SimpleThemeToggle />
+              <button
+                onClick={() => {
+                  document.documentElement.classList.toggle('dark');
+                }}
+                style={{
+                  backgroundColor: '#3b82f6',
+                  color: 'white',
+                  padding: '8px 12px',
+                  border: '2px solid green',
+                  borderRadius: '4px',
+                  fontSize: '12px',
+                  cursor: 'pointer'
+                }}
+              >
+                🌙 TOGGLE
+              </button>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Debug: More visible theme toggle for mobile */}
+            {/* Debug: Simple inline theme toggle for mobile */}
             <div style={{ border: '2px solid blue', padding: '4px' }}>
-              <SimpleThemeToggle />
+              <button
+                onClick={() => {
+                  document.documentElement.classList.toggle('dark');
+                }}
+                style={{
+                  backgroundColor: '#ef4444',
+                  color: 'white',
+                  padding: '6px 8px',
+                  border: '2px solid green',
+                  borderRadius: '4px',
+                  fontSize: '10px',
+                  cursor: 'pointer'
+                }}
+              >
+                🌙 T
+              </button>
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
