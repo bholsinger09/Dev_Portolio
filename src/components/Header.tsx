@@ -55,12 +55,18 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            <ThemeToggle />
+            {/* Debug: More visible theme toggle */}
+            <div style={{ border: '2px solid red', padding: '4px' }}>
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+            {/* Debug: More visible theme toggle for mobile */}
+            <div style={{ border: '2px solid blue', padding: '4px' }}>
+              <ThemeToggle />
+            </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
