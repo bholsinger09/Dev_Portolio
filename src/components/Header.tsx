@@ -55,32 +55,45 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            {/* Debug: Simple inline theme toggle */}
-            <div style={{ backgroundColor: 'red', color: 'white', padding: '10px' }}>
-              THEME TOGGLE TEST
+            {/* Working theme toggle - using div instead of button */}
+            <div 
+              onClick={() => {
+                document.documentElement.classList.toggle('dark');
+              }}
+              style={{ 
+                backgroundColor: '#3b82f6', 
+                color: 'white', 
+                padding: '8px 12px',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontSize: '14px',
+                userSelect: 'none',
+                border: '2px solid #1e40af'
+              }}
+            >
+              🌙 Toggle Theme
             </div>
           </div>
 
           {/* Mobile menu button - ALWAYS VISIBLE FOR DEBUG */}
           <div className="flex items-center space-x-2" style={{ border: '3px solid purple' }}>
-            {/* Debug: Simple inline theme toggle for mobile */}
-            <div style={{ border: '2px solid blue', padding: '4px' }}>
-              <button
-                onClick={() => {
-                  document.documentElement.classList.toggle('dark');
-                }}
-                style={{
-                  backgroundColor: '#ef4444',
-                  color: 'white',
-                  padding: '6px 8px',
-                  border: '2px solid green',
-                  borderRadius: '4px',
-                  fontSize: '10px',
-                  cursor: 'pointer'
-                }}
-              >
-                🌙 T
-              </button>
+            {/* Working mobile theme toggle */}
+            <div 
+              onClick={() => {
+                document.documentElement.classList.toggle('dark');
+              }}
+              style={{ 
+                backgroundColor: '#ef4444', 
+                color: 'white', 
+                padding: '6px 8px',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '12px',
+                userSelect: 'none',
+                border: '2px solid #dc2626'
+              }}
+            >
+              🌙
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
