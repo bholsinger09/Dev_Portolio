@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import SimpleThemeToggle from './SimpleThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,8 +76,8 @@ const Header = () => {
             </div>
             <button
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toggleTheme) {
-                  (window as any).toggleTheme();
+                if (typeof window !== 'undefined' && (window as unknown as { toggleTheme?: () => void }).toggleTheme) {
+                  (window as unknown as { toggleTheme: () => void }).toggleTheme();
                 }
               }}
               className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
@@ -92,8 +91,8 @@ const Header = () => {
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).toggleTheme) {
-                  (window as any).toggleTheme();
+                if (typeof window !== 'undefined' && (window as unknown as { toggleTheme?: () => void }).toggleTheme) {
+                  (window as unknown as { toggleTheme: () => void }).toggleTheme();
                 }
               }}
               className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
