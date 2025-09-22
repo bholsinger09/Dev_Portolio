@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+// import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,12 +55,36 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            <ThemeToggle />
+            {/* Temporary simple button to test positioning */}
+            <button 
+              style={{
+                backgroundColor: '#ef4444',
+                color: 'white',
+                padding: '8px 12px',
+                borderRadius: '6px',
+                border: 'none',
+                fontSize: '12px'
+              }}
+            >
+              THEME TEST
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+            {/* Temporary simple button to test mobile positioning */}
+            <button 
+              style={{
+                backgroundColor: '#3b82f6',
+                color: 'white',
+                padding: '6px',
+                borderRadius: '4px',
+                border: 'none',
+                fontSize: '10px'
+              }}
+            >
+              T
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
