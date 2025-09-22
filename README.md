@@ -1,5 +1,10 @@
 # Ben H. - Full-Stack Developer Portfolio
 
+[![CI/CD Pipeline](https://github.com/bholsinger09/Dev_Portolio/actions/workflows/ci.yml/badge.svg)](https://github.com/bholsinger09/Dev_Portolio/actions/workflows/ci.yml)
+[![Tests](https://img.shields.io/badge/tests-152%20passing-brightgreen.svg)](https://github.com/bholsinger09/Dev_Portolio/actions)
+[![Coverage](https://img.shields.io/badge/coverage-84%25-green.svg)](https://github.com/bholsinger09/Dev_Portolio/actions)
+[![Vercel](https://img.shields.io/badge/deployment-success-brightgreen.svg)](https://dev-portolio-git-main-ben-holsingers-projects.vercel.app)
+
 A modern, responsive portfolio website showcasing full-stack development skills across multiple programming languages and frameworks.
 
 ## 🚀 Live Demo
@@ -58,6 +63,37 @@ A modern, responsive portfolio website showcasing full-stack development skills 
 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🧪 Testing
+
+This project includes comprehensive unit tests with 84%+ coverage:
+
+### Running Tests
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+
+# Run tests for CI (no watch mode)
+npm run test:ci
+```
+
+### Test Coverage
+- **152 Total Tests** across all components
+- **84%+ Code Coverage** with detailed reporting
+- **Automated Testing** via GitHub Actions on every push/PR
+- **Test Suites**: Hero, About, Projects, Skills, Contact, Footer
+
+### Testing Technologies
+- **Jest** - Testing framework
+- **React Testing Library** - Component testing utilities
+- **@testing-library/jest-dom** - Custom Jest matchers
+- **@testing-library/user-event** - User interaction testing
 
 ## 📞 Contact
 
