@@ -42,8 +42,8 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - ALWAYS VISIBLE FOR DEBUG */}
+          <div className="flex items-center space-x-8" style={{ border: '3px solid orange' }}>
             <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -76,8 +76,8 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+          {/* Mobile menu button - ALWAYS VISIBLE FOR DEBUG */}
+          <div className="flex items-center space-x-2" style={{ border: '3px solid purple' }}>
             {/* Debug: Simple inline theme toggle for mobile */}
             <div style={{ border: '2px solid blue', padding: '4px' }}>
               <button
