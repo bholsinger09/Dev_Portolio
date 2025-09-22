@@ -55,19 +55,40 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            {/* Temporary simple button to test positioning */}
-            <button 
+            {/* More visible test button - works on all screen sizes */}
+            <div 
               style={{
                 backgroundColor: '#ef4444',
                 color: 'white',
-                padding: '8px 12px',
-                borderRadius: '6px',
-                border: 'none',
-                fontSize: '12px'
+                padding: '10px 15px',
+                borderRadius: '8px',
+                fontSize: '14px',
+                fontWeight: 'bold',
+                border: '2px solid #000',
+                position: 'relative',
+                zIndex: 9999
               }}
             >
-              THEME TEST
-            </button>
+              🔴 THEME TEST BUTTON
+            </div>
+          </div>
+
+          {/* ALWAYS VISIBLE TEST - regardless of screen size */}
+          <div 
+            style={{
+              position: 'absolute',
+              top: '10px',
+              right: '10px',
+              backgroundColor: '#10b981',
+              color: 'white',
+              padding: '5px 10px',
+              borderRadius: '4px',
+              fontSize: '12px',
+              zIndex: 10000,
+              border: '2px solid #000'
+            }}
+          >
+            ✅ ALWAYS VISIBLE
           </div>
 
           {/* Mobile menu button */}
