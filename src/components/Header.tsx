@@ -56,11 +56,15 @@ const Header = () => {
               ))}
             </div>
             <ThemeToggle />
+            {/* Temporary test element to verify deployment */}
+            <div className="bg-red-500 text-white px-2 py-1 rounded text-xs">THEME</div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
+            {/* Temporary test element to verify mobile deployment */}
+            <div className="bg-blue-500 text-white px-1 py-1 rounded text-xs">M</div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
