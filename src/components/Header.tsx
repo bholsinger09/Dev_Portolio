@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+import SimpleThemeToggle from './SimpleThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,7 @@ const Header = () => {
             </div>
             {/* Debug: More visible theme toggle */}
             <div style={{ border: '2px solid red', padding: '4px' }}>
-              <ThemeToggle />
+              <SimpleThemeToggle />
             </div>
           </div>
 
@@ -65,7 +65,7 @@ const Header = () => {
           <div className="md:hidden flex items-center space-x-2">
             {/* Debug: More visible theme toggle for mobile */}
             <div style={{ border: '2px solid blue', padding: '4px' }}>
-              <ThemeToggle />
+              <SimpleThemeToggle />
             </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
