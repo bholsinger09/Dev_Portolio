@@ -62,8 +62,8 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation - ALWAYS VISIBLE FOR DEBUG */}
-          <div className="flex items-center space-x-8" style={{ border: '3px solid orange' }}>
+          {/* Desktop Navigation - Clean version with theme toggle */}
+          <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -75,46 +75,32 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            {/* Working theme toggle - using div instead of button */}
-            <div 
+            <button
               onClick={() => {
-                document.documentElement.classList.toggle('dark');
+                if (typeof window !== 'undefined' && (window as any).toggleTheme) {
+                  (window as any).toggleTheme();
+                }
               }}
-              style={{ 
-                backgroundColor: '#3b82f6', 
-                color: 'white', 
-                padding: '8px 12px',
-                borderRadius: '6px',
-                cursor: 'pointer',
-                fontSize: '14px',
-                userSelect: 'none',
-                border: '2px solid #1e40af'
-              }}
-            >
-              🌙 Toggle Theme
-            </div>
-          </div>
-
-          {/* Mobile menu button - ALWAYS VISIBLE FOR DEBUG */}
-          <div className="flex items-center space-x-2" style={{ border: '3px solid purple' }}>
-            {/* Working mobile theme toggle */}
-            <div 
-              onClick={() => {
-                document.documentElement.classList.toggle('dark');
-              }}
-              style={{ 
-                backgroundColor: '#ef4444', 
-                color: 'white', 
-                padding: '6px 8px',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                fontSize: '12px',
-                userSelect: 'none',
-                border: '2px solid #dc2626'
-              }}
+              className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
+              title="Toggle theme"
             >
               🌙
-            </div>
+            </button>
+          </div>
+
+          {/* Mobile menu button with theme toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).toggleTheme) {
+                  (window as any).toggleTheme();
+                }
+              }}
+              className="p-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
+              title="Toggle theme"
+            >
+              🌙
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
