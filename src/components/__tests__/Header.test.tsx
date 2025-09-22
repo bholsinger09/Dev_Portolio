@@ -1,4 +1,9 @@
-import React from 'react';
+import React// Mock ThemeToggle component
+jest.mock('../ThemeToggle', () => {
+  const MockThemeToggle = () => <div data-testid="theme-toggle">Theme Toggle</div>;
+  MockThemeToggle.displayName = 'MockThemeToggle';
+  return MockThemeToggle;
+}); 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Header from '../Header';
@@ -13,7 +18,8 @@ jest.mock('next/link', () => {
 // Mock ThemeToggle component
 jest.mock('../ThemeToggle', () => {
   return function MockThemeToggle() {
-    return <button data-testid="theme-toggle">Theme Toggle</button>;
+    return const MockThemeToggle = () => <div data-testid="theme-toggle">Theme Toggle</div>;
+MockThemeToggle.displayName = 'MockThemeToggle';;
   };
 });
 
