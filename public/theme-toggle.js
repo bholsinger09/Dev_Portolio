@@ -31,9 +31,24 @@ function toggleTheme() {
 
 // Inject theme toggle into the navigation
 function injectThemeButton() {
-  // Remove any existing theme buttons first
-  const existing = document.getElementById('theme-toggle-btn');
-  if (existing) existing.remove();
+  // Remove any existing theme buttons first - check for multiple possible IDs
+  const existingIds = ['theme-toggle-btn', 'force-theme-toggle', 'theme-button'];
+  existingIds.forEach(id => {
+    const existing = document.getElementById(id);
+    if (existing) {
+      console.log('Removing old theme button:', id);
+      existing.remove();
+    }
+  });
+  
+  // Also remove any buttons with theme-related text
+  const allButtons = document.querySelectorAll('button');
+  allButtons.forEach(btn => {
+    if (btn.textContent && btn.textContent.includes('THEME')) {
+      console.log('Removing old theme button by text content:', btn);
+      btn.remove();
+    }
+  });
   
   // Look for navigation area to integrate properly
   const nav = document.querySelector('nav') || document.querySelector('header') || document.querySelector('.header');
