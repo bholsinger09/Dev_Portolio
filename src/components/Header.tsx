@@ -56,23 +56,8 @@ const Header = () => {
               ))}
             </div>
             {/* Debug: Simple inline theme toggle */}
-            <div style={{ border: '2px solid red', padding: '4px' }}>
-              <button
-                onClick={() => {
-                  document.documentElement.classList.toggle('dark');
-                }}
-                style={{
-                  backgroundColor: '#3b82f6',
-                  color: 'white',
-                  padding: '8px 12px',
-                  border: '2px solid green',
-                  borderRadius: '4px',
-                  fontSize: '12px',
-                  cursor: 'pointer'
-                }}
-              >
-                🌙 TOGGLE
-              </button>
+            <div style={{ backgroundColor: 'red', color: 'white', padding: '10px' }}>
+              THEME TOGGLE TEST
             </div>
           </div>
 
