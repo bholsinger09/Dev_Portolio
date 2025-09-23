@@ -168,3 +168,46 @@ section#skills .space-y-6 h3 {
   text-align: center !important;
   width: 100% !important;
 }
+
+/* Contact Section Centering Overrides */
+section#contact .grid .space-y-8 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+section#contact .space-y-8 h3 {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+section#contact .space-y-8 h4 {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+section#contact .space-y-4 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+section#contact .space-y-4 > div {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 8px !important;
+}
+
+section#contact .space-y-2 {
+  text-align: center !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+section#contact .space-y-2 li {
+  text-align: center !important;
+}

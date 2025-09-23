@@ -52,54 +52,120 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="space-y-8"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}
           >
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
+            <div style={{ textAlign: 'center', width: '100%' }}>
+              <h3 
+                className="text-2xl font-semibold text-gray-900 mb-6" 
+                style={{ textAlign: 'center' }}
+              >
+                Contact Information
+              </h3>
+              <div 
+                className="space-y-4" 
+                style={{ 
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center'
+                }}
+              >
+                <div 
+                  className="flex items-center space-x-3"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    gap: '8px'
+                  }}
+                >
                   <div className="flex-shrink-0">
                     <Mail className="w-6 h-6 text-blue-600" />
                   </div>
-                  <div>
-                    <p className="text-gray-900 font-medium">Email</p>
-                    <a href="mailto:bholsinger@gmail.com" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <div style={{ textAlign: 'center' }}>
+                    <p className="text-gray-900 font-medium" style={{ textAlign: 'center' }}>Email</p>
+                    <a 
+                      href="mailto:bholsinger@gmail.com" 
+                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                      style={{ textAlign: 'center' }}
+                    >
                       bholsinger@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
+                <div 
+                  className="flex items-center space-x-3"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    gap: '8px'
+                  }}
+                >
                   <div className="flex-shrink-0">
                     <Phone className="w-6 h-6 text-blue-600" />
                   </div>
-                  <div>
-                    <p className="text-gray-900 font-medium">Phone</p>
-                    <a href="tel:+12082841929" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <div style={{ textAlign: 'center' }}>
+                    <p className="text-gray-900 font-medium" style={{ textAlign: 'center' }}>Phone</p>
+                    <a 
+                      href="tel:+12082841929" 
+                      className="text-gray-600 hover:text-blue-600 transition-colors"
+                      style={{ textAlign: 'center' }}
+                    >
                       +1 (208) 284-1929
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
+                <div 
+                  className="flex items-center space-x-3"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    gap: '8px'
+                  }}
+                >
                   <div className="flex-shrink-0">
                     <MapPin className="w-6 h-6 text-blue-600" />
                   </div>
-                  <div>
-                    <p className="text-gray-900 font-medium">Location</p>
-                    <p className="text-gray-600">Boise, Idaho</p>
+                  <div style={{ textAlign: 'center' }}>
+                    <p className="text-gray-900 font-medium" style={{ textAlign: 'center' }}>Location</p>
+                    <p className="text-gray-600" style={{ textAlign: 'center' }}>Boise, Idaho</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">What I&apos;m Looking For</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Full-stack development opportunities</li>
-                <li>• Challenging technical projects</li>
-                <li>• Remote or hybrid work arrangements</li>
-                <li>• Collaborative team environments</li>
-                <li>• Freelance and consulting projects</li>
+            <div style={{ textAlign: 'center', width: '100%' }}>
+              <h4 
+                className="text-lg font-semibold text-gray-900 mb-4" 
+                style={{ textAlign: 'center' }}
+              >
+                What I&apos;m Looking For
+              </h4>
+              <ul 
+                className="space-y-2 text-gray-600" 
+                style={{ 
+                  textAlign: 'center',
+                  listStyle: 'none',
+                  padding: 0
+                }}
+              >
+                <li style={{ textAlign: 'center' }}>• Full-stack development opportunities</li>
+                <li style={{ textAlign: 'center' }}>• Challenging technical projects</li>
+                <li style={{ textAlign: 'center' }}>• Remote or hybrid work arrangements</li>
+                <li style={{ textAlign: 'center' }}>• Collaborative team environments</li>
+                <li style={{ textAlign: 'center' }}>• Freelance and consulting projects</li>
               </ul>
             </div>
           </motion.div>
