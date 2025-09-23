@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { Providers } from '../Providers';
 
 // Track the props passed to ThemeProvider
-let themeProviderProps: any = {};
+let themeProviderProps: Record<string, unknown> = {};
 
 // Mock next-themes
 jest.mock('next-themes', () => ({
