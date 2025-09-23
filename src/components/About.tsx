@@ -77,7 +77,7 @@ const About = () => {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl w-full">
             {skills.map((skillGroup, index) => (
               <motion.div
                 key={skillGroup.category}
@@ -85,10 +85,11 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 text-center"
+                className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow duration-300"
+                style={{ textAlign: 'center' }}
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{skillGroup.category}</h3>
-                <div className="flex flex-wrap justify-center gap-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{skillGroup.category}</h3>
+                <div className="flex flex-wrap gap-2" style={{ justifyContent: 'center' }}>
                   {skillGroup.technologies.map((tech) => (
                     <span
                       key={tech}

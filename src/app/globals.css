@@ -89,3 +89,16 @@ nav a:visited {
 .navigation-links a + a {
   margin-left: 2rem !important;
 }
+
+/* Force center alignment for About section skills */
+#about .bg-gray-50 {
+  text-align: center !important;
+}
+
+#about .bg-gray-50 h3 {
+  text-align: center !important;
+}
+
+#about .bg-gray-50 .flex {
+  justify-content: center !important;
+}
