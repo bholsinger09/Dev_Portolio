@@ -187,7 +187,7 @@ describe('Projects Component', () => {
     })
 
     it('has responsive spacing', () => {
-      const container = document.querySelector('.max-w-7xl')
+      const container = document.querySelector('.max-w-6xl')
       expect(container).toHaveClass('px-4', 'sm:px-6', 'lg:px-8')
     })
   })

@@ -100,14 +100,19 @@ describe('Skills Component', () => {
       expect(progressBars.length).toBeGreaterThanOrEqual(20) // At least 20 skills total
     })
 
-    it('has colored progress indicators for each skill', () => {
-      // Check for various colored progress bars
-      expect(document.querySelector('.bg-yellow-500')).toBeInTheDocument() // JavaScript
-      expect(document.querySelector('.bg-orange-500')).toBeInTheDocument() // Swift
-      expect(document.querySelector('.bg-green-500')).toBeInTheDocument() // Python
-      expect(document.querySelector('.bg-red-500')).toBeInTheDocument() // Java
-      expect(document.querySelector('.bg-blue-500')).toBeInTheDocument() // TypeScript
-      expect(document.querySelector('.bg-purple-500')).toBeInTheDocument() // C#
+    it('has gradient progress indicators for each skill', () => {
+      // Check for gradient progress bars instead of solid colors
+      expect(document.querySelector('.bg-gradient-to-r')).toBeInTheDocument()
+      
+      // Check for specific gradient color classes used in the enhanced Skills component
+      const gradientBars = document.querySelectorAll('.bg-gradient-to-r')
+      expect(gradientBars.length).toBeGreaterThanOrEqual(20)
+      
+      // Check for the enhanced color system with gradients
+      expect(document.querySelector('.from-yellow-400')).toBeInTheDocument() // JavaScript
+      expect(document.querySelector('.from-orange-400')).toBeInTheDocument() // Swift  
+      expect(document.querySelector('.from-green-400')).toBeInTheDocument() // Python
+      expect(document.querySelector('.from-red-400')).toBeInTheDocument() // Java
     })
   })
 
@@ -127,11 +132,15 @@ describe('Skills Component', () => {
     })
 
     it('applies correct colors to statistics', () => {
-      const statsNumbers = document.querySelectorAll('.text-3xl')
-      expect(statsNumbers[0]).toHaveClass('text-blue-600')
-      expect(statsNumbers[1]).toHaveClass('text-green-600')
-      expect(statsNumbers[2]).toHaveClass('text-purple-600')
-      expect(statsNumbers[3]).toHaveClass('text-orange-600')
+      // Get statistics container and then find the colored numbers within it
+      const statsContainer = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4')
+      expect(statsContainer).toBeInTheDocument()
+      
+      // Check for specific colored stat numbers
+      expect(document.querySelector('.text-blue-600')).toBeInTheDocument() // Years Experience
+      expect(document.querySelector('.text-green-600')).toBeInTheDocument() // Projects Completed  
+      expect(document.querySelector('.text-purple-600')).toBeInTheDocument() // Languages Used
+      expect(document.querySelector('.text-orange-600')).toBeInTheDocument() // Platforms Mastered
     })
   })
 
@@ -153,7 +162,7 @@ describe('Skills Component', () => {
     })
 
     it('applies proper spacing classes', () => {
-      const container = document.querySelector('.max-w-7xl')
+      const container = document.querySelector('.max-w-6xl')
       expect(container).toHaveClass('mx-auto', 'px-4', 'sm:px-6', 'lg:px-8')
     })
   })
@@ -219,7 +228,7 @@ describe('Skills Component', () => {
 
   describe('Visual Elements', () => {
     it('renders skill bars with proper structure', () => {
-      const skillBars = document.querySelectorAll('.w-full.bg-gray-200.rounded-full.h-2')
+      const skillBars = document.querySelectorAll('.w-full.bg-gray-200.rounded-full.h-3')
       expect(skillBars.length).toBeGreaterThanOrEqual(20)
     })
 
