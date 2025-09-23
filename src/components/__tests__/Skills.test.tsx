@@ -29,7 +29,7 @@ describe('Skills Component', () => {
 
     it('displays correct category headings as h3 elements', () => {
       const categoryHeadings = screen.getAllByRole('heading', { level: 3 })
-      expect(categoryHeadings).toHaveLength(4)
+      expect(categoryHeadings).toHaveLength(5) // 4 categories + 1 statistics
 
       expect(categoryHeadings[0]).toHaveTextContent('Programming Languages')
       expect(categoryHeadings[1]).toHaveTextContent('Mobile & Frontend')
@@ -118,17 +118,17 @@ describe('Skills Component', () => {
 
   describe('Statistics Section', () => {
     it('displays all achievement statistics', () => {
-      expect(screen.getByText('3+')).toBeInTheDocument()
+      expect(screen.getByText('5+')).toBeInTheDocument()
       expect(screen.getByText('Years Experience')).toBeInTheDocument()
 
-      expect(screen.getByText('15+')).toBeInTheDocument()
+      expect(screen.getByText('50+')).toBeInTheDocument()
       expect(screen.getByText('Projects Completed')).toBeInTheDocument()
 
-      expect(screen.getByText('6')).toBeInTheDocument()
-      expect(screen.getByText('Languages Used')).toBeInTheDocument()
+      expect(screen.getByText('25+')).toBeInTheDocument()
+      expect(screen.getByText('Technologies Mastered')).toBeInTheDocument()
 
-      expect(screen.getByText('4')).toBeInTheDocument()
-      expect(screen.getByText('Platforms Mastered')).toBeInTheDocument()
+      expect(screen.getByText('30+')).toBeInTheDocument()
+      expect(screen.getByText('Happy Clients')).toBeInTheDocument()
     })
 
     it('applies correct colors to statistics', () => {
@@ -185,7 +185,7 @@ describe('Skills Component', () => {
       expect(mainHeading).toBeInTheDocument()
 
       const subHeadings = screen.getAllByRole('heading', { level: 3 })
-      expect(subHeadings).toHaveLength(4)
+      expect(subHeadings).toHaveLength(5) // 4 categories + 1 statistics
 
       const headingTexts = subHeadings.map(h => h.textContent)
       expect(headingTexts).toContain('Programming Languages')
