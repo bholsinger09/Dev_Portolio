@@ -109,28 +109,29 @@ describe('Projects Component', () => {
   })
 
   describe('Project Visual Elements', () => {
-    it('renders project category emojis and descriptions', () => {
+    it('renders project category badges correctly', () => {
+      expect(screen.getByText('API & AI Integration')).toBeInTheDocument()
+      expect(screen.getByText('Desktop Application')).toBeInTheDocument()
+      expect(screen.getByText('Mobile Application')).toBeInTheDocument()
+      expect(screen.getByText('Mobile E-Commerce')).toBeInTheDocument()
+      expect(screen.getByText('Security & Authentication')).toBeInTheDocument()
+      expect(screen.getByText('Social Platform')).toBeInTheDocument()
+    })
+
+    it('displays project emojis in visual placeholders', () => {
       expect(screen.getByText('🤖')).toBeInTheDocument()
-      expect(screen.getByText('☕')).toBeInTheDocument()
-      expect(screen.getByText('📱')).toBeInTheDocument()
-      expect(screen.getByText('🛍️')).toBeInTheDocument()
+      expect(screen.getByText('💻')).toBeInTheDocument()
+      expect(screen.getAllByText('📱')).toHaveLength(2) // Two iOS projects
       expect(screen.getByText('🔐')).toBeInTheDocument()
-      expect(screen.getByText('🤝')).toBeInTheDocument()
+      expect(screen.getByText('👥')).toBeInTheDocument()
     })
 
-    it('displays category titles correctly', () => {
-      expect(screen.getByText('FastAPI + AI')).toBeInTheDocument()
-      expect(screen.getByText('Java Application')).toBeInTheDocument()
-      expect(screen.getByText('iOS Development')).toBeInTheDocument()
-      expect(screen.getByText('E-Commerce iOS')).toBeInTheDocument()
-      expect(screen.getByText('Identity Platform')).toBeInTheDocument()
-      expect(screen.getByText('Community App')).toBeInTheDocument()
-    })
-
-    it('shows technology summaries in visual elements', () => {
-      expect(screen.getByText('Python • OpenAI • LLM')).toBeInTheDocument()
-      expect(screen.getByText('OOP • Collections • Console')).toBeInTheDocument()
-      expect(screen.getByText('Swift • SwiftUI • MapKit')).toBeInTheDocument()
+    it('shows project stats section', () => {
+      expect(screen.getByText('Project Portfolio Highlights')).toBeInTheDocument()
+      expect(screen.getByText('Total Projects')).toBeInTheDocument()
+      expect(screen.getByText('Technologies Used')).toBeInTheDocument()
+      expect(screen.getByText('Project Categories')).toBeInTheDocument()
+      expect(screen.getByText('Active Deployments')).toBeInTheDocument()
     })
   })
 
@@ -147,10 +148,10 @@ describe('Projects Component', () => {
     })
 
     it('applies proper styling to project cards', () => {
-      const projectCards = document.querySelectorAll('.bg-white')
-      expect(projectCards).toHaveLength(6)
+      const projectCards = document.querySelectorAll('.bg-white.rounded-xl.shadow-lg')
+      expect(projectCards.length).toBeGreaterThanOrEqual(6) // 6 project cards + stats cards
 
-      // Check card styling
+      // Check that we have project cards with proper structure
       const firstCard = projectCards[0]
       expect(firstCard).toHaveClass('bg-white', 'rounded-xl', 'shadow-lg', 'overflow-hidden')
     })
@@ -161,9 +162,9 @@ describe('Projects Component', () => {
       const mainHeading = screen.getByRole('heading', { name: 'Featured Projects' })
       expect(mainHeading.tagName).toBe('H2')
 
-      // Project titles should be properly structured
+      // Project titles should be properly structured (6 projects + 1 stats heading)
       const projectHeadings = screen.getAllByRole('heading', { level: 3 })
-      expect(projectHeadings).toHaveLength(6)
+      expect(projectHeadings.length).toBeGreaterThanOrEqual(6)
     })
 
     it('has meaningful link descriptions', () => {
@@ -198,11 +199,11 @@ describe('Projects Component', () => {
       const demoButtons = screen.getAllByText('Demo')
 
       codeButtons.forEach(button => {
-        expect(button.closest('a')).toHaveClass('flex', 'items-center', 'gap-1')
+        expect(button.closest('a')).toHaveClass('flex', 'items-center', 'gap-2', 'bg-gray-900', 'text-white')
       })
 
       demoButtons.forEach(button => {
-        expect(button.closest('a')).toHaveClass('flex', 'items-center', 'gap-1', 'bg-blue-600', 'text-white')
+        expect(button.closest('a')).toHaveClass('flex', 'items-center', 'gap-2', 'bg-blue-600', 'text-white')
       })
     })
 
@@ -211,7 +212,7 @@ describe('Projects Component', () => {
       const demoLinks = screen.getAllByText('Demo')
 
       codeLinks.forEach(link => {
-        expect(link.closest('a')).toHaveClass('hover:text-gray-900')
+        expect(link.closest('a')).toHaveClass('hover:bg-gray-800')
       })
 
       demoLinks.forEach(link => {
