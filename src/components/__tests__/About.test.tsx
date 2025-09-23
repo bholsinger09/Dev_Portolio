@@ -161,7 +161,7 @@ describe('About Component', () => {
       const section = document.querySelector('#about')
       expect(section).toHaveClass('py-20')
 
-      const container = document.querySelector('.max-w-7xl.mx-auto.px-4.sm\\:px-6.lg\\:px-8')
+      const container = document.querySelector('.max-w-6xl.mx-auto.px-4.sm\\:px-6.lg\\:px-8')
       expect(container).toBeInTheDocument()
     })
 

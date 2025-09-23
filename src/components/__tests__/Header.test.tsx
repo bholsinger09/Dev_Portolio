@@ -5,9 +5,11 @@ import Header from '../Header';
 
 // Mock next/link
 jest.mock('next/link', () => {
-  return ({ children, href }: { children: React.ReactNode; href: string }) => (
+  const MockLink = ({ children, href }: { children: React.ReactNode; href: string }) => (
     <a href={href}>{children}</a>
   );
+  MockLink.displayName = 'MockLink';
+  return MockLink;
 });
 
 // Mock ThemeToggle component
@@ -46,27 +48,21 @@ describe('Header', () => {
 
     it('renders theme toggle button', () => {
       render(<Header />);
-      expect(screen.getAllByTitle(/switch to (light|dark) mode/i)).toHaveLength(2); // Desktop and mobile
+      expect(screen.getByTitle(/switch to (light|dark) mode/i)).toBeInTheDocument();
     });
   });
 
-  describe('Mobile Menu', () => {
-    it('mobile menu is hidden by default', () => {
+  describe('Navigation', () => {
+    it('navigation is always visible (horizontal layout)', () => {
       render(<Header />);
-      const mobileNavigation = screen.queryByText('Home');
-      expect(mobileNavigation).toBeInTheDocument(); // Should be visible in desktop nav
-    });
-
-    it('toggles mobile menu when hamburger button is clicked', () => {
-      render(<Header />);
-      const menuButton = screen.getByRole('button', { name: /open main menu/i });
-
-      // Click to open menu
-      fireEvent.click(menuButton);
-
-      // Menu should be open (we can't easily test visibility due to CSS classes, 
-      // but we can test the button state change)
-      expect(menuButton).toBeInTheDocument();
+      const navigation = screen.getByText('Home');
+      expect(navigation).toBeInTheDocument();
+      
+      // Navigation items should be visible
+      const navItems = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
+      navItems.forEach(item => {
+        expect(screen.getByText(item)).toBeInTheDocument();
+      });
     });
   });
 
@@ -117,8 +113,8 @@ describe('Header', () => {
       // Navigation should have nav role
       expect(screen.getByRole('navigation')).toBeInTheDocument();
 
-      // Menu button should have proper screen reader text
-      expect(screen.getByText('Open main menu')).toBeInTheDocument();
+      // Theme toggle button should be accessible
+      expect(screen.getByTitle(/switch to (light|dark) mode/i)).toBeInTheDocument();
     });
 
     it('has proper heading hierarchy', () => {
@@ -130,22 +126,23 @@ describe('Header', () => {
     });
   });
 
-  describe('Responsive Design', () => {
-    it('has desktop navigation hidden on mobile screens', () => {
+  describe('Layout', () => {
+    it('has horizontal navigation layout', () => {
       render(<Header />);
 
-      // Desktop nav should have hidden class for mobile - check the parent div of nav items
-      const desktopNav = screen.getByText('Home').closest('div')?.parentElement;
-      expect(desktopNav?.className).toContain('hidden md:flex');
+      // Navigation should be in a horizontal flex container
+      const navContainer = screen.getByText('Home').closest('.navigation-links');
+      expect(navContainer).toBeInTheDocument();
+      expect(navContainer).toHaveClass('flex', 'items-baseline');
     });
 
-    it('has mobile menu button hidden on desktop screens', () => {
+    it('displays theme toggle button alongside navigation', () => {
       render(<Header />);
 
-      const buttons = screen.getAllByRole('button');
-      const menuButton = buttons.find(button => !button.getAttribute('title'));
-      // The md:hidden class is now on the parent div of the parent div  
-      expect(menuButton?.closest('div')?.parentElement?.className).toContain('md:hidden');
+      // Theme button should be present and visible
+      const themeButton = screen.getByTitle(/switch to (light|dark) mode/i);
+      expect(themeButton).toBeInTheDocument();
+      expect(themeButton).toHaveClass('rounded-lg');
     });
   });
 });

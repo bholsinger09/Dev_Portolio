@@ -3,16 +3,26 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Providers } from '../Providers';
 
+// Track the props passed to ThemeProvider
+let themeProviderProps: any = {};
+
 // Mock next-themes
 jest.mock('next-themes', () => ({
-  ThemeProvider: ({ children, ...props }: any) => (
-    <div data-testid="theme-provider" {...props}>
-      {children}
-    </div>
-  ),
+  ThemeProvider: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => {
+    themeProviderProps = props;
+    return (
+      <div data-testid="theme-provider">
+        {children}
+      </div>
+    );
+  },
 }));
 
 describe('Providers', () => {
+  beforeEach(() => {
+    themeProviderProps = {};
+  });
+  
   describe('Theme Provider Setup', () => {
     it('renders ThemeProvider with correct attributes', () => {
       const TestChild = () => <div data-testid="test-child">Test Content</div>;
@@ -25,9 +35,12 @@ describe('Providers', () => {
 
       const themeProvider = screen.getByTestId('theme-provider');
       expect(themeProvider).toBeInTheDocument();
-      expect(themeProvider).toHaveAttribute('attribute', 'class');
-      expect(themeProvider).toHaveAttribute('defaultTheme', 'system');
-      expect(themeProvider).toHaveAttribute('enableSystem', 'true');
+      
+      // Check props passed to ThemeProvider mock
+      expect(themeProviderProps.attribute).toBe('class');
+      expect(themeProviderProps.defaultTheme).toBe('system');
+      expect(themeProviderProps.enableSystem).toBe(true);
+      expect(themeProviderProps.storageKey).toBe('theme');
     });
 
     it('renders children correctly', () => {
@@ -67,8 +80,7 @@ describe('Providers', () => {
         </Providers>
       );
 
-      const themeProvider = screen.getByTestId('theme-provider');
-      expect(themeProvider).toHaveAttribute('enableSystem', 'true');
+      expect(themeProviderProps.enableSystem).toBe(true);
     });
 
     it('uses class attribute for theme switching', () => {
@@ -78,8 +90,7 @@ describe('Providers', () => {
         </Providers>
       );
 
-      const themeProvider = screen.getByTestId('theme-provider');
-      expect(themeProvider).toHaveAttribute('attribute', 'class');
+      expect(themeProviderProps.attribute).toBe('class');
     });
 
     it('defaults to system theme', () => {
@@ -89,8 +100,7 @@ describe('Providers', () => {
         </Providers>
       );
 
-      const themeProvider = screen.getByTestId('theme-provider');
-      expect(themeProvider).toHaveAttribute('defaultTheme', 'system');
+      expect(themeProviderProps.defaultTheme).toBe('system');
     });
   });
 
