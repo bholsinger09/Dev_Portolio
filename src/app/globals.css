@@ -65,3 +65,15 @@ body {
 * {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
+
+/* Navigation link styles */
+nav a {
+  text-decoration: none !important;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active,
+nav a:visited {
+  text-decoration: none !important;
+}

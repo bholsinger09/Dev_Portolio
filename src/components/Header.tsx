@@ -60,13 +60,13 @@ const Header = () => {
           </div>
 
           {/* Horizontal Navigation Bar - visible on all screen sizes */}
-          <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-8">
-            <div className="flex items-baseline space-x-2 sm:space-x-4 lg:space-x-8">
+          <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
+            <div className="flex items-baseline space-x-4 sm:space-x-6 lg:space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-1 sm:px-2 lg:px-3 py-2 text-xs sm:text-sm lg:text-sm font-medium transition-colors whitespace-nowrap"
+                  className="no-underline text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 sm:px-3 lg:px-4 py-2 text-sm sm:text-base lg:text-base font-medium transition-colors whitespace-nowrap hover:no-underline focus:no-underline"
                 >
                   {item.label}
                 </Link>
@@ -74,7 +74,7 @@ const Header = () => {
             </div>
             <button
               onClick={toggleTheme}
-              className="p-1.5 sm:p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600 flex-shrink-0"
+              className="p-1.5 sm:p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600 flex-shrink-0 ml-4"
               title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
             >
               {isDark ? <Sun size={16} className="sm:w-[18px] sm:h-[18px]" /> : <Moon size={16} className="sm:w-[18px] sm:h-[18px]" />}
