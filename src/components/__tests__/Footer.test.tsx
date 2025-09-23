@@ -44,9 +44,9 @@ describe('Footer Component', () => {
       expect(screen.getByText(new RegExp(`© ${currentYear} Ben H\\. All rights reserved`, 'i'))).toBeInTheDocument();
     });
 
-    it('displays coffee message', () => {
+    it('displays tea and code monkey message', () => {
       expect(screen.getByText(/Made with/i)).toBeInTheDocument();
-      expect(screen.getByText(/and lots of coffee/i)).toBeInTheDocument();
+      expect(screen.getByText(/and lots of 🍵 by a code monkey 🐒/i)).toBeInTheDocument();
     });
   });
 
