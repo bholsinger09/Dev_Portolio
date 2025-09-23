@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // Theme toggle functionality
   const toggleTheme = () => {
@@ -30,9 +31,28 @@ const Header = () => {
       setScrolled(window.scrollY > 20);
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
 
   const navItems = [
     { href: '#home', label: 'Home' },
@@ -80,7 +100,7 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button with theme toggle */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-2" ref={mobileMenuRef}>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600"
@@ -91,7 +111,11 @@ const Header = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
+              aria-label={isOpen ? 'Close main menu' : 'Open main menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
+              <span className="sr-only">{isOpen ? 'Close main menu' : 'Open main menu'}</span>
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -99,8 +123,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200 dark:border-gray-700">
+          <div className="md:hidden" id="mobile-navigation">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200 dark:border-gray-700 shadow-lg">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
