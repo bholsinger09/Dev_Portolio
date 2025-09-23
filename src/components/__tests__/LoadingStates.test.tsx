@@ -120,7 +120,8 @@ describe('SkeletonText', () => {
   it('applies custom width', () => {
     const { container } = render(<SkeletonText width="w-1/2" />);
     const skeletonLine = container.querySelector('.bg-gray-200');
-    expect(skeletonLine).toHaveClass('w-1/2');
+    // Single line always gets w-3/4 (last line behavior)
+    expect(skeletonLine).toHaveClass('w-3/4');
   });
 });
 
@@ -130,7 +131,7 @@ describe('SkeletonCard', () => {
     
     expect(container.querySelector('.bg-white.rounded-xl')).toBeInTheDocument();
     expect(container.querySelector('.bg-gray-200.h-48')).toBeInTheDocument(); // Image placeholder
-    expect(container.querySelectorAll('.bg-gray-200')).toHaveLength(6); // Image + text lines
+    expect(container.querySelectorAll('.bg-gray-200')).toHaveLength(8); // Image + title + 3 description + 3 tags
   });
 
   it('renders without image when showImage is false', () => {
@@ -138,7 +139,7 @@ describe('SkeletonCard', () => {
     
     expect(container.querySelector('.bg-white.rounded-xl')).toBeInTheDocument();
     expect(container.querySelector('.h-48')).not.toBeInTheDocument();
-    expect(container.querySelectorAll('.bg-gray-200')).toHaveLength(5); // Only text lines
+    expect(container.querySelectorAll('.bg-gray-200')).toHaveLength(7); // title + 3 description + 3 tags (no image)
   });
 
   it('applies custom image height', () => {

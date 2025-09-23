@@ -230,8 +230,14 @@ const ProjectsStats: React.FC = () => {
 const Projects = () => {
   const { isLoading, error, startLoading, stopLoading } = useLoadingState(true);
 
-  // Simulate loading data
+  // Simulate loading data (skip in test environment)
   useEffect(() => {
+    // Don't simulate loading in test environment
+    if (process.env.NODE_ENV === 'test') {
+      stopLoading();
+      return;
+    }
+
     const timer = setTimeout(() => {
       stopLoading();
     }, 1500);

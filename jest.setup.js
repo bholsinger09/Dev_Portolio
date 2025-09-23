@@ -1,5 +1,8 @@
 import '@testing-library/jest-dom'
 
+// Set test environment variable
+process.env.NODE_ENV = 'test';
+
 // Mock framer-motion to avoid animation issues in tests
 jest.mock('framer-motion', () => ({
   motion: {
