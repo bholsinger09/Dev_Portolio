@@ -60,13 +60,17 @@ const Header = () => {
           </div>
 
           {/* Horizontal Navigation Bar - visible on all screen sizes */}
-          <div className="flex items-center gap-6 sm:gap-8 lg:gap-12">
-            <div className="navigation-links flex items-baseline gap-6 sm:gap-8 lg:gap-12">
-              {navItems.map((item) => (
+          <div className="flex items-center" style={{ gap: '2rem' }}>
+            <div className="navigation-links flex items-baseline" style={{ gap: '2rem' }}>
+              {navItems.map((item, index) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className="nav-item no-underline text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 sm:px-4 lg:px-5 py-2 text-sm sm:text-base lg:text-base font-medium transition-colors whitespace-nowrap hover:no-underline focus:no-underline"
+                  style={{ 
+                    marginLeft: index > 0 ? '2rem' : '0',
+                    display: 'inline-block'
+                  }}
                 >
                   {item.label}
                 </Link>
@@ -76,6 +80,7 @@ const Header = () => {
               onClick={toggleTheme}
               className="p-1.5 sm:p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600 flex-shrink-0"
               title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+              style={{ marginLeft: '2rem' }}
             >
               {isDark ? <Sun size={16} className="sm:w-[18px] sm:h-[18px]" /> : <Moon size={16} className="sm:w-[18px] sm:h-[18px]" />}
             </button>
