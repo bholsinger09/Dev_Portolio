@@ -58,7 +58,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Ben H. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm flex items-center mt-2 md:mt-0">
-            Made with <Heart size={16} className="mx-1 text-red-500" /> and lots of coffee
+            Made with <Heart size={16} className="mx-1 text-red-500" /> and lots of 🍵 by a code monkey 🐒
           </p>
         </div>
       </div>
