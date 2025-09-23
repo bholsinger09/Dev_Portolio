@@ -10,7 +10,12 @@ jest.mock('next/link', () => {
   );
 });
 
-
+// Mock ThemeToggle component
+jest.mock('../ThemeToggle', () => {
+  const MockThemeToggle = () => <div data-testid="theme-toggle">Theme Toggle</div>;
+  MockThemeToggle.displayName = 'MockThemeToggle';
+  return MockThemeToggle;
+});
 
 // Mock window.scrollY
 Object.defineProperty(window, 'scrollY', {
@@ -54,15 +59,10 @@ describe('Header', () => {
 
     it('toggles mobile menu when hamburger button is clicked', () => {
       render(<Header />);
-      // Find the mobile menu button by looking for the button without a title (not the theme toggle)
-      const buttons = screen.getAllByRole('button');
-      const menuButton = buttons.find(button => !button.getAttribute('title'));
-      expect(menuButton).toBeInTheDocument();
+      const menuButton = screen.getByRole('button', { name: /open main menu/i });
 
       // Click to open menu
-      if (menuButton) {
-        fireEvent.click(menuButton);
-      }
+      fireEvent.click(menuButton);
 
       // Menu should be open (we can't easily test visibility due to CSS classes, 
       // but we can test the button state change)
@@ -117,10 +117,8 @@ describe('Header', () => {
       // Navigation should have nav role
       expect(screen.getByRole('navigation')).toBeInTheDocument();
 
-      // Mobile menu button should exist (even without specific aria-label)
-      const buttons = screen.getAllByRole('button');
-      const menuButton = buttons.find(button => !button.getAttribute('title'));
-      expect(menuButton).toBeInTheDocument();
+      // Menu button should have proper screen reader text
+      expect(screen.getByText('Open main menu')).toBeInTheDocument();
     });
 
     it('has proper heading hierarchy', () => {
@@ -146,7 +144,8 @@ describe('Header', () => {
 
       const buttons = screen.getAllByRole('button');
       const menuButton = buttons.find(button => !button.getAttribute('title'));
-      expect(menuButton?.closest('div')?.className).toContain('md:hidden');
+      // The md:hidden class is now on the parent div of the parent div  
+      expect(menuButton?.closest('div')?.parentElement?.className).toContain('md:hidden');
     });
   });
 });

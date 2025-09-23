@@ -99,45 +99,48 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile menu button with theme toggle */}
-          <div className="md:hidden flex items-center space-x-2" ref={mobileMenuRef}>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600"
-              title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
-              aria-label={isOpen ? 'Close main menu' : 'Open main menu'}
-              aria-expanded={isOpen}
-              aria-controls="mobile-navigation"
-            >
-              <span className="sr-only">{isOpen ? 'Close main menu' : 'Open main menu'}</span>
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          {/* Mobile menu area */}
+          <div className="md:hidden" ref={mobileMenuRef}>
+            {/* Mobile menu button with theme toggle */}
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors duration-200 border border-gray-200 dark:border-gray-600"
+                title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+              >
+                {isDark ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400 transition-colors"
+                aria-label={isOpen ? 'Close main menu' : 'Open main menu'}
+                aria-expanded={isOpen}
+                aria-controls="mobile-navigation"
+              >
+                <span className="sr-only">{isOpen ? 'Close main menu' : 'Open main menu'}</span>
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+
+            {/* Mobile Navigation */}
+            {isOpen && (
+              <div id="mobile-navigation">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200 dark:border-gray-700 shadow-lg">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden" id="mobile-navigation">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200 dark:border-gray-700 shadow-lg">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 text-base font-medium transition-colors rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </nav>
     </header>
   );
