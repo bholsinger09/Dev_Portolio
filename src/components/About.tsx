@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,14 +54,14 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Me</h2>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
               I&apos;m a passionate full-stack software engineer with hands-on experience developing applications
               across mobile, web, and AI integration platforms. My portfolio includes iOS applications,
               FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms,
               showcasing my versatility in tackling diverse technical challenges.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed text-center">
               From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities,
               I excel at selecting the right technology stack for each project. My experience spans real estate
               applications, e-commerce platforms, task management systems, and identity verification solutions,
@@ -75,30 +75,32 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="flex justify-center"
         >
-          {skills.map((skillGroup, index) => (
-            <motion.div
-              key={skillGroup.category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow duration-300"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">{skillGroup.category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {skillGroup.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(skillGroup.color)}`}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl">
+            {skills.map((skillGroup, index) => (
+              <motion.div
+                key={skillGroup.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow duration-300 text-center"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{skillGroup.category}</h3>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {skillGroup.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${getColorClasses(skillGroup.color)}`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
