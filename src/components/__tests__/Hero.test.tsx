@@ -38,9 +38,10 @@ describe('Hero Component', () => {
   describe('Text Content', () => {
     it('renders main heading with correct text', () => {
       const mainHeading = screen.getByRole('heading', { level: 1 })
+      const subHeading = screen.getByRole('heading', { level: 2 })
 
       expect(mainHeading).toHaveTextContent('Ben H.')
-      expect(mainHeading).toHaveTextContent('Full-Stack Software Engineer')
+      expect(subHeading).toHaveTextContent('Full-Stack Software Engineer')
     })
 
     it('displays all programming languages', () => {

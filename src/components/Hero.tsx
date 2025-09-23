@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-24 pb-12 dark:from-gray-900 dark:to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Professional Photo */}
@@ -27,63 +27,68 @@ const Hero = () => {
             </div>
           </div>
 
-          <div>
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">
               Ben H.
-              <span className="block text-3xl md:text-4xl text-blue-600 font-medium mt-2">
-                Full-Stack Software Engineer
-              </span>
             </h1>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-600 dark:text-blue-400 font-medium mb-6">
+              Full-Stack Software Engineer
+            </h2>
           </div>
 
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Experienced software engineer specializing in full-stack development with expertise in{' '}
-            <span className="text-blue-600 font-semibold">JavaScript/TypeScript</span>,{' '}
-            <span className="text-red-600 font-semibold">Java</span>,{' '}
-            <span className="text-green-600 font-semibold">Python</span>,{' '}
-            <span className="text-purple-600 font-semibold">C#</span>, and{' '}
-            <span className="text-orange-600 font-semibold">Swift</span>.
-            Building scalable applications from web platforms to mobile solutions.
-          </p>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
+              Experienced software engineer specializing in full-stack development with expertise in{' '}
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">JavaScript/TypeScript</span>,{' '}
+              <span className="text-red-600 dark:text-red-400 font-semibold">Java</span>,{' '}
+              <span className="text-green-600 dark:text-green-400 font-semibold">Python</span>,{' '}
+              <span className="text-purple-600 dark:text-purple-400 font-semibold">C#</span>, and{' '}
+              <span className="text-orange-600 dark:text-orange-400 font-semibold">Swift</span>.
+              Building scalable applications from web platforms to mobile solutions.
+            </p>
+          </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-10">
             <a
               href="#projects"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
+              className="w-full sm:w-auto bg-blue-600 dark:bg-blue-700 text-white px-8 py-4 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               View My Work
             </a>
             <a
               href="/resume.pdf"
-              className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors font-medium text-lg flex items-center gap-2"
+              className="w-full sm:w-auto border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Download size={20} />
               Download Resume
             </a>
           </div>
 
-          <div className="flex justify-center space-x-6 mt-8">
+          <div className="flex justify-center space-x-8 mt-10">
             <a
               href="https://github.com/bholsinger09"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110"
+              aria-label="GitHub Profile"
             >
-              <Github size={28} />
+              <Github size={32} />
             </a>
             <a
               href="https://linkedin.com/in/ben-holsinger"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors transform hover:scale-110"
+              aria-label="LinkedIn Profile"
             >
-              <Linkedin size={28} />
+              <Linkedin size={32} />
             </a>
             <a
               href="mailto:ben.holsinger@example.com"
-              className="text-gray-600 hover:text-red-600 transition-colors"
+              className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors transform hover:scale-110"
+              aria-label="Send Email"
             >
-              <Mail size={28} />
+              <Mail size={32} />
             </a>
           </div>
         </div>
