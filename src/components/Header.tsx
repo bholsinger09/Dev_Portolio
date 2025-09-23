@@ -61,12 +61,12 @@ const Header = () => {
 
           {/* Horizontal Navigation Bar - visible on all screen sizes */}
           <div className="flex items-center gap-6 sm:gap-8 lg:gap-12">
-            <div className="flex items-baseline gap-6 sm:gap-8 lg:gap-12">
+            <div className="navigation-links flex items-baseline gap-6 sm:gap-8 lg:gap-12">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="no-underline text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 sm:px-4 lg:px-5 py-2 text-sm sm:text-base lg:text-base font-medium transition-colors whitespace-nowrap hover:no-underline focus:no-underline"
+                  className="nav-item no-underline text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 sm:px-4 lg:px-5 py-2 text-sm sm:text-base lg:text-base font-medium transition-colors whitespace-nowrap hover:no-underline focus:no-underline"
                 >
                   {item.label}
                 </Link>

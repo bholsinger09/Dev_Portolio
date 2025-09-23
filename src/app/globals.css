@@ -77,3 +77,30 @@ nav a:active,
 nav a:visited {
   text-decoration: none !important;
 }
+
+/* Force visible spacing between navigation items */
+.navigation-links {
+  gap: 2rem !important; /* 32px - override Tailwind */
+}
+
+.nav-item {
+  margin: 0 1rem !important; /* Additional margin for each item */
+}
+
+@media (min-width: 640px) {
+  .navigation-links {
+    gap: 2.5rem !important; /* 40px on small screens */
+  }
+  .nav-item {
+    margin: 0 1.25rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation-links {
+    gap: 3rem !important; /* 48px on large screens */
+  }
+  .nav-item {
+    margin: 0 1.5rem !important;
+  }
+}
