@@ -53,7 +53,7 @@ test.describe('Image Handling', () => {
         await page.waitForTimeout(2000);
         const pageContent = await page.content();
         console.log('Page content after image block:', pageContent.substring(0, 2000));
-        
+
         // Look for any fallback element - could be text, initials, or placeholder
         const possibleFallbacks = [
             page.locator('[alt*="profile"], [alt*="Profile"], [alt*="BH"], [alt*="Ben"]').first(),
@@ -62,7 +62,7 @@ test.describe('Image Handling', () => {
             page.locator('img[src*="placeholder"], img[src*="fallback"]').first(),
             page.locator('svg').first()
         ];
-        
+
         let foundFallback = false;
         for (const fallback of possibleFallbacks) {
             if (await fallback.count() > 0) {
@@ -76,7 +76,7 @@ test.describe('Image Handling', () => {
                 }
             }
         }
-        
+
         if (!foundFallback) {
             // Last resort: just check that no broken image is visible
             const brokenImage = page.locator('img[src="/non-existent-image.jpg"]');

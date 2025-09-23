@@ -8,7 +8,7 @@ test.describe('Navigation Components', () => {
     test('should display header with logo and navigation items', async ({ page }) => {
         // Ensure desktop viewport for proper navigation visibility
         await page.setViewportSize({ width: 1280, height: 720 });
-        
+
         // Check header is visible and fixed
         const header = page.locator('header');
         await expect(header).toBeVisible();
@@ -38,7 +38,7 @@ test.describe('Navigation Components', () => {
             // On mobile, check that mobile menu button exists
             const mobileMenuButton = page.locator('button[aria-label*="menu"]');
             await expect(mobileMenuButton).toBeVisible();
-            
+
             // Click mobile menu to reveal navigation
             await mobileMenuButton.click();
             await page.waitForTimeout(300);
@@ -49,11 +49,11 @@ test.describe('Navigation Components', () => {
             // Try desktop navigation first
             const desktopNavLink = page.locator('div.hidden.md\\:flex').locator(`a[href="${item.href}"]`).first();
             const mobileNavLink = page.locator('#mobile-navigation').locator(`a[href="${item.href}"]`).first();
-            
+
             // Check which location has visible navigation
             const desktopVisible = await desktopNavLink.isVisible();
             const mobileVisible = await mobileNavLink.isVisible();
-            
+
             if (desktopVisible) {
                 await expect(desktopNavLink).toBeVisible();
                 await expect(desktopNavLink).toHaveText(item.text);
@@ -72,16 +72,16 @@ test.describe('Navigation Components', () => {
     test('should have working theme toggle button', async ({ page }) => {
         // Ensure desktop viewport 
         await page.setViewportSize({ width: 1280, height: 720 });
-        
+
         // Skip on mobile Safari as theme toggle is hidden on mobile
         const viewport = page.viewportSize();
         const isMobile = viewport && viewport.width < 768;
-        
+
         if (isMobile) {
             test.skip();
             return;
         }
-        
+
         // Check theme toggle buttons exist and find visible one
         const desktopThemeToggle = page.locator('div.hidden.md\\:flex button[title*="Switch to"]').first();
         const mobileThemeToggle = page.locator('div.md\\:hidden button[title*="Switch to"]').first();

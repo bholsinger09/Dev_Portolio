@@ -6,18 +6,18 @@ test.describe('Theme Functionality', () => {
     const getVisibleThemeToggle = async (page: Page) => {
         const desktopThemeToggle = page.locator('div.hidden.md\\:flex button[title*="Switch to"]').first();
         const mobileThemeToggle = page.locator('div.md\\:hidden button[title*="Switch to"]').first();
-        
+
         const desktopVisible = await desktopThemeToggle.isVisible();
         return desktopVisible ? desktopThemeToggle : mobileThemeToggle;
     };
 
     test.beforeEach(async ({ page }) => {
         await page.goto('/');
-        
+
         // Skip tests on mobile viewports
         const viewport = page.viewportSize();
         const isMobile = viewport && viewport.width < 768;
-        
+
         if (isMobile) {
             test.skip();
         }
@@ -28,7 +28,7 @@ test.describe('Theme Functionality', () => {
         await page.setViewportSize({ width: 1280, height: 720 });
         await page.waitForLoadState('domcontentloaded');
         await page.waitForTimeout(1000);
-        
+
         const themeToggle = await getVisibleThemeToggle(page);
         await expect(themeToggle).toBeVisible();
 
@@ -43,7 +43,7 @@ test.describe('Theme Functionality', () => {
         await page.setViewportSize({ width: 1280, height: 720 });
         await page.waitForLoadState('domcontentloaded');
         await page.waitForTimeout(1000);
-        
+
         const themeToggle = await getVisibleThemeToggle(page);
         await expect(themeToggle).toBeVisible();
 
@@ -77,7 +77,7 @@ test.describe('Theme Functionality', () => {
         await page.setViewportSize({ width: 1280, height: 720 });
         await page.waitForLoadState('domcontentloaded');
         await page.waitForTimeout(1000);
-        
+
         const themeToggle = await getVisibleThemeToggle(page);
         const html = page.locator('html');
 

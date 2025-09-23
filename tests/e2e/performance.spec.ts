@@ -233,7 +233,7 @@ test.describe('Performance Tests', () => {
     test('should handle resource loading failures gracefully', async ({ page }) => {
         // Ensure desktop viewport
         await page.setViewportSize({ width: 1280, height: 720 });
-        
+
         // Block some non-critical resources
         await page.route('**/*.svg', route => route.abort());
 
@@ -246,7 +246,7 @@ test.describe('Performance Tests', () => {
         // Essential functionality should work (skip theme toggle on mobile)
         const viewport = page.viewportSize();
         const isMobile = viewport && viewport.width < 768;
-        
+
         if (!isMobile) {
             const themeToggle = page.locator('button[title*="Switch to"]').first();
             if (await themeToggle.count() > 0) {
@@ -262,7 +262,7 @@ test.describe('Performance Tests', () => {
     test('should have efficient JavaScript execution', async ({ page }) => {
         // Ensure desktop viewport
         await page.setViewportSize({ width: 1280, height: 720 });
-        
+
         // Skip coverage test for webkit as it doesn't support coverage API
         const browserName = page.context().browser()?.browserType().name();
         if (browserName === 'webkit') {
