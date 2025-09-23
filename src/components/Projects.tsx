@@ -153,11 +153,11 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{project.description}</p>
+              <div className="p-6" style={{ textAlign: 'center' }}>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{project.title}</h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed text-center">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-4" style={{ justifyContent: 'center' }}>
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
@@ -168,7 +168,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-between items-center">
+                <div className="flex justify-center items-center gap-4">
                   <a
                     href={project.github}
                     target="_blank"

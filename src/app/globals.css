@@ -102,3 +102,20 @@ nav a:visited {
 #about .bg-gray-50 .flex {
   justify-content: center !important;
 }
+
+/* Force center alignment for Projects section cards */
+#projects .bg-white {
+  text-align: center !important;
+}
+
+#projects .bg-white h3 {
+  text-align: center !important;
+}
+
+#projects .bg-white p {
+  text-align: center !important;
+}
+
+#projects .bg-white .flex {
+  justify-content: center !important;
+}
