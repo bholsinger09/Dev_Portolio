@@ -153,11 +153,32 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="p-6" style={{ textAlign: 'center' }}>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{project.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed text-center">{project.description}</p>
+              <div 
+                className="p-6 text-center" 
+                style={{ 
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
+                }}
+              >
+                <h3 
+                  className="text-xl font-semibold text-gray-900 mb-2 text-center" 
+                  style={{ textAlign: 'center', width: '100%' }}
+                >
+                  {project.title}
+                </h3>
+                <p 
+                  className="text-gray-600 text-sm mb-4 leading-relaxed text-center" 
+                  style={{ textAlign: 'center', width: '100%' }}
+                >
+                  {project.description}
+                </p>
 
-                <div className="flex flex-wrap gap-2 mb-4" style={{ justifyContent: 'center' }}>
+                <div 
+                  className="flex flex-wrap gap-2 mb-4 justify-center" 
+                  style={{ justifyContent: 'center', width: '100%' }}
+                >
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}

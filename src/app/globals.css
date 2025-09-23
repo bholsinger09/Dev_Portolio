@@ -119,3 +119,22 @@ nav a:visited {
 #projects .bg-white .flex {
   justify-content: center !important;
 }
+
+/* Additional aggressive centering for project cards */
+section#projects .bg-white .p-6 {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+section#projects .bg-white .p-6 h3,
+section#projects .bg-white .p-6 p {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+section#projects .bg-white .p-6 .flex {
+  justify-content: center !important;
+  width: 100% !important;
+}
