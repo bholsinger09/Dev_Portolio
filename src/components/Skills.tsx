@@ -8,42 +8,42 @@ const Skills = () => {
     {
       title: 'Programming Languages',
       skills: [
-        { name: 'JavaScript', level: 90, color: 'bg-yellow-500' },
-        { name: 'Swift', level: 88, color: 'bg-orange-500' },
-        { name: 'Python', level: 85, color: 'bg-green-500' },
-        { name: 'Java', level: 82, color: 'bg-red-500' },
-        { name: 'TypeScript', level: 80, color: 'bg-blue-500' },
-        { name: 'C#', level: 75, color: 'bg-purple-500' },
+        { name: 'JavaScript', level: 90, color: 'from-yellow-400 to-yellow-600', textColor: 'text-yellow-600', shadowColor: 'shadow-yellow-500/50' },
+        { name: 'Swift', level: 88, color: 'from-orange-400 to-orange-600', textColor: 'text-orange-600', shadowColor: 'shadow-orange-500/50' },
+        { name: 'Python', level: 85, color: 'from-green-400 to-green-600', textColor: 'text-green-600', shadowColor: 'shadow-green-500/50' },
+        { name: 'Java', level: 82, color: 'from-red-400 to-red-600', textColor: 'text-red-600', shadowColor: 'shadow-red-500/50' },
+        { name: 'TypeScript', level: 80, color: 'from-blue-400 to-blue-600', textColor: 'text-blue-600', shadowColor: 'shadow-blue-500/50' },
+        { name: 'C#', level: 75, color: 'from-purple-400 to-purple-600', textColor: 'text-purple-600', shadowColor: 'shadow-purple-500/50' },
       ]
     },
     {
       title: 'Mobile & Frontend',
       skills: [
-        { name: 'SwiftUI', level: 90, color: 'bg-blue-600' },
-        { name: 'UIKit', level: 88, color: 'bg-blue-500' },
-        { name: 'React', level: 85, color: 'bg-cyan-500' },
-        { name: 'Core Data', level: 82, color: 'bg-orange-400' },
-        { name: 'Next.js', level: 80, color: 'bg-gray-700' },
+        { name: 'SwiftUI', level: 90, color: 'from-blue-500 to-blue-700', textColor: 'text-blue-700', shadowColor: 'shadow-blue-500/50' },
+        { name: 'UIKit', level: 88, color: 'from-blue-400 to-blue-600', textColor: 'text-blue-600', shadowColor: 'shadow-blue-500/50' },
+        { name: 'React', level: 85, color: 'from-cyan-400 to-cyan-600', textColor: 'text-cyan-600', shadowColor: 'shadow-cyan-500/50' },
+        { name: 'Core Data', level: 82, color: 'from-orange-400 to-orange-500', textColor: 'text-orange-500', shadowColor: 'shadow-orange-500/50' },
+        { name: 'Next.js', level: 80, color: 'from-gray-600 to-gray-800', textColor: 'text-gray-700', shadowColor: 'shadow-gray-500/50' },
       ]
     },
     {
       title: 'Backend & APIs',
       skills: [
-        { name: 'FastAPI', level: 90, color: 'bg-green-600' },
-        { name: 'Node.js', level: 85, color: 'bg-green-500' },
-        { name: 'Express', level: 82, color: 'bg-gray-600' },
-        { name: 'OpenAI API', level: 88, color: 'bg-purple-600' },
-        { name: 'RESTful APIs', level: 90, color: 'bg-blue-600' },
+        { name: 'FastAPI', level: 90, color: 'from-green-500 to-green-700', textColor: 'text-green-700', shadowColor: 'shadow-green-500/50' },
+        { name: 'Node.js', level: 85, color: 'from-green-400 to-green-600', textColor: 'text-green-600', shadowColor: 'shadow-green-500/50' },
+        { name: 'Express', level: 82, color: 'from-gray-500 to-gray-700', textColor: 'text-gray-700', shadowColor: 'shadow-gray-500/50' },
+        { name: 'OpenAI API', level: 88, color: 'from-purple-500 to-purple-700', textColor: 'text-purple-700', shadowColor: 'shadow-purple-500/50' },
+        { name: 'RESTful APIs', level: 90, color: 'from-blue-500 to-blue-700', textColor: 'text-blue-700', shadowColor: 'shadow-blue-500/50' },
       ]
     },
     {
       title: 'Tools & Platforms',
       skills: [
-        { name: 'Git', level: 95, color: 'bg-red-600' },
-        { name: 'Xcode', level: 88, color: 'bg-blue-500' },
-        { name: 'VS Code', level: 92, color: 'bg-blue-600' },
-        { name: 'Docker', level: 75, color: 'bg-blue-400' },
-        { name: 'iOS Development', level: 90, color: 'bg-gray-800' },
+        { name: 'Git', level: 95, color: 'from-red-500 to-red-700', textColor: 'text-red-700', shadowColor: 'shadow-red-500/50' },
+        { name: 'Xcode', level: 88, color: 'from-blue-400 to-blue-600', textColor: 'text-blue-600', shadowColor: 'shadow-blue-500/50' },
+        { name: 'VS Code', level: 92, color: 'from-blue-500 to-blue-700', textColor: 'text-blue-700', shadowColor: 'shadow-blue-500/50' },
+        { name: 'Docker', level: 75, color: 'from-blue-300 to-blue-500', textColor: 'text-blue-500', shadowColor: 'shadow-blue-500/50' },
+        { name: 'iOS Development', level: 90, color: 'from-gray-700 to-gray-900', textColor: 'text-gray-800', shadowColor: 'shadow-gray-500/50' },
       ]
     }
   ];
@@ -100,7 +100,7 @@ const Skills = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
                     viewport={{ once: true }}
-                    className="space-y-2"
+                    className="space-y-3 group"
                     style={{ textAlign: 'center' }}
                   >
                     <div 
@@ -108,25 +108,78 @@ const Skills = () => {
                       style={{ textAlign: 'center' }}
                     >
                       <span 
-                        className="text-gray-800 font-medium" 
+                        className="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-200" 
                         style={{ textAlign: 'left' }}
                       >
                         {skill.name}
                       </span>
-                      <span 
-                        className="text-gray-600 text-sm" 
+                      <motion.span 
+                        className={`${skill.textColor} text-sm font-bold ${skill.level >= 90 ? 'animate-pulse' : ''}`}
                         style={{ textAlign: 'right' }}
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ duration: 0.3, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.5 }}
                       >
                         {skill.level}%
-                      </span>
+                      </motion.span>
                     </div>
 
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="relative">
+                      {/* Background progress bar */}
+                      <div className="w-full bg-gray-200 rounded-full h-3 shadow-inner">
+                        {/* Animated progress bar with gradient and glow effect */}
+                        <motion.div
+                          className={`bg-gradient-to-r ${skill.color} h-3 rounded-full relative overflow-hidden ${skill.shadowColor} shadow-lg`}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{ 
+                            duration: 1.2, 
+                            delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.2,
+                            ease: "easeOut" 
+                          }}
+                          viewport={{ once: true }}
+                          style={{
+                            boxShadow: `0 0 10px ${skill.level >= 85 ? '8px' : '4px'} rgba(59, 130, 246, 0.3)`
+                          }}
+                        >
+                          {/* Animated shine effect */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20"
+                            initial={{ x: '-100%' }}
+                            whileInView={{ x: '100%' }}
+                            transition={{ 
+                              duration: 1.5,
+                              delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 1,
+                              ease: "easeInOut"
+                            }}
+                            viewport={{ once: true }}
+                          />
+                          
+                          {/* Pulsing effect for high-level skills */}
+                          {skill.level >= 90 && (
+                            <motion.div
+                              className="absolute inset-0 bg-white opacity-10"
+                              animate={{ opacity: [0.1, 0.3, 0.1] }}
+                              transition={{ 
+                                duration: 2,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                              }}
+                            />
+                          )}
+                        </motion.div>
+                      </div>
+                      
+                      {/* Skill level indicator dot */}
                       <motion.div
-                        className={`${skill.color} h-2 rounded-full`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.2 }}
+                        className={`absolute top-1/2 transform -translate-y-1/2 w-2 h-2 ${skill.color.replace('from-', 'bg-').replace(' to-' + skill.color.split('to-')[1], '')} rounded-full border-2 border-white shadow-lg`}
+                        style={{ left: `calc(${skill.level}% - 4px)` }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ 
+                          duration: 0.3,
+                          delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 1.2
+                        }}
                         viewport={{ once: true }}
                       />
                     </div>
@@ -146,22 +199,93 @@ const Skills = () => {
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">3+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">15+</div>
-              <div className="text-gray-600">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600">6</div>
-              <div className="text-gray-600">Languages Used</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-600">4</div>
-              <div className="text-gray-600">Platforms Mastered</div>
-            </div>
+            <motion.div 
+              className="text-center group cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="relative">
+                <motion.div 
+                  className="text-4xl font-bold text-blue-600 group-hover:text-blue-700 transition-colors duration-200"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  3+
+                </motion.div>
+                <motion.div
+                  className="absolute -inset-2 bg-blue-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-200"
+                  initial={false}
+                />
+              </div>
+              <div className="text-gray-600 mt-2 group-hover:text-gray-700 transition-colors duration-200">Years Experience</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center group cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="relative">
+                <motion.div 
+                  className="text-4xl font-bold text-green-600 group-hover:text-green-700 transition-colors duration-200"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                >
+                  15+
+                </motion.div>
+                <motion.div
+                  className="absolute -inset-2 bg-green-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-200"
+                  initial={false}
+                />
+              </div>
+              <div className="text-gray-600 mt-2 group-hover:text-gray-700 transition-colors duration-200">Projects Completed</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center group cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="relative">
+                <motion.div 
+                  className="text-4xl font-bold text-purple-600 group-hover:text-purple-700 transition-colors duration-200"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                >
+                  6
+                </motion.div>
+                <motion.div
+                  className="absolute -inset-2 bg-purple-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-200"
+                  initial={false}
+                />
+              </div>
+              <div className="text-gray-600 mt-2 group-hover:text-gray-700 transition-colors duration-200">Languages Used</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center group cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="relative">
+                <motion.div 
+                  className="text-4xl font-bold text-orange-600 group-hover:text-orange-700 transition-colors duration-200"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.9 }}
+                >
+                  4
+                </motion.div>
+                <motion.div
+                  className="absolute -inset-2 bg-orange-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-200"
+                  initial={false}
+                />
+              </div>
+              <div className="text-gray-600 mt-2 group-hover:text-gray-700 transition-colors duration-200">Platforms Mastered</div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
