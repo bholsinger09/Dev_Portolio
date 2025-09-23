@@ -1,0 +1,442 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - navigation [ref=e4]:
+        - generic [ref=e5]:
+          - link "Ben H." [ref=e7] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e9]:
+            - button "Switch to dark mode" [ref=e10]:
+              - img [ref=e11]
+            - button "Open main menu" [ref=e13]:
+              - generic [ref=e14]: Open main menu
+              - img [ref=e15]
+    - main [ref=e16]:
+      - generic [ref=e19]:
+        - img "Ben H. - Full-Stack Software Engineer" [ref=e22]
+        - generic [ref=e23]:
+          - heading "Ben H." [level=1] [ref=e24]
+          - heading "Full-Stack Software Engineer" [level=2] [ref=e25]
+        - paragraph [ref=e27]:
+          - text: Experienced software engineer specializing in full-stack development with expertise in
+          - generic [ref=e28]: JavaScript/TypeScript
+          - text: ","
+          - generic [ref=e29]: Java
+          - text: ","
+          - generic [ref=e30]: Python
+          - text: ","
+          - generic [ref=e31]: C#
+          - text: ", and"
+          - generic [ref=e32]: Swift
+          - text: . Building scalable applications from web platforms to mobile solutions.
+        - generic [ref=e33]:
+          - link "View My Work" [ref=e34] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Download Resume" [ref=e35] [cursor=pointer]:
+            - /url: /resume.pdf
+            - img [ref=e36] [cursor=pointer]
+            - text: Download Resume
+        - generic [ref=e39]:
+          - link "GitHub Profile" [ref=e40] [cursor=pointer]:
+            - /url: https://github.com/bholsinger09
+            - img [ref=e41] [cursor=pointer]
+          - link "LinkedIn Profile" [ref=e44] [cursor=pointer]:
+            - /url: https://linkedin.com/in/ben-holsinger
+            - img [ref=e45] [cursor=pointer]
+          - link "Send Email" [ref=e49] [cursor=pointer]:
+            - /url: mailto:ben.holsinger@example.com
+            - img [ref=e50] [cursor=pointer]
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - heading "About Me" [level=2] [ref=e56]
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: I'm a passionate full-stack software engineer with hands-on experience developing applications across mobile, web, and AI integration platforms. My portfolio includes iOS applications, FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms, showcasing my versatility in tackling diverse technical challenges.
+            - paragraph [ref=e59]: From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities, I excel at selecting the right technology stack for each project. My experience spans real estate applications, e-commerce platforms, task management systems, and identity verification solutions, demonstrating my ability to deliver practical, user-focused applications.
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - heading "Mobile Development" [level=3] [ref=e62]
+            - generic [ref=e63]:
+              - generic [ref=e64]: Swift
+              - generic [ref=e65]: SwiftUI
+              - generic [ref=e66]: UIKit
+              - generic [ref=e67]: Core Data
+              - generic [ref=e68]: MapKit
+          - generic [ref=e69]:
+            - heading "Backend & APIs" [level=3] [ref=e70]
+            - generic [ref=e71]:
+              - generic [ref=e72]: Python
+              - generic [ref=e73]: FastAPI
+              - generic [ref=e74]: Node.js
+              - generic [ref=e75]: Express
+              - generic [ref=e76]: OpenAI API
+          - generic [ref=e77]:
+            - heading "Languages" [level=3] [ref=e78]
+            - generic [ref=e79]:
+              - generic [ref=e80]: Swift
+              - generic [ref=e81]: Python
+              - generic [ref=e82]: JavaScript
+              - generic [ref=e83]: Java
+              - generic [ref=e84]: TypeScript
+          - generic [ref=e85]:
+            - heading "Frontend Web" [level=3] [ref=e86]
+            - generic [ref=e87]:
+              - generic [ref=e88]: React
+              - generic [ref=e89]: Next.js
+              - generic [ref=e90]: Tailwind CSS
+              - generic [ref=e91]: HTML/CSS
+              - generic [ref=e92]: JavaScript
+          - generic [ref=e93]:
+            - heading "Tools & Platforms" [level=3] [ref=e94]
+            - generic [ref=e95]:
+              - generic [ref=e96]: Xcode
+              - generic [ref=e97]: Git
+              - generic [ref=e98]: Docker
+              - generic [ref=e99]: VS Code
+              - generic [ref=e100]: Uvicorn
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - heading "Featured Projects" [level=2] [ref=e104]
+          - paragraph [ref=e105]: A showcase of my work across different technologies and domains, demonstrating full-stack development capabilities and problem-solving skills.
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: 🤖
+              - generic [ref=e111]: FastAPI + AI
+              - generic [ref=e112]: Python • OpenAI • LLM
+            - generic [ref=e113]:
+              - heading "FastAPI LLM Integration Platform" [level=3] [ref=e114]
+              - paragraph [ref=e115]: A comprehensive FastAPI application integrated with Large Language Models featuring OpenAI integration, rate limiting, streaming responses, text summarization, and translation capabilities. Built with robust error handling and secure environment configuration.
+              - generic [ref=e116]:
+                - generic [ref=e117]: Python
+                - generic [ref=e118]: FastAPI
+                - generic [ref=e119]: OpenAI API
+                - generic [ref=e120]: asyncio
+                - generic [ref=e121]: Uvicorn
+              - generic [ref=e122]:
+                - link "Code" [ref=e123] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/fastAPI_LLM_python
+                  - img [ref=e124] [cursor=pointer]
+                  - generic [ref=e127] [cursor=pointer]: Code
+                - link "Demo" [ref=e128] [cursor=pointer]:
+                  - /url: https://fastapi-llm-demo.herokuapp.com/docs
+                  - img [ref=e129] [cursor=pointer]
+                  - generic [ref=e133] [cursor=pointer]: Demo
+          - generic [ref=e134]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: ☕
+              - generic [ref=e138]: Java Application
+              - generic [ref=e139]: OOP • Collections • Console
+            - generic [ref=e140]:
+              - heading "Java Task Management System" [level=3] [ref=e141]
+              - paragraph [ref=e142]: Object-oriented console application built in Java featuring comprehensive task management with priority levels, due dates, completion tracking, and persistent data storage. Demonstrates solid OOP principles and data structures.
+              - generic [ref=e143]:
+                - generic [ref=e144]: Java
+                - generic [ref=e145]: OOP Design
+                - generic [ref=e146]: Collections
+                - generic [ref=e147]: File I/O
+                - generic [ref=e148]: Scanner
+              - generic [ref=e149]:
+                - link "Code" [ref=e150] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/Java_todo_list
+                  - img [ref=e151] [cursor=pointer]
+                  - generic [ref=e154] [cursor=pointer]: Code
+                - link "Demo" [ref=e155] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/Java_todo_list#demo
+                  - img [ref=e156] [cursor=pointer]
+                  - generic [ref=e160] [cursor=pointer]: Demo
+          - generic [ref=e161]:
+            - generic [ref=e163]:
+              - generic [ref=e164]: 📱
+              - generic [ref=e165]: iOS Development
+              - generic [ref=e166]: Swift • SwiftUI • MapKit
+            - generic [ref=e167]:
+              - heading "DevRealtor iOS App" [level=3] [ref=e168]
+              - paragraph [ref=e169]: Native iOS application developed in Swift featuring real estate property search, detailed property views, interactive maps integration, and user favorites management. Built with modern SwiftUI and follows iOS design guidelines.
+              - generic [ref=e170]:
+                - generic [ref=e171]: Swift
+                - generic [ref=e172]: SwiftUI
+                - generic [ref=e173]: MapKit
+                - generic [ref=e174]: Core Data
+                - generic [ref=e175]: URLSession
+              - generic [ref=e176]:
+                - link "Code" [ref=e177] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/DevRealatorApp
+                  - img [ref=e178] [cursor=pointer]
+                  - generic [ref=e181] [cursor=pointer]: Code
+                - link "Demo" [ref=e182] [cursor=pointer]:
+                  - /url: https://apps.apple.com/app/devrealatormapp
+                  - img [ref=e183] [cursor=pointer]
+                  - generic [ref=e187] [cursor=pointer]: Demo
+          - generic [ref=e188]:
+            - generic [ref=e190]:
+              - generic [ref=e191]: 🛍️
+              - generic [ref=e192]: E-Commerce iOS
+              - generic [ref=e193]: Swift • Payments • Cloud
+            - generic [ref=e194]:
+              - heading "HookahShop E-Commerce iOS App" [level=3] [ref=e195]
+              - paragraph [ref=e196]: Full-featured e-commerce iOS application for hookah products with shopping cart functionality, product catalog, user authentication, payment processing integration, and order management system.
+              - generic [ref=e197]:
+                - generic [ref=e198]: Swift
+                - generic [ref=e199]: UIKit
+                - generic [ref=e200]: Core Data
+                - generic [ref=e201]: Stripe SDK
+                - generic [ref=e202]: CloudKit
+              - generic [ref=e203]:
+                - link "Code" [ref=e204] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/HookahApp
+                  - img [ref=e205] [cursor=pointer]
+                  - generic [ref=e208] [cursor=pointer]: Code
+                - link "Demo" [ref=e209] [cursor=pointer]:
+                  - /url: https://apps.apple.com/app/hookahshop
+                  - img [ref=e210] [cursor=pointer]
+                  - generic [ref=e214] [cursor=pointer]: Demo
+          - generic [ref=e215]:
+            - generic [ref=e217]:
+              - generic [ref=e218]: 🔐
+              - generic [ref=e219]: Identity Platform
+              - generic [ref=e220]: Security • Verification • Auth
+            - generic [ref=e221]:
+              - heading "Identity Management Platform" [level=3] [ref=e222]
+              - paragraph [ref=e223]: Comprehensive identity verification and management system featuring user authentication, document verification, secure data storage, and administrative dashboard. Built with modern security practices and scalable architecture.
+              - generic [ref=e224]:
+                - generic [ref=e225]: JavaScript
+                - generic [ref=e226]: Node.js
+                - generic [ref=e227]: Express
+                - generic [ref=e228]: MongoDB
+                - generic [ref=e229]: JWT
+              - generic [ref=e230]:
+                - link "Code" [ref=e231] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/identifyme
+                  - img [ref=e232] [cursor=pointer]
+                  - generic [ref=e235] [cursor=pointer]: Code
+                - link "Demo" [ref=e236] [cursor=pointer]:
+                  - /url: https://identifyme-platform.vercel.app
+                  - img [ref=e237] [cursor=pointer]
+                  - generic [ref=e241] [cursor=pointer]: Demo
+          - generic [ref=e242]:
+            - generic [ref=e244]:
+              - generic [ref=e245]: 🤝
+              - generic [ref=e246]: Community App
+              - generic [ref=e247]: React • Real-time • Social
+            - generic [ref=e248]:
+              - heading "Help Yourself Community Platform" [level=3] [ref=e249]
+              - paragraph [ref=e250]: Community-driven web platform designed to connect people offering help with those who need it. Features user matching, messaging system, location-based services, and community rating system.
+              - generic [ref=e251]:
+                - generic [ref=e252]: JavaScript
+                - generic [ref=e253]: React
+                - generic [ref=e254]: Node.js
+                - generic [ref=e255]: PostgreSQL
+                - generic [ref=e256]: Socket.io
+              - generic [ref=e257]:
+                - link "Code" [ref=e258] [cursor=pointer]:
+                  - /url: https://github.com/bholsinger09/help_yourself
+                  - img [ref=e259] [cursor=pointer]
+                  - generic [ref=e262] [cursor=pointer]: Code
+                - link "Demo" [ref=e263] [cursor=pointer]:
+                  - /url: https://help-yourself-community.netlify.app
+                  - img [ref=e264] [cursor=pointer]
+                  - generic [ref=e268] [cursor=pointer]: Demo
+      - generic [ref=e270]:
+        - generic [ref=e271]:
+          - heading "Skills & Expertise" [level=2] [ref=e272]
+          - paragraph [ref=e273]: Comprehensive technical skills across the full development stack, from mobile applications to enterprise-level systems.
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - heading "Programming Languages" [level=3] [ref=e276]
+            - generic [ref=e277]:
+              - generic [ref=e279]:
+                - generic [ref=e280]: JavaScript
+                - generic [ref=e281]: 90%
+              - generic [ref=e283]:
+                - generic [ref=e284]: Swift
+                - generic [ref=e285]: 88%
+              - generic [ref=e287]:
+                - generic [ref=e288]: Python
+                - generic [ref=e289]: 85%
+              - generic [ref=e291]:
+                - generic [ref=e292]: Java
+                - generic [ref=e293]: 82%
+              - generic [ref=e295]:
+                - generic [ref=e296]: TypeScript
+                - generic [ref=e297]: 80%
+              - generic [ref=e299]:
+                - generic [ref=e300]: C#
+                - generic [ref=e301]: 75%
+          - generic [ref=e302]:
+            - heading "Mobile & Frontend" [level=3] [ref=e303]
+            - generic [ref=e304]:
+              - generic [ref=e306]:
+                - generic [ref=e307]: SwiftUI
+                - generic [ref=e308]: 90%
+              - generic [ref=e310]:
+                - generic [ref=e311]: UIKit
+                - generic [ref=e312]: 88%
+              - generic [ref=e314]:
+                - generic [ref=e315]: React
+                - generic [ref=e316]: 85%
+              - generic [ref=e318]:
+                - generic [ref=e319]: Core Data
+                - generic [ref=e320]: 82%
+              - generic [ref=e322]:
+                - generic [ref=e323]: Next.js
+                - generic [ref=e324]: 80%
+          - generic [ref=e325]:
+            - heading "Backend & APIs" [level=3] [ref=e326]
+            - generic [ref=e327]:
+              - generic [ref=e329]:
+                - generic [ref=e330]: FastAPI
+                - generic [ref=e331]: 90%
+              - generic [ref=e333]:
+                - generic [ref=e334]: Node.js
+                - generic [ref=e335]: 85%
+              - generic [ref=e337]:
+                - generic [ref=e338]: Express
+                - generic [ref=e339]: 82%
+              - generic [ref=e341]:
+                - generic [ref=e342]: OpenAI API
+                - generic [ref=e343]: 88%
+              - generic [ref=e345]:
+                - generic [ref=e346]: RESTful APIs
+                - generic [ref=e347]: 90%
+          - generic [ref=e348]:
+            - heading "Tools & Platforms" [level=3] [ref=e349]
+            - generic [ref=e350]:
+              - generic [ref=e352]:
+                - generic [ref=e353]: Git
+                - generic [ref=e354]: 95%
+              - generic [ref=e356]:
+                - generic [ref=e357]: Xcode
+                - generic [ref=e358]: 88%
+              - generic [ref=e360]:
+                - generic [ref=e361]: VS Code
+                - generic [ref=e362]: 92%
+              - generic [ref=e364]:
+                - generic [ref=e365]: Docker
+                - generic [ref=e366]: 75%
+              - generic [ref=e368]:
+                - generic [ref=e369]: iOS Development
+                - generic [ref=e370]: 90%
+        - generic [ref=e372]:
+          - generic [ref=e373]:
+            - generic [ref=e374]: 3+
+            - generic [ref=e375]: Years Experience
+          - generic [ref=e376]:
+            - generic [ref=e377]: 15+
+            - generic [ref=e378]: Projects Completed
+          - generic [ref=e379]:
+            - generic [ref=e380]: "6"
+            - generic [ref=e381]: Languages Used
+          - generic [ref=e382]:
+            - generic [ref=e383]: "4"
+            - generic [ref=e384]: Platforms Mastered
+      - generic [ref=e386]:
+        - generic [ref=e387]:
+          - heading "Get In Touch" [level=2] [ref=e388]
+          - paragraph [ref=e389]: I'm always interested in hearing about new opportunities and exciting projects. Let's discuss how we can work together!
+        - generic [ref=e390]:
+          - generic [ref=e391]:
+            - generic [ref=e392]:
+              - heading "Contact Information" [level=3] [ref=e393]
+              - generic [ref=e394]:
+                - generic [ref=e395]:
+                  - img [ref=e397]
+                  - generic [ref=e400]:
+                    - paragraph [ref=e401]: Email
+                    - link "bholsinger@gmail.com" [ref=e402] [cursor=pointer]:
+                      - /url: mailto:bholsinger@gmail.com
+                - generic [ref=e403]:
+                  - img [ref=e405]
+                  - generic [ref=e407]:
+                    - paragraph [ref=e408]: Phone
+                    - link "+1 (208) 284-1929" [ref=e409] [cursor=pointer]:
+                      - /url: tel:+12082841929
+                - generic [ref=e410]:
+                  - img [ref=e412]
+                  - generic [ref=e415]:
+                    - paragraph [ref=e416]: Location
+                    - paragraph [ref=e417]: Boise, Idaho
+            - generic [ref=e418]:
+              - heading "What I'm Looking For" [level=4] [ref=e419]
+              - list [ref=e420]:
+                - listitem [ref=e421]: • Full-stack development opportunities
+                - listitem [ref=e422]: • Challenging technical projects
+                - listitem [ref=e423]: • Remote or hybrid work arrangements
+                - listitem [ref=e424]: • Collaborative team environments
+                - listitem [ref=e425]: • Freelance and consulting projects
+          - generic [ref=e427]:
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - generic [ref=e430]: Name
+                - textbox "Name" [ref=e431]
+              - generic [ref=e432]:
+                - generic [ref=e433]: Email
+                - textbox "Email" [ref=e434]
+            - generic [ref=e435]:
+              - generic [ref=e436]: Subject
+              - textbox "Subject" [ref=e437]
+            - generic [ref=e438]:
+              - generic [ref=e439]: Message
+              - textbox "Message" [ref=e440]
+            - button "Send Message" [ref=e441]:
+              - img [ref=e442]
+              - generic [ref=e445]: Send Message
+    - contentinfo [ref=e446]:
+      - generic [ref=e447]:
+        - generic [ref=e448]:
+          - generic [ref=e449]:
+            - heading "Ben H." [level=3] [ref=e450]
+            - paragraph [ref=e451]: Full-Stack Developer passionate about creating innovative solutions across multiple technologies and platforms.
+          - generic [ref=e452]:
+            - heading "Quick Links" [level=4] [ref=e453]
+            - list [ref=e454]:
+              - listitem [ref=e455]:
+                - link "About" [ref=e456] [cursor=pointer]:
+                  - /url: "#about"
+              - listitem [ref=e457]:
+                - link "Projects" [ref=e458] [cursor=pointer]:
+                  - /url: "#projects"
+              - listitem [ref=e459]:
+                - link "Skills" [ref=e460] [cursor=pointer]:
+                  - /url: "#skills"
+              - listitem [ref=e461]:
+                - link "Contact" [ref=e462] [cursor=pointer]:
+                  - /url: "#contact"
+          - generic [ref=e463]:
+            - heading "Technologies" [level=4] [ref=e464]
+            - list [ref=e465]:
+              - listitem [ref=e466]: JavaScript & TypeScript
+              - listitem [ref=e467]: Java & Spring Boot
+              - listitem [ref=e468]: Python & Django
+              - listitem [ref=e469]: C# & .NET Core
+              - listitem [ref=e470]: Swift & SwiftUI
+          - generic [ref=e471]:
+            - heading "Connect" [level=4] [ref=e472]
+            - generic [ref=e473]:
+              - link "bholsinger@gmail.com" [ref=e474] [cursor=pointer]:
+                - /url: mailto:bholsinger@gmail.com
+              - link "+1 (208) 284-1929" [ref=e475] [cursor=pointer]:
+                - /url: tel:+12082841929
+            - generic [ref=e476]:
+              - link [ref=e477] [cursor=pointer]:
+                - /url: https://github.com/yourusername
+                - img [ref=e478] [cursor=pointer]
+              - link [ref=e481] [cursor=pointer]:
+                - /url: https://linkedin.com/in/yourusername
+                - img [ref=e482] [cursor=pointer]
+              - link [ref=e486] [cursor=pointer]:
+                - /url: mailto:bholsinger@gmail.com
+                - img [ref=e487] [cursor=pointer]
+        - separator [ref=e490]
+        - generic [ref=e491]:
+          - paragraph [ref=e492]: © 2025 Ben H. All rights reserved.
+          - paragraph [ref=e493]:
+            - text: Made with
+            - img [ref=e494]
+            - text: and lots of coffee
+  - button "Open Next.js Dev Tools" [ref=e501] [cursor=pointer]:
+    - img [ref=e502] [cursor=pointer]
+  - alert [ref=e505]
+```
