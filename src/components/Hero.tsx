@@ -1,31 +1,61 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ErrorBoundary, withErrorBoundary } from './ErrorBoundary';
+import { PulseLoader } from './LoadingStates';
+
+const ProfileImage = withErrorBoundary(() => {
+  const [imageLoading, setImageLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
+  const handleImageError = () => {
+    setImageLoading(false);
+    setImageError(true);
+  };
+
+  return (
+    <div className="flex justify-center mb-8">
+      <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl relative">
+        {imageLoading && (
+          <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+            <div className="text-gray-400">Loading...</div>
+          </div>
+        )}
+        
+        {imageError ? (
+          <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold">
+            BH
+          </div>
+        ) : (
+          <img
+            src="/profile-small.png"
+            alt="Ben H. - Full-Stack Software Engineer"
+            className={`w-full h-full object-cover transition-opacity duration-300 ${
+              imageLoading ? 'opacity-0' : 'opacity-100'
+            }`}
+            onLoad={handleImageLoad}
+            onError={handleImageError}
+          />
+        )}
+      </div>
+    </div>
+  );
+});
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 pt-24 pb-12 dark:from-gray-900 dark:to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
-          {/* Professional Photo */}
-          <div className="flex justify-center mb-8">
-            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-              <img
-                src="/profile-small.png"
-                alt="Ben H. - Full-Stack Software Engineer"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback to BH initials if image fails to load
-                  const target = e.target as HTMLImageElement;
-                  const parent = target.parentElement;
-                  if (parent) {
-                    parent.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold">BH</div>';
-                  }
-                }}
-              />
-            </div>
-          </div>
+          {/* Professional Photo with Error Handling */}
+          <ErrorBoundary isolate>
+            <ProfileImage />
+          </ErrorBoundary>
 
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4">

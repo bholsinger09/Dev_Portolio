@@ -6,6 +6,140 @@ import { Theme, ContactFormData } from '@/types';
 import { FORM_VALIDATION } from '@/constants';
 
 /**
+ * Custom hook for async operations with loading and error states
+ */
+export const useAsync = <T>(
+  asyncFunction: () => Promise<T>,
+  dependencies: React.DependencyList = []
+) => {
+  const [data, setData] = useState<T | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const execute = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setError(null);
+      const result = await asyncFunction();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+      setData(null);
+    } finally {
+      setIsLoading(false);
+    }
+  }, dependencies);
+
+  useEffect(() => {
+    execute();
+  }, [execute]);
+
+  const retry = useCallback(() => {
+    execute();
+  }, [execute]);
+
+  return {
+    data,
+    error,
+    isLoading,
+    retry,
+  };
+};
+
+/**
+ * Custom hook for managing loading states with timeout
+ */
+export const useLoadingState = (initialLoading = false, timeout = 10000) => {
+  const [isLoading, setIsLoading] = useState<boolean>(initialLoading);
+  const [error, setError] = useState<string | null>(null);
+  const [isTimeout, setIsTimeout] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!isLoading) return;
+
+    const timer = setTimeout(() => {
+      if (isLoading) {
+        setIsTimeout(true);
+        setError('Request timed out. Please try again.');
+        setIsLoading(false);
+      }
+    }, timeout);
+
+    return () => clearTimeout(timer);
+  }, [isLoading, timeout]);
+
+  const startLoading = useCallback(() => {
+    setIsLoading(true);
+    setError(null);
+    setIsTimeout(false);
+  }, []);
+
+  const stopLoading = useCallback((errorMessage?: string) => {
+    setIsLoading(false);
+    if (errorMessage) {
+      setError(errorMessage);
+    }
+  }, []);
+
+  const reset = useCallback(() => {
+    setIsLoading(false);
+    setError(null);
+    setIsTimeout(false);
+  }, []);
+
+  return {
+    isLoading,
+    error,
+    isTimeout,
+    startLoading,
+    stopLoading,
+    reset,
+  };
+};
+
+/**
+ * Custom hook for retry functionality
+ */
+export const useRetry = (maxRetries = 3, initialDelay = 1000) => {
+  const [retryCount, setRetryCount] = useState(0);
+  const [isRetrying, setIsRetrying] = useState(false);
+
+  const retry = useCallback(async (operation: () => Promise<void>) => {
+    if (retryCount >= maxRetries) {
+      throw new Error(`Maximum retry attempts (${maxRetries}) exceeded`);
+    }
+
+    setIsRetrying(true);
+    const delay = initialDelay * Math.pow(2, retryCount); // Exponential backoff
+
+    await new Promise(resolve => setTimeout(resolve, delay));
+
+    try {
+      await operation();
+      setRetryCount(0); // Reset on success
+    } catch (error) {
+      setRetryCount(prev => prev + 1);
+      throw error;
+    } finally {
+      setIsRetrying(false);
+    }
+  }, [retryCount, maxRetries, initialDelay]);
+
+  const reset = useCallback(() => {
+    setRetryCount(0);
+    setIsRetrying(false);
+  }, []);
+
+  return {
+    retry,
+    retryCount,
+    isRetrying,
+    canRetry: retryCount < maxRetries,
+    reset,
+  };
+};
+
+/**
  * Custom hook for theme management
  */
 export const useTheme = () => {
@@ -71,6 +205,8 @@ export const useContactForm = () => {
   
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const validateForm = useCallback((): ValidationResult => {

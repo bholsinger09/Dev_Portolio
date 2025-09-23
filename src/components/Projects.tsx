@@ -2,7 +2,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { Section, Container } from '@/components/ui';
@@ -10,6 +10,9 @@ import { projects } from '@/data';
 import { ANIMATION_DURATIONS } from '@/constants';
 import { calculateAnimationDelay, getTechnologyColor } from '@/utils';
 import type { Project } from '@/types';
+import { ErrorBoundary, withErrorBoundary } from './ErrorBoundary';
+import { ProjectsGridSkeleton, LoadingState } from './LoadingStates';
+import { useAsync, useLoadingState } from '@/hooks';
 
 /**
  * Technology tag component with enhanced styling
@@ -222,45 +225,65 @@ const ProjectsStats: React.FC = () => {
 };
 
 /**
- * Main Projects component
+ * Main Projects component with error handling and loading states
  */
-    const Projects = () => {
+const Projects = () => {
+  const { isLoading, error, startLoading, stopLoading } = useLoadingState(true);
+
+  // Simulate loading data
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      stopLoading();
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, [stopLoading]);
+
   return (
     <Section id="projects" background="gray">
       <Container size="lg">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: ANIMATION_DURATIONS.DEFAULT }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured Projects
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A showcase of my work across different technologies and domains, demonstrating
-            full-stack development capabilities and problem-solving skills.
-          </p>
-        </motion.div>
+        <ErrorBoundary isolate>
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: ANIMATION_DURATIONS.DEFAULT }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Featured Projects
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              A showcase of my work across different technologies and domains, demonstrating
+              full-stack development capabilities and problem-solving skills.
+            </p>
+          </motion.div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={project.title} 
-              project={project} 
-              index={index} 
-            />
-          ))}
-        </div>
+          {/* Projects Grid with Loading States */}
+          <LoadingState 
+            isLoading={isLoading}
+            error={error}
+            fallback={<ProjectsGridSkeleton count={6} />}
+            minHeight="min-h-[400px]"
+          >
+            <ErrorBoundary isolate>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projects.map((project, index) => (
+                  <ErrorBoundary key={project.title} isolate>
+                    <ProjectCard project={project} index={index} />
+                  </ErrorBoundary>
+                ))}
+              </div>
+            </ErrorBoundary>
+          </LoadingState>
 
-        {/* Projects Stats */}
-        <ProjectsStats />
+          {/* Project Statistics */}
+          <ErrorBoundary isolate>
+            <ProjectsStats />
+          </ErrorBoundary>
+        </ErrorBoundary>
       </Container>
     </Section>
   );
-};
-
-export default Projects;
+};export default Projects;
