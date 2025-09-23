@@ -90,7 +90,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Featured Projects</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my work across different technologies and domains, demonstrating 
+            A showcase of my work across different technologies and domains, demonstrating
             full-stack development capabilities and problem-solving skills.
           </p>
         </motion.div>
@@ -151,11 +151,11 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span

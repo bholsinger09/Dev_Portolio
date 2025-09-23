@@ -27,25 +27,24 @@ export default function ThemeToggle() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <div 
+    <div
       className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1 transition-colors duration-200"
-      style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: '4px', 
-        backgroundColor: '#f3f4f6', 
-        borderRadius: '8px', 
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+        backgroundColor: '#f3f4f6',
+        borderRadius: '8px',
         padding: '4px',
         minWidth: '120px'
       }}
     >
       <button
         onClick={() => setTheme('light')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'light'
-            ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
-        }`}
+        className={`p-2 rounded-md transition-all duration-200 ${theme === 'light'
+          ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+          : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
+          }`}
         style={{
           padding: '8px',
           borderRadius: '6px',
@@ -59,14 +58,13 @@ export default function ThemeToggle() {
       >
         <Sun className="w-4 h-4" style={{ width: '16px', height: '16px' }} />
       </button>
-      
+
       <button
         onClick={() => setTheme('system')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'system'
-            ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
-        }`}
+        className={`p-2 rounded-md transition-all duration-200 ${theme === 'system'
+          ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+          : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
+          }`}
         style={{
           padding: '8px',
           borderRadius: '6px',
@@ -80,14 +78,13 @@ export default function ThemeToggle() {
       >
         <Monitor className="w-4 h-4" style={{ width: '16px', height: '16px' }} />
       </button>
-      
+
       <button
         onClick={() => setTheme('dark')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'dark'
-            ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
-        }`}
+        className={`p-2 rounded-md transition-all duration-200 ${theme === 'dark'
+          ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm'
+          : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700'
+          }`}
         style={{
           padding: '8px',
           borderRadius: '6px',

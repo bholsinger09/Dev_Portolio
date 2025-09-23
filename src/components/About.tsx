@@ -56,15 +56,15 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              I&apos;m a passionate full-stack software engineer with hands-on experience developing applications 
-              across mobile, web, and AI integration platforms. My portfolio includes iOS applications, 
-              FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms, 
+              I&apos;m a passionate full-stack software engineer with hands-on experience developing applications
+              across mobile, web, and AI integration platforms. My portfolio includes iOS applications,
+              FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms,
               showcasing my versatility in tackling diverse technical challenges.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities, 
-              I excel at selecting the right technology stack for each project. My experience spans real estate 
-              applications, e-commerce platforms, task management systems, and identity verification solutions, 
+              From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities,
+              I excel at selecting the right technology stack for each project. My experience spans real estate
+              applications, e-commerce platforms, task management systems, and identity verification solutions,
               demonstrating my ability to deliver practical, user-focused applications.
             </p>
           </div>

@@ -42,7 +42,7 @@ const Hero = () => {
             <span className="text-red-600 font-semibold">Java</span>,{' '}
             <span className="text-green-600 font-semibold">Python</span>,{' '}
             <span className="text-purple-600 font-semibold">C#</span>, and{' '}
-            <span className="text-orange-600 font-semibold">Swift</span>. 
+            <span className="text-orange-600 font-semibold">Swift</span>.
             Building scalable applications from web platforms to mobile solutions.
           </p>
 

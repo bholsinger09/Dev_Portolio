@@ -21,7 +21,7 @@ describe('Skills Component', () => {
         'Backend & APIs',
         'Tools & Platforms'
       ]
-      
+
       categoryTitles.forEach(title => {
         expect(screen.getByRole('heading', { name: title })).toBeInTheDocument()
       })
@@ -30,7 +30,7 @@ describe('Skills Component', () => {
     it('displays correct category headings as h3 elements', () => {
       const categoryHeadings = screen.getAllByRole('heading', { level: 3 })
       expect(categoryHeadings).toHaveLength(4)
-      
+
       expect(categoryHeadings[0]).toHaveTextContent('Programming Languages')
       expect(categoryHeadings[1]).toHaveTextContent('Mobile & Frontend')
       expect(categoryHeadings[2]).toHaveTextContent('Backend & APIs')
@@ -42,19 +42,19 @@ describe('Skills Component', () => {
     it('displays all programming language skills with levels', () => {
       expect(screen.getByText('JavaScript')).toBeInTheDocument()
       expect(screen.getAllByText('90%')).toHaveLength(5) // JavaScript, SwiftUI, FastAPI, RESTful APIs, iOS Development
-      
+
       expect(screen.getByText('Swift')).toBeInTheDocument()
       expect(screen.getAllByText('88%')).toHaveLength(4) // Swift, UIKit, OpenAI API, Xcode
-      
+
       expect(screen.getByText('Python')).toBeInTheDocument()
       expect(screen.getAllByText('85%')).toHaveLength(3) // Python, React, Node.js
-      
+
       expect(screen.getByText('Java')).toBeInTheDocument()
       expect(screen.getAllByText('82%')).toHaveLength(3) // Java, Core Data, Express
-      
+
       expect(screen.getByText('TypeScript')).toBeInTheDocument()
       expect(screen.getAllByText('80%')).toHaveLength(2) // TypeScript, Next.js
-      
+
       expect(screen.getByText('C#')).toBeInTheDocument()
       expect(screen.getAllByText('75%')).toHaveLength(2) // C#, Docker
     })
@@ -84,11 +84,11 @@ describe('Skills Component', () => {
     it('displays tools and platform skills', () => {
       expect(screen.getByText('Git')).toBeInTheDocument()
       expect(screen.getByText('95%')).toBeInTheDocument()
-      
+
       expect(screen.getByText('Xcode')).toBeInTheDocument()
       expect(screen.getByText('VS Code')).toBeInTheDocument()
       expect(screen.getByText('92%')).toBeInTheDocument()
-      
+
       expect(screen.getByText('Docker')).toBeInTheDocument()
       expect(screen.getByText('iOS Development')).toBeInTheDocument()
     })
@@ -115,13 +115,13 @@ describe('Skills Component', () => {
     it('displays all achievement statistics', () => {
       expect(screen.getByText('3+')).toBeInTheDocument()
       expect(screen.getByText('Years Experience')).toBeInTheDocument()
-      
+
       expect(screen.getByText('15+')).toBeInTheDocument()
       expect(screen.getByText('Projects Completed')).toBeInTheDocument()
-      
+
       expect(screen.getByText('6')).toBeInTheDocument()
       expect(screen.getByText('Languages Used')).toBeInTheDocument()
-      
+
       expect(screen.getByText('4')).toBeInTheDocument()
       expect(screen.getByText('Platforms Mastered')).toBeInTheDocument()
     })
@@ -174,10 +174,10 @@ describe('Skills Component', () => {
     it('has proper heading structure', () => {
       const mainHeading = screen.getByRole('heading', { name: /Skills & Expertise/i, level: 2 })
       expect(mainHeading).toBeInTheDocument()
-      
+
       const subHeadings = screen.getAllByRole('heading', { level: 3 })
       expect(subHeadings).toHaveLength(4)
-      
+
       const headingTexts = subHeadings.map(h => h.textContent)
       expect(headingTexts).toContain('Programming Languages')
       expect(headingTexts).toContain('Mobile & Frontend')
@@ -197,10 +197,10 @@ describe('Skills Component', () => {
       // Check highest level skills
       expect(screen.getByText('Git')).toBeInTheDocument()
       expect(screen.getByText('95%')).toBeInTheDocument()
-      
+
       expect(screen.getByText('VS Code')).toBeInTheDocument()
       expect(screen.getByText('92%')).toBeInTheDocument()
-      
+
       expect(screen.getByText('JavaScript')).toBeInTheDocument()
       const ninetyPercentSkills = screen.getAllByText('90%')
       expect(ninetyPercentSkills).toHaveLength(5) // JavaScript, SwiftUI, FastAPI, RESTful APIs, iOS Development
@@ -210,7 +210,7 @@ describe('Skills Component', () => {
       // Programming Languages category should contain expected skills
       const progLangSection = screen.getByText('Programming Languages').closest('.space-y-6')
       expect(progLangSection).toBeInTheDocument()
-      
+
       // Mobile & Frontend category should contain expected skills  
       const mobileSection = screen.getByText('Mobile & Frontend').closest('.space-y-6')
       expect(mobileSection).toBeInTheDocument()

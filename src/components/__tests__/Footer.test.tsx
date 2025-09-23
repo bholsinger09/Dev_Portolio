@@ -52,7 +52,7 @@ describe('Footer Component', () => {
     it('lists all technology stacks', () => {
       const technologies = [
         'JavaScript & TypeScript',
-        'Java & Spring Boot', 
+        'Java & Spring Boot',
         'Python & Django',
         'C# & .NET Core',
         'Swift & SwiftUI'
@@ -72,7 +72,7 @@ describe('Footer Component', () => {
     it('displays email contact link', () => {
       const emailLinks = screen.getAllByText('bholsinger@gmail.com')
       expect(emailLinks).toHaveLength(1) // One in connect section, one in social icons
-      
+
       const emailLink = screen.getByRole('link', { name: 'bholsinger@gmail.com' })
       expect(emailLink).toHaveAttribute('href', 'mailto:bholsinger@gmail.com')
     })
@@ -86,10 +86,10 @@ describe('Footer Component', () => {
     it('renders social media icons', () => {
       // Check for GitHub link
       expect(document.querySelector('a[href="https://github.com/yourusername"]')).toBeInTheDocument()
-      
+
       // Check for LinkedIn link  
       expect(document.querySelector('a[href="https://linkedin.com/in/yourusername"]')).toBeInTheDocument()
-      
+
       // Check for Mail icon link (different from the text email link)
       const mailLinks = document.querySelectorAll('a[href="mailto:bholsinger@gmail.com"]')
       expect(mailLinks.length).toBe(2) // One text link and one icon link
@@ -98,10 +98,10 @@ describe('Footer Component', () => {
     it('social links open in new tab', () => {
       const githubLink = document.querySelector('a[href="https://github.com/yourusername"]')
       const linkedinLink = document.querySelector('a[href="https://linkedin.com/in/yourusername"]')
-      
+
       expect(githubLink).toHaveAttribute('target', '_blank')
       expect(githubLink).toHaveAttribute('rel', 'noopener noreferrer')
-      
+
       expect(linkedinLink).toHaveAttribute('target', '_blank')
       expect(linkedinLink).toHaveAttribute('rel', 'noopener noreferrer')
     })
@@ -169,16 +169,16 @@ describe('Footer Component', () => {
     it('has proper heading hierarchy', () => {
       const brandHeading = screen.getByRole('heading', { name: /Ben H\./i, level: 3 })
       expect(brandHeading).toBeInTheDocument()
-      
+
       const sectionHeadings = screen.getAllByRole('heading', { level: 4 })
       expect(sectionHeadings).toHaveLength(3) // Quick Links, Technologies, Connect
-      
+
       const headingTexts = sectionHeadings.map(h => h.textContent)
       expect(headingTexts).toEqual(['Quick Links', 'Technologies', 'Connect'])
     })
 
     it('navigation links are keyboard accessible', () => {
-      const quickLinks = screen.getAllByRole('link').filter(link => 
+      const quickLinks = screen.getAllByRole('link').filter(link =>
         link.getAttribute('href')?.startsWith('#')
       )
       expect(quickLinks).toHaveLength(4) // About, Projects, Skills, Contact
@@ -207,7 +207,7 @@ describe('Footer Component', () => {
     it('includes social media icons with proper styling', () => {
       const socialIcons = document.querySelectorAll('.flex.space-x-4 a')
       expect(socialIcons).toHaveLength(3) // GitHub, LinkedIn, Email
-      
+
       socialIcons.forEach(icon => {
         expect(icon).toHaveClass('text-gray-400', 'hover:text-white', 'transition-colors')
       })

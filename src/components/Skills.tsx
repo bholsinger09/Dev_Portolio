@@ -60,7 +60,7 @@ const Skills = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Skills & Expertise</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive technical skills across the full development stack, 
+            Comprehensive technical skills across the full development stack,
             from mobile applications to enterprise-level systems.
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ const Skills = () => {
               className="space-y-6"
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">{category.title}</h3>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
@@ -91,7 +91,7 @@ const Skills = () => {
                       <span className="text-gray-800 font-medium">{skill.name}</span>
                       <span className="text-gray-600 text-sm">{skill.level}%</span>
                     </div>
-                    
+
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <motion.div
                         className={`${skill.color} h-2 rounded-full`}

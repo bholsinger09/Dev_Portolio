@@ -160,7 +160,7 @@ describe('About Component', () => {
     it('applies proper spacing classes', () => {
       const section = document.querySelector('#about')
       expect(section).toHaveClass('py-20')
-      
+
       const container = document.querySelector('.max-w-7xl.mx-auto.px-4.sm\\:px-6.lg\\:px-8')
       expect(container).toBeInTheDocument()
     })
@@ -185,7 +185,7 @@ describe('About Component', () => {
       const skillsGrid = document.querySelector('.grid')
       expect(skillsGrid).toHaveClass(
         'grid-cols-1',
-        'md:grid-cols-2', 
+        'md:grid-cols-2',
         'lg:grid-cols-3'
       )
     })
@@ -202,7 +202,7 @@ describe('About Component', () => {
     it('has proper heading structure', () => {
       const mainHeading = screen.getByRole('heading', { name: /About Me/i, level: 2 })
       expect(mainHeading).toBeInTheDocument()
-      
+
       const subHeadings = screen.getAllByRole('heading', { level: 3 })
       expect(subHeadings).toHaveLength(5)
     })

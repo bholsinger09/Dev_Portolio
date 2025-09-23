@@ -1,5 +1,5 @@
 // IMMEDIATE cleanup of any old theme toggles
-(function() {
+(function () {
   console.log('CLEANING UP OLD THEME TOGGLES...');
   // Remove by IDs
   ['theme-toggle-btn', 'force-theme-toggle', 'theme-button'].forEach(id => {
@@ -9,7 +9,7 @@
       el.remove();
     }
   });
-  
+
   // Remove by text content
   document.querySelectorAll('button').forEach(btn => {
     if (btn.textContent && (btn.textContent.includes('THEME') || btn.textContent.includes('🌙'))) {
@@ -21,28 +21,28 @@
 
 function toggleTheme() {
   document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', 
+  localStorage.setItem('theme',
     document.documentElement.classList.contains('dark') ? 'dark' : 'light'
   );
-  
+
   // Update button icon
   const button = document.getElementById('theme-toggle-btn');
   if (button) {
     button.innerHTML = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
   }
-  
+
   console.log('Theme toggled! Dark mode is now: ' + document.documentElement.classList.contains('dark'));
 }
 
 // Load saved theme on page load
-(function() {
+(function () {
   const saved = localStorage.getItem('theme');
   if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark');
   }
-  
+
   // Set initial icon when button is available
-  setTimeout(function() {
+  setTimeout(function () {
     const button = document.getElementById('theme-toggle-btn');
     if (button) {
       button.innerHTML = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
@@ -61,7 +61,7 @@ function injectThemeButton() {
       existing.remove();
     }
   });
-  
+
   // Also remove any buttons with theme-related text
   const allButtons = document.querySelectorAll('button');
   allButtons.forEach(btn => {
@@ -70,10 +70,10 @@ function injectThemeButton() {
       btn.remove();
     }
   });
-  
+
   // Look for navigation area to integrate properly
   const nav = document.querySelector('nav') || document.querySelector('header') || document.querySelector('.header');
-  
+
   if (nav) {
     const button = document.createElement('button');
     button.id = 'theme-toggle-btn';
@@ -95,15 +95,15 @@ function injectThemeButton() {
       min-width: 44px !important;
       height: 44px !important;
     `;
-    
+
     // Add hover effects
-    button.addEventListener('mouseenter', function() {
+    button.addEventListener('mouseenter', function () {
       this.style.background = 'rgba(255,255,255,0.1)';
     });
-    button.addEventListener('mouseleave', function() {
+    button.addEventListener('mouseleave', function () {
       this.style.background = 'transparent';
     });
-    
+
     nav.appendChild(button);
     console.log('Theme button integrated into navigation:', button);
     return button;
@@ -133,7 +133,7 @@ function injectThemeButton() {
       backdrop-filter: blur(10px) !important;
       transition: all 0.2s ease !important;
     `;
-    
+
     document.body.appendChild(button);
     console.log('Theme button added with subtle fixed positioning:', button);
     return button;
@@ -150,7 +150,7 @@ window.addEventListener('load', injectThemeButton);
 document.addEventListener('DOMContentLoaded', injectThemeButton);
 
 // Also try when the page becomes visible
-document.addEventListener('visibilitychange', function() {
+document.addEventListener('visibilitychange', function () {
   if (!document.hidden) {
     injectThemeButton();
   }

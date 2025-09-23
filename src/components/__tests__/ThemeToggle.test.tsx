@@ -41,7 +41,7 @@ describe('ThemeToggle', () => {
     it('has proper accessibility attributes', () => {
       renderWithTheme(<ThemeToggle />);
       const button = screen.getByRole('button', { name: /toggle theme/i });
-      
+
       expect(button).toHaveAttribute('aria-label', expect.stringContaining('Toggle theme'));
       expect(button).toHaveClass('focus:outline-none');
     });
@@ -51,7 +51,7 @@ describe('ThemeToggle', () => {
     it('shows sun icon in light theme', () => {
       mockUseTheme.resolvedTheme = 'light';
       renderWithTheme(<ThemeToggle />);
-      
+
       // Sun icon should be visible
       const sunIcon = screen.getByTestId('sun-icon');
       expect(sunIcon).toBeInTheDocument();
@@ -60,7 +60,7 @@ describe('ThemeToggle', () => {
     it('shows moon icon in dark theme', () => {
       mockUseTheme.resolvedTheme = 'dark';
       renderWithTheme(<ThemeToggle />);
-      
+
       // Moon icon should be visible (though we can't easily test visibility due to CSS)
       const button = screen.getByRole('button', { name: /toggle theme/i });
       expect(button).toBeInTheDocument();
@@ -73,10 +73,10 @@ describe('ThemeToggle', () => {
       mockUseTheme.theme = 'light';
       mockUseTheme.resolvedTheme = 'light';
       renderWithTheme(<ThemeToggle />);
-      
+
       const button = screen.getByRole('button', { name: /toggle theme/i });
       fireEvent.click(button);
-      
+
       expect(mockSetTheme).toHaveBeenCalledWith('dark');
     });
 
@@ -84,10 +84,10 @@ describe('ThemeToggle', () => {
       mockUseTheme.theme = 'dark';
       mockUseTheme.resolvedTheme = 'dark';
       renderWithTheme(<ThemeToggle />);
-      
+
       const button = screen.getByRole('button', { name: /toggle theme/i });
       fireEvent.click(button);
-      
+
       expect(mockSetTheme).toHaveBeenCalledWith('system');
     });
 
@@ -95,10 +95,10 @@ describe('ThemeToggle', () => {
       mockUseTheme.theme = 'system';
       mockUseTheme.resolvedTheme = 'light';
       renderWithTheme(<ThemeToggle />);
-      
+
       const button = screen.getByRole('button', { name: /toggle theme/i });
       fireEvent.click(button);
-      
+
       expect(mockSetTheme).toHaveBeenCalledWith('light');
     });
   });
@@ -107,7 +107,7 @@ describe('ThemeToggle', () => {
     it('has hover and transition classes', () => {
       renderWithTheme(<ThemeToggle />);
       const button = screen.getByRole('button', { name: /toggle theme/i });
-      
+
       expect(button).toHaveClass('transition-all', 'duration-200');
       expect(button.className).toMatch(/hover:/);
     });
@@ -115,7 +115,7 @@ describe('ThemeToggle', () => {
     it('has proper rounded styling', () => {
       renderWithTheme(<ThemeToggle />);
       const button = screen.getByRole('button', { name: /toggle theme/i });
-      
+
       expect(button).toHaveClass('rounded-lg');
     });
   });
@@ -124,7 +124,7 @@ describe('ThemeToggle', () => {
     it('has consistent sizing across breakpoints', () => {
       renderWithTheme(<ThemeToggle />);
       const button = screen.getByRole('button', { name: /toggle theme/i });
-      
+
       expect(button).toHaveClass('p-2');
     });
   });
@@ -133,7 +133,7 @@ describe('ThemeToggle', () => {
     it('has proper color classes for light and dark modes', () => {
       renderWithTheme(<ThemeToggle />);
       const button = screen.getByRole('button', { name: /toggle theme/i });
-      
+
       // Should have dark mode classes
       expect(button.className).toMatch(/dark:/);
     });

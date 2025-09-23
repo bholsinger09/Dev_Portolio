@@ -10,7 +10,7 @@
   border: 3px solid #000;
   cursor: pointer;
   z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .theme-toggle::before {

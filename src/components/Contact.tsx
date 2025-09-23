@@ -39,7 +39,7 @@ const Contact = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get In Touch</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I&apos;m always interested in hearing about new opportunities and exciting projects. 
+            I&apos;m always interested in hearing about new opportunities and exciting projects.
             Let&apos;s discuss how we can work together!
           </p>
         </motion.div>

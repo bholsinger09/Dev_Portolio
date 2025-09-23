@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">Ben H.</h3>
             <p className="text-gray-400">
-              Full-Stack Developer passionate about creating innovative solutions 
+              Full-Stack Developer passionate about creating innovative solutions
               across multiple technologies and platforms.
             </p>
           </div>

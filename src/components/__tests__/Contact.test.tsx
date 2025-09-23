@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import Contact from '../Contact'
 
 // Mock console.log for form submission tests
-const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {})
+const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => { })
 
 describe('Contact Component', () => {
   beforeEach(() => {
@@ -35,7 +35,7 @@ describe('Contact Component', () => {
       // Look for the email text in the contact information section specifically
       const contactSection = screen.getByText('Contact Information').parentElement
       expect(contactSection?.textContent).toContain('Email')
-      
+
       const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i })
       expect(emailLink).toBeInTheDocument()
       expect(emailLink).toHaveAttribute('href', 'mailto:bholsinger@gmail.com')
@@ -45,7 +45,7 @@ describe('Contact Component', () => {
       // Look for the phone text in the contact information section specifically
       const contactSection = screen.getByText('Contact Information').parentElement
       expect(contactSection?.textContent).toContain('Phone')
-      
+
       const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
       expect(phoneLink).toBeInTheDocument()
       expect(phoneLink).toHaveAttribute('href', 'tel:+12082841929')
@@ -120,7 +120,7 @@ describe('Contact Component', () => {
     it('allows user to type in name field', async () => {
       const user = userEvent.setup()
       const nameInput = screen.getByLabelText(/Name/i)
-      
+
       await user.type(nameInput, 'John Doe')
       expect(nameInput).toHaveValue('John Doe')
     })
@@ -128,7 +128,7 @@ describe('Contact Component', () => {
     it('allows user to type in email field', async () => {
       const user = userEvent.setup()
       const emailInput = screen.getByLabelText(/Email/i)
-      
+
       await user.type(emailInput, 'john@example.com')
       expect(emailInput).toHaveValue('john@example.com')
     })
@@ -136,7 +136,7 @@ describe('Contact Component', () => {
     it('allows user to type in subject field', async () => {
       const user = userEvent.setup()
       const subjectInput = screen.getByLabelText(/Subject/i)
-      
+
       await user.type(subjectInput, 'Job Opportunity')
       expect(subjectInput).toHaveValue('Job Opportunity')
     })
@@ -144,7 +144,7 @@ describe('Contact Component', () => {
     it('allows user to type in message field', async () => {
       const user = userEvent.setup()
       const messageTextarea = screen.getByLabelText(/Message/i)
-      
+
       await user.type(messageTextarea, 'Hello, I have an exciting opportunity...')
       expect(messageTextarea).toHaveValue('Hello, I have an exciting opportunity...')
     })
@@ -153,7 +153,7 @@ describe('Contact Component', () => {
   describe('Form Submission', () => {
     it('submits form with correct data and resets fields', async () => {
       const user = userEvent.setup()
-      
+
       // Fill out the form
       await user.type(screen.getByLabelText(/Name/i), 'John Doe')
       await user.type(screen.getByLabelText(/Email/i), 'john@example.com')
@@ -181,7 +181,7 @@ describe('Contact Component', () => {
 
     it('prevents default form submission behavior', async () => {
       const user = userEvent.setup()
-      
+
       // Fill required fields
       await user.type(screen.getByLabelText(/Name/i), 'Test')
       await user.type(screen.getByLabelText(/Email/i), 'test@example.com')
@@ -190,13 +190,13 @@ describe('Contact Component', () => {
 
       const form = screen.getByLabelText(/Name/i).closest('form')
       const mockPreventDefault = jest.fn()
-      
+
       // Create custom event with preventDefault
       const submitEvent = new Event('submit', { bubbles: true, cancelable: true })
       submitEvent.preventDefault = mockPreventDefault
 
       form?.dispatchEvent(submitEvent)
-      
+
       // Note: The actual preventDefault is called in the component's handleSubmit
       // This test verifies the form structure supports proper event handling
       expect(form).toBeInTheDocument()
@@ -212,7 +212,7 @@ describe('Contact Component', () => {
     it('applies proper spacing classes', () => {
       const section = document.querySelector('#contact')
       expect(section).toHaveClass('py-20')
-      
+
       const container = document.querySelector('.max-w-7xl.mx-auto.px-4.sm\\:px-6.lg\\:px-8')
       expect(container).toBeInTheDocument()
     })
@@ -252,10 +252,10 @@ describe('Contact Component', () => {
     it('has proper heading structure', () => {
       const mainHeading = screen.getByRole('heading', { name: /Get In Touch/i, level: 2 })
       expect(mainHeading).toBeInTheDocument()
-      
+
       const contactInfoHeading = screen.getByRole('heading', { name: /Contact Information/i, level: 3 })
       expect(contactInfoHeading).toBeInTheDocument()
-      
+
       const opportunityHeading = screen.getByRole('heading', { name: /What I'm Looking For/i, level: 4 })
       expect(opportunityHeading).toBeInTheDocument()
     })
@@ -270,7 +270,7 @@ describe('Contact Component', () => {
     it('has accessible links', () => {
       const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i })
       const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
-      
+
       expect(emailLink).toHaveAttribute('href')
       expect(phoneLink).toHaveAttribute('href')
     })
@@ -293,7 +293,7 @@ describe('Contact Component', () => {
     it('applies hover effects to contact links', () => {
       const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i })
       const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i })
-      
+
       expect(emailLink).toHaveClass('hover:text-blue-600', 'transition-colors')
       expect(phoneLink).toHaveClass('hover:text-blue-600', 'transition-colors')
     })
@@ -302,7 +302,7 @@ describe('Contact Component', () => {
       const submitButton = screen.getByRole('button', { name: /Send Message/i })
       expect(submitButton).toHaveClass(
         'w-full',
-        'bg-blue-600', 
+        'bg-blue-600',
         'text-white',
         'py-3',
         'px-6',

@@ -17,13 +17,13 @@ describe('Projects Component', () => {
     it('renders all 6 projects', () => {
       const projectTitles = [
         'FastAPI LLM Integration Platform',
-        'Java Task Management System', 
+        'Java Task Management System',
         'DevRealtor iOS App',
         'HookahShop E-Commerce iOS App',
         'Identity Management Platform',
         'Help Yourself Community Platform'
       ]
-      
+
       projectTitles.forEach(title => {
         expect(screen.getByText(title)).toBeInTheDocument()
       })
@@ -42,16 +42,16 @@ describe('Projects Component', () => {
       expect(screen.getByText('Python')).toBeInTheDocument()
       expect(screen.getByText('FastAPI')).toBeInTheDocument()
       expect(screen.getByText('OpenAI API')).toBeInTheDocument()
-      
+
       // Java project
       expect(screen.getByText('Java')).toBeInTheDocument()
       expect(screen.getByText('OOP Design')).toBeInTheDocument()
-      
+
       // Swift projects
       expect(screen.getAllByText('Swift')).toHaveLength(2)
       expect(screen.getByText('SwiftUI')).toBeInTheDocument()
       expect(screen.getByText('UIKit')).toBeInTheDocument()
-      
+
       // JavaScript/Node.js projects
       expect(screen.getAllByText('JavaScript')).toHaveLength(2)
       expect(screen.getAllByText('Node.js')).toHaveLength(2)
@@ -63,7 +63,7 @@ describe('Projects Component', () => {
       const javaTag = screen.getByText('Java')
       const swiftTag = screen.getAllByText('Swift')[0]
       const jsTag = screen.getAllByText('JavaScript')[0]
-      
+
       expect(pythonTag).toHaveClass('bg-green-100', 'text-green-800')
       expect(javaTag).toHaveClass('bg-red-100', 'text-red-800')
       expect(swiftTag).toHaveClass('bg-orange-100', 'text-orange-800')
@@ -75,7 +75,7 @@ describe('Projects Component', () => {
     it('renders GitHub links for all projects', () => {
       const githubLinks = screen.getAllByText('Code')
       expect(githubLinks).toHaveLength(6)
-      
+
       // Check that all code links have GitHub URLs
       githubLinks.forEach(link => {
         const href = link.closest('a')?.getAttribute('href')
@@ -86,7 +86,7 @@ describe('Projects Component', () => {
     it('renders demo links for all projects', () => {
       const demoLinks = screen.getAllByText('Demo')
       expect(demoLinks).toHaveLength(6)
-      
+
       // Check that all demo links open in new tab
       demoLinks.forEach(link => {
         const anchor = link.closest('a')
@@ -99,7 +99,7 @@ describe('Projects Component', () => {
       const codeLinks = screen.getAllByText('Code')
       const demoLinks = screen.getAllByText('Demo')
       const allLinks = [...codeLinks, ...demoLinks]
-      
+
       allLinks.forEach(link => {
         const anchor = link.closest('a')
         expect(anchor).toHaveAttribute('target', '_blank')
@@ -149,7 +149,7 @@ describe('Projects Component', () => {
     it('applies proper styling to project cards', () => {
       const projectCards = document.querySelectorAll('.bg-white')
       expect(projectCards).toHaveLength(6)
-      
+
       // Check card styling
       const firstCard = projectCards[0]
       expect(firstCard).toHaveClass('bg-white', 'rounded-xl', 'shadow-lg', 'overflow-hidden')
@@ -160,7 +160,7 @@ describe('Projects Component', () => {
     it('has proper heading hierarchy', () => {
       const mainHeading = screen.getByRole('heading', { name: 'Featured Projects' })
       expect(mainHeading.tagName).toBe('H2')
-      
+
       // Project titles should be properly structured
       const projectHeadings = screen.getAllByRole('heading', { level: 3 })
       expect(projectHeadings).toHaveLength(6)
@@ -174,7 +174,7 @@ describe('Projects Component', () => {
     it('has proper semantic structure', () => {
       const section = document.querySelector('#projects')
       expect(section?.tagName).toBe('SECTION')
-      
+
       const headings = screen.getAllByRole('heading')
       expect(headings.length).toBeGreaterThanOrEqual(7) // Main heading + 6 project headings
     })
@@ -196,11 +196,11 @@ describe('Projects Component', () => {
     it('renders interactive buttons with proper classes', () => {
       const codeButtons = screen.getAllByText('Code')
       const demoButtons = screen.getAllByText('Demo')
-      
+
       codeButtons.forEach(button => {
         expect(button.closest('a')).toHaveClass('flex', 'items-center', 'gap-1')
       })
-      
+
       demoButtons.forEach(button => {
         expect(button.closest('a')).toHaveClass('flex', 'items-center', 'gap-1', 'bg-blue-600', 'text-white')
       })
@@ -209,11 +209,11 @@ describe('Projects Component', () => {
     it('has proper hover styling classes', () => {
       const codeLinks = screen.getAllByText('Code')
       const demoLinks = screen.getAllByText('Demo')
-      
+
       codeLinks.forEach(link => {
         expect(link.closest('a')).toHaveClass('hover:text-gray-900')
       })
-      
+
       demoLinks.forEach(link => {
         expect(link.closest('a')).toHaveClass('hover:bg-blue-700')
       })
