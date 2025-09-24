@@ -5,10 +5,11 @@ import EnhancedProjectsSection from '@/components/EnhancedProjectsSection';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import PageTransition from '@/components/PageTransition';
 
 export default function LocalePage() {
     return (
-        <div className="min-h-screen">
+        <PageTransition>
             <Header />
             <main>
                 <Hero />
@@ -18,6 +19,6 @@ export default function LocalePage() {
                 <Contact />
             </main>
             <Footer />
-        </div>
+        </PageTransition>
     );
 }

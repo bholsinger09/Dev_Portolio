@@ -8,6 +8,7 @@ import { Section, Container } from '@/components/ui';
 import { skillCategories } from '@/data';
 import { ANIMATION_DURATIONS } from '@/constants';
 import { calculateAnimationDelay, formatPercentage } from '@/utils';
+import { ScrollReveal, StaggeredReveal, AnimatedCounter } from './ScrollAnimations';
 import type { SkillCategory, Skill } from '@/types';
 
 /**
@@ -105,46 +106,39 @@ const SkillCategorySection: React.FC<SkillCategoryProps> = ({ category, index })
  */
 const StatisticsSection: React.FC = () => {
   const statistics = [
-    { label: 'Years Experience', value: '5+', color: 'text-blue-600' },
-    { label: 'Projects Completed', value: '50+', color: 'text-green-600' },
-    { label: 'Technologies Mastered', value: '25+', color: 'text-purple-600' },
-    { label: 'Happy Clients', value: '30+', color: 'text-orange-600' },
+    { label: 'Years Experience', value: 5, color: 'text-blue-600', suffix: '+' },
+    { label: 'Projects Completed', value: 50, color: 'text-green-600', suffix: '+' },
+    { label: 'Technologies Mastered', value: 25, color: 'text-purple-600', suffix: '+' },
+    { label: 'Happy Clients', value: 30, color: 'text-orange-600', suffix: '+' },
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: ANIMATION_DURATIONS.DEFAULT, delay: 0.3 }}
-      viewport={{ once: true }}
-      className="mt-20"
-    >
+    <ScrollReveal direction="up" delay={0.3} className="mt-20">
       <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
         Achievement Highlights
       </h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-        {statistics.map((stat, index) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: ANIMATION_DURATIONS.DEFAULT,
-              delay: calculateAnimationDelay(index, 0.1)
-            }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-              {stat.value}
+      <StaggeredReveal
+        direction="scale"
+        staggerDelay={0.1}
+        className="grid grid-cols-2 md:grid-cols-4 gap-8"
+        itemClassName="text-center"
+      >
+        {statistics.map((stat) => (
+          <div key={stat.label} className="group">
+            <div className={`text-4xl font-bold ${stat.color} mb-2 transition-transform group-hover:scale-110`}>
+              <AnimatedCounter 
+                end={stat.value} 
+                suffix={stat.suffix}
+                duration={2}
+              />
             </div>
             <div className="text-gray-600 text-sm">
               {stat.label}
             </div>
-          </motion.div>
+          </div>
         ))}
-      </div>
-    </motion.div>
+      </StaggeredReveal>
+    </ScrollReveal>
   );
 };
 
