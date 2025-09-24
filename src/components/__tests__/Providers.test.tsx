@@ -8,7 +8,7 @@ let themeProviderProps: Record<string, unknown> = {};
 
 // Mock next-themes
 jest.mock('next-themes', () => ({
-  ThemeProvider: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => {
+  ThemeProvider: ({ children, ...props }: { children: React.ReactNode;[key: string]: unknown }) => {
     themeProviderProps = props;
     return (
       <div data-testid="theme-provider">
@@ -22,7 +22,7 @@ describe('Providers', () => {
   beforeEach(() => {
     themeProviderProps = {};
   });
-  
+
   describe('Theme Provider Setup', () => {
     it('renders ThemeProvider with correct attributes', () => {
       const TestChild = () => <div data-testid="test-child">Test Content</div>;
@@ -35,7 +35,7 @@ describe('Providers', () => {
 
       const themeProvider = screen.getByTestId('theme-provider');
       expect(themeProvider).toBeInTheDocument();
-      
+
       // Check props passed to ThemeProvider mock
       expect(themeProviderProps.attribute).toBe('class');
       expect(themeProviderProps.defaultTheme).toBe('system');

@@ -75,7 +75,7 @@ describe('ErrorBoundary', () => {
       );
 
       expect(screen.getByText('Test error message')).toBeInTheDocument();
-      
+
       Object.defineProperty(process.env, 'NODE_ENV', {
         value: 'test',
         configurable: true
@@ -169,7 +169,7 @@ describe('ErrorBoundary', () => {
       const goHomeButton = screen.getByText('Go Home');
       expect(goHomeButton).toBeInTheDocument();
       expect(goHomeButton).toHaveAttribute('type', 'button');
-      
+
       // Test that clicking doesn't cause an error
       expect(() => fireEvent.click(goHomeButton)).not.toThrow();
     });
@@ -203,9 +203,9 @@ describe('CompactErrorFallback', () => {
 
   it('renders compact error UI', () => {
     render(
-      <CompactErrorFallback 
-        error={mockError} 
-        resetError={mockResetError} 
+      <CompactErrorFallback
+        error={mockError}
+        resetError={mockResetError}
       />
     );
 
@@ -220,9 +220,9 @@ describe('CompactErrorFallback', () => {
     });
 
     render(
-      <CompactErrorFallback 
-        error={mockError} 
-        resetError={mockResetError} 
+      <CompactErrorFallback
+        error={mockError}
+        resetError={mockResetError}
       />
     );
 
@@ -236,9 +236,9 @@ describe('CompactErrorFallback', () => {
 
   it('calls resetError when retry button is clicked', () => {
     render(
-      <CompactErrorFallback 
-        error={mockError} 
-        resetError={mockResetError} 
+      <CompactErrorFallback
+        error={mockError}
+        resetError={mockResetError}
       />
     );
 

@@ -202,7 +202,7 @@ export const useContactForm = () => {
     subject: '',
     message: ''
   });
-  
+
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -254,7 +254,7 @@ export const useContactForm = () => {
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
@@ -263,7 +263,7 @@ export const useContactForm = () => {
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const validation = validateForm();
     if (!validation.isValid) {
       return;
@@ -276,10 +276,10 @@ export const useContactForm = () => {
       // Here you would typically make an API call to submit the form
       // For now, we'll simulate a successful submission
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
+
       // Show success message for 3 seconds
       setTimeout(() => setSubmitStatus('idle'), 3000);
     } catch (error) {

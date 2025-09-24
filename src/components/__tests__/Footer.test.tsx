@@ -20,7 +20,7 @@ describe('Footer Component', () => {
     it('applies correct href attributes to contact links', () => {
       const emailLink = screen.getByRole('link', { name: /bholsinger@gmail.com/i });
       const phoneLink = screen.getByRole('link', { name: /\+1 \(208\) 284-1929/i });
-      
+
       expect(emailLink).toHaveAttribute('href', 'mailto:bholsinger@gmail.com');
       expect(phoneLink).toHaveAttribute('href', 'tel:+12082841929');
     });

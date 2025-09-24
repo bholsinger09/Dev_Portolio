@@ -68,9 +68,9 @@ describe('LoadingState', () => {
     const customErrorFallback = <div>Custom error UI</div>;
 
     render(
-      <LoadingState 
-        isLoading={false} 
-        error="Error occurred" 
+      <LoadingState
+        isLoading={false}
+        error="Error occurred"
         errorFallback={customErrorFallback}
       >
         {mockChildren}
@@ -83,10 +83,10 @@ describe('LoadingState', () => {
 
   it('applies custom className and minHeight', () => {
     const { container } = render(
-      <LoadingState 
-        isLoading={true} 
-        error={null} 
-        className="custom-class" 
+      <LoadingState
+        isLoading={true}
+        error={null}
+        className="custom-class"
         minHeight="min-h-[500px]"
       >
         {mockChildren}
@@ -128,7 +128,7 @@ describe('SkeletonText', () => {
 describe('SkeletonCard', () => {
   it('renders card skeleton with image by default', () => {
     const { container } = render(<SkeletonCard />);
-    
+
     expect(container.querySelector('.bg-white.rounded-xl')).toBeInTheDocument();
     expect(container.querySelector('.bg-gray-200.h-48')).toBeInTheDocument(); // Image placeholder
     expect(container.querySelectorAll('.bg-gray-200')).toHaveLength(8); // Image + title + 3 description + 3 tags
@@ -136,7 +136,7 @@ describe('SkeletonCard', () => {
 
   it('renders without image when showImage is false', () => {
     const { container } = render(<SkeletonCard showImage={false} />);
-    
+
     expect(container.querySelector('.bg-white.rounded-xl')).toBeInTheDocument();
     expect(container.querySelector('.h-48')).not.toBeInTheDocument();
     expect(container.querySelectorAll('.bg-gray-200')).toHaveLength(7); // title + 3 description + 3 tags (no image)
@@ -213,10 +213,10 @@ describe('ProgressBar', () => {
   it('clamps progress to 0-100 range', () => {
     const { container: container1 } = render(<ProgressBar progress={-10} />);
     const { container: container2 } = render(<ProgressBar progress={150} />);
-    
+
     const progressFill1 = container1.querySelector('.bg-blue-600');
     const progressFill2 = container2.querySelector('.bg-blue-600');
-    
+
     expect(progressFill1).toHaveStyle('width: 0%');
     expect(progressFill2).toHaveStyle('width: 100%');
   });
@@ -239,7 +239,7 @@ describe('PulseLoader', () => {
         <div>Content</div>
       </PulseLoader>
     );
-    
+
     expect(container.firstChild).toHaveClass('animate-pulse', 'opacity-50');
     expect(screen.getByText('Content')).toBeInTheDocument();
   });
@@ -250,7 +250,7 @@ describe('PulseLoader', () => {
         <div>Content</div>
       </PulseLoader>
     );
-    
+
     expect(container.firstChild).not.toHaveClass('animate-pulse');
     expect(container.firstChild).not.toHaveClass('opacity-50');
   });
@@ -264,7 +264,7 @@ describe('LazyLoader', () => {
     unobserve: () => null,
     disconnect: () => null
   });
-  
+
   beforeAll(() => {
     window.IntersectionObserver = mockIntersectionObserver;
   });
@@ -281,8 +281,8 @@ describe('LazyLoader', () => {
   });
 
   it('renders children after intersection and loading', async () => {
-    let intersectionCallback: (entries: any[]) => void = () => {};
-    
+    let intersectionCallback: (entries: any[]) => void = () => { };
+
     mockIntersectionObserver.mockImplementation((callback) => {
       intersectionCallback = callback;
       return {

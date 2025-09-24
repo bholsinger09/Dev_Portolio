@@ -57,7 +57,7 @@ describe('Header', () => {
       render(<Header />);
       const navigation = screen.getByText('Home');
       expect(navigation).toBeInTheDocument();
-      
+
       // Navigation items should be visible
       const navItems = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
       navItems.forEach(item => {

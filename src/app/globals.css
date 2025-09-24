@@ -86,7 +86,7 @@ nav a:visited {
 }
 
 /* Ensure spacing works across all browsers */
-.navigation-links a + a {
+.navigation-links a+a {
   margin-left: 2rem !important;
 }
 
@@ -194,7 +194,7 @@ section#contact .space-y-4 {
   text-align: center !important;
 }
 
-section#contact .space-y-4 > div {
+section#contact .space-y-4>div {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;

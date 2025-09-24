@@ -55,7 +55,7 @@ const ProjectActions: React.FC<ProjectActionsProps> = ({ project }) => {
         <Github size={18} />
         <span className="font-medium">Code</span>
       </motion.a>
-      
+
       <motion.a
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.95 }}
@@ -112,11 +112,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ 
+      whileHover={{
         y: -8,
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' 
+        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
       }}
-      transition={{ 
+      transition={{
         opacity: { duration: ANIMATION_DURATIONS.DEFAULT, delay: calculateAnimationDelay(index, 0.1) },
         y: { duration: ANIMATION_DURATIONS.DEFAULT, delay: calculateAnimationDelay(index, 0.1) },
         boxShadow: { duration: 0.3 }
@@ -133,11 +133,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center"
         >
           <div className="text-6xl opacity-30">
-            {project.category.includes('Mobile') ? '📱' : 
-             project.category.includes('AI') ? '🤖' :
-             project.category.includes('E-Commerce') ? '🛒' :
-             project.category.includes('Security') ? '🔐' :
-             project.category.includes('Social') ? '👥' : '💻'}
+            {project.category.includes('Mobile') ? '📱' :
+              project.category.includes('AI') ? '🤖' :
+                project.category.includes('E-Commerce') ? '🛒' :
+                  project.category.includes('Security') ? '🔐' :
+                    project.category.includes('Social') ? '👥' : '💻'}
           </div>
         </motion.div>
         <div className="absolute top-4 right-4">
@@ -204,7 +204,7 @@ const ProjectsStats: React.FC = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
-            transition={{ 
+            transition={{
               duration: ANIMATION_DURATIONS.DEFAULT,
               delay: calculateAnimationDelay(index, 0.1)
             }}
@@ -267,7 +267,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid with Loading States */}
-          <LoadingState 
+          <LoadingState
             isLoading={isLoading}
             error={error}
             fallback={<ProjectsGridSkeleton count={6} />}
@@ -292,4 +292,4 @@ const Projects = () => {
       </Container>
     </Section>
   );
-};export default Projects;
+}; export default Projects;

@@ -80,30 +80,30 @@ export const SkeletonCard: React.FC<{
   className?: string;
   showImage?: boolean;
   imageHeight?: string;
-}> = ({ 
-  className = '', 
-  showImage = true, 
-  imageHeight = 'h-48' 
+}> = ({
+  className = '',
+  showImage = true,
+  imageHeight = 'h-48'
 }) => (
-  <div className={classNames('bg-white rounded-xl shadow-lg overflow-hidden', className)}>
-    {showImage && (
-      <div className={classNames('bg-gray-200 animate-pulse', imageHeight)} />
-    )}
-    <div className="p-6 space-y-4">
-      <div className="h-6 bg-gray-200 rounded animate-pulse w-3/4" />
-      <div className="space-y-2">
-        <div className="h-4 bg-gray-200 rounded animate-pulse w-full" />
-        <div className="h-4 bg-gray-200 rounded animate-pulse w-5/6" />
-        <div className="h-4 bg-gray-200 rounded animate-pulse w-4/5" />
-      </div>
-      <div className="flex gap-2">
-        <div className="h-6 bg-gray-200 rounded-full animate-pulse w-16" />
-        <div className="h-6 bg-gray-200 rounded-full animate-pulse w-20" />
-        <div className="h-6 bg-gray-200 rounded-full animate-pulse w-18" />
+    <div className={classNames('bg-white rounded-xl shadow-lg overflow-hidden', className)}>
+      {showImage && (
+        <div className={classNames('bg-gray-200 animate-pulse', imageHeight)} />
+      )}
+      <div className="p-6 space-y-4">
+        <div className="h-6 bg-gray-200 rounded animate-pulse w-3/4" />
+        <div className="space-y-2">
+          <div className="h-4 bg-gray-200 rounded animate-pulse w-full" />
+          <div className="h-4 bg-gray-200 rounded animate-pulse w-5/6" />
+          <div className="h-4 bg-gray-200 rounded animate-pulse w-4/5" />
+        </div>
+        <div className="flex gap-2">
+          <div className="h-6 bg-gray-200 rounded-full animate-pulse w-16" />
+          <div className="h-6 bg-gray-200 rounded-full animate-pulse w-20" />
+          <div className="h-6 bg-gray-200 rounded-full animate-pulse w-18" />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 
 /**
  * Skeleton loading for project grid
@@ -165,7 +165,7 @@ export const ProgressBar: React.FC<{
   showPercentage?: boolean;
 }> = ({ progress, className = '', showPercentage = false }) => {
   const clampedProgress = Math.max(0, Math.min(100, progress));
-  
+
   return (
     <div className={classNames('w-full', className)}>
       <div className="flex justify-between items-center mb-1">
@@ -213,41 +213,41 @@ export const LazyLoader: React.FC<{
   threshold = 0.1,
   className = '',
 }) => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const elementRef = React.useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = React.useState(false);
+    const [isLoaded, setIsLoaded] = React.useState(false);
+    const elementRef = React.useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin, threshold }
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        },
+        { rootMargin, threshold }
+      );
+
+      if (elementRef.current) {
+        observer.observe(elementRef.current);
+      }
+
+      return () => observer.disconnect();
+    }, [rootMargin, threshold]);
+
+    React.useEffect(() => {
+      if (isVisible) {
+        // Simulate loading time
+        const timer = setTimeout(() => setIsLoaded(true), 300);
+        return () => clearTimeout(timer);
+      }
+    }, [isVisible]);
+
+    return (
+      <div ref={elementRef} className={className}>
+        {isVisible && isLoaded ? children : fallback}
+      </div>
     );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [rootMargin, threshold]);
-
-  React.useEffect(() => {
-    if (isVisible) {
-      // Simulate loading time
-      const timer = setTimeout(() => setIsLoaded(true), 300);
-      return () => clearTimeout(timer);
-    }
-  }, [isVisible]);
-
-  return (
-    <div ref={elementRef} className={className}>
-      {isVisible && isLoaded ? children : fallback}
-    </div>
-  );
-};
+  };
 
 export default LoadingState;

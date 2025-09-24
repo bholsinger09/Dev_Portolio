@@ -27,7 +27,7 @@ const ProfileImage = withErrorBoundary(() => {
             <div className="text-gray-400">Loading...</div>
           </div>
         )}
-        
+
         {imageError ? (
           <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl md:text-7xl font-bold">
             BH
@@ -38,9 +38,8 @@ const ProfileImage = withErrorBoundary(() => {
             alt="Ben H. - Full-Stack Software Engineer and Developer Portfolio"
             width={224}
             height={224}
-            className={`w-full h-full object-cover transition-opacity duration-300 ${
-              imageLoading ? 'opacity-0' : 'opacity-100'
-            }`}
+            className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
+              }`}
             onLoad={handleImageLoad}
             onError={handleImageError}
             priority

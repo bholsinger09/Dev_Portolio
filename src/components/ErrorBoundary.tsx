@@ -85,7 +85,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   render() {
     if (this.state.hasError && this.state.error) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback;
-      
+
       return (
         <FallbackComponent
           error={this.state.error}
@@ -189,9 +189,8 @@ export function withErrorBoundary<P extends object>(
     </ErrorBoundary>
   );
 
-  WrappedComponent.displayName = `withErrorBoundary(${
-    Component.displayName || Component.name || 'Component'
-  })`;
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name || 'Component'
+    })`;
 
   return WrappedComponent;
 }
@@ -201,7 +200,7 @@ export function withErrorBoundary<P extends object>(
  */
 export const useErrorHandler = () => {
   const [, setState] = React.useState();
-  
+
   return React.useCallback((error: Error) => {
     setState(() => {
       throw error;

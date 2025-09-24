@@ -65,7 +65,7 @@ export const safeLocalStorage = {
       return fallback;
     }
   },
-  
+
   setItem: (key: string, value: string): void => {
     if (typeof window === 'undefined') return;
     try {
@@ -88,10 +88,10 @@ export const throttle = <T extends (...args: any[]) => void>(
 ): ((...args: Parameters<T>) => void) => {
   let timeoutId: NodeJS.Timeout | null = null;
   let lastExecTime = 0;
-  
+
   return (...args: Parameters<T>) => {
     const currentTime = Date.now();
-    
+
     if (currentTime - lastExecTime > delay) {
       func(...args);
       lastExecTime = currentTime;

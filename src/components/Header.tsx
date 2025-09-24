@@ -67,7 +67,7 @@ const Header = () => {
                   key={item.href}
                   href={item.href}
                   className="nav-item no-underline text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 sm:px-4 lg:px-5 py-2 text-sm sm:text-base lg:text-base font-medium transition-colors whitespace-nowrap hover:no-underline focus:no-underline"
-                  style={{ 
+                  style={{
                     marginLeft: index > 0 ? '2rem' : '0',
                     display: 'inline-block'
                   }}

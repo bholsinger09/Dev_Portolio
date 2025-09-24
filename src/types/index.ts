@@ -53,14 +53,14 @@ export interface AnimationConfig {
 export type Theme = 'light' | 'dark' | 'system';
 
 // Technology color mapping
-export type TechnologyType = 
-  | 'JavaScript' 
-  | 'TypeScript' 
-  | 'React' 
-  | 'Node.js' 
-  | 'Java' 
-  | 'Python' 
-  | 'C#' 
+export type TechnologyType =
+  | 'JavaScript'
+  | 'TypeScript'
+  | 'React'
+  | 'Node.js'
+  | 'Java'
+  | 'Python'
+  | 'C#'
   | 'Swift'
   | 'PostgreSQL'
   | 'MongoDB';

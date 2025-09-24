@@ -20,14 +20,14 @@ interface SkillBarProps {
 
 const SkillBar: React.FC<SkillBarProps> = ({ skill, index }) => {
   const isHighPerformance = skill.level >= 90;
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: ANIMATION_DURATIONS.DEFAULT, 
-        delay: calculateAnimationDelay(index, ANIMATION_DURATIONS.STAGGER_DELAY) 
+      transition={{
+        duration: ANIMATION_DURATIONS.DEFAULT,
+        delay: calculateAnimationDelay(index, ANIMATION_DURATIONS.STAGGER_DELAY)
       }}
       viewport={{ once: true }}
       className="space-y-2"
@@ -40,23 +40,22 @@ const SkillBar: React.FC<SkillBarProps> = ({ skill, index }) => {
           {formatPercentage(skill.level)}
         </span>
       </div>
-      
+
       <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${skill.level}%` }}
-          whileHover={isHighPerformance ? { 
+          whileHover={isHighPerformance ? {
             scale: 1.02,
-            boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' 
+            boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)'
           } : {}}
-          transition={{ 
+          transition={{
             width: { duration: 1, delay: calculateAnimationDelay(index, 0.1) },
             scale: { duration: 0.2 },
             boxShadow: { duration: 0.2 }
           }}
-          className={`h-full bg-gradient-to-r ${skill.color} rounded-full ${
-            isHighPerformance ? `${skill.shadowColor} animate-pulse` : ''
-          }`}
+          className={`h-full bg-gradient-to-r ${skill.color} rounded-full ${isHighPerformance ? `${skill.shadowColor} animate-pulse` : ''
+            }`}
           viewport={{ once: true }}
         />
       </div>
@@ -77,9 +76,9 @@ const SkillCategorySection: React.FC<SkillCategoryProps> = ({ category, index })
     <motion.div
       initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ 
-        duration: ANIMATION_DURATIONS.DEFAULT, 
-        delay: calculateAnimationDelay(index, ANIMATION_DURATIONS.STAGGER_DELAY) 
+      transition={{
+        duration: ANIMATION_DURATIONS.DEFAULT,
+        delay: calculateAnimationDelay(index, ANIMATION_DURATIONS.STAGGER_DELAY)
       }}
       viewport={{ once: true }}
       className="space-y-6"
@@ -87,13 +86,13 @@ const SkillCategorySection: React.FC<SkillCategoryProps> = ({ category, index })
       <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
         {category.title}
       </h3>
-      
+
       <div className="space-y-4 w-full max-w-sm mx-auto">
         {category.skills.map((skill, skillIndex) => (
-          <SkillBar 
-            key={skill.name} 
-            skill={skill} 
-            index={skillIndex} 
+          <SkillBar
+            key={skill.name}
+            skill={skill}
+            index={skillIndex}
           />
         ))}
       </div>
@@ -129,7 +128,7 @@ const StatisticsSection: React.FC = () => {
             key={stat.label}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ 
+            transition={{
               duration: ANIMATION_DURATIONS.DEFAULT,
               delay: calculateAnimationDelay(index, 0.1)
             }}

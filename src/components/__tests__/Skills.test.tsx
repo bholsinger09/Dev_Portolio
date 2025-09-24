@@ -103,11 +103,11 @@ describe('Skills Component', () => {
     it('has gradient progress indicators for each skill', () => {
       // Check for gradient progress bars instead of solid colors
       expect(document.querySelector('.bg-gradient-to-r')).toBeInTheDocument()
-      
+
       // Check for specific gradient color classes used in the enhanced Skills component
       const gradientBars = document.querySelectorAll('.bg-gradient-to-r')
       expect(gradientBars.length).toBeGreaterThanOrEqual(20)
-      
+
       // Check for the enhanced color system with gradients
       expect(document.querySelector('.from-yellow-400')).toBeInTheDocument() // JavaScript
       expect(document.querySelector('.from-orange-400')).toBeInTheDocument() // Swift  
@@ -135,7 +135,7 @@ describe('Skills Component', () => {
       // Get statistics container and then find the colored numbers within it
       const statsContainer = document.querySelector('.grid.grid-cols-2.md\\:grid-cols-4')
       expect(statsContainer).toBeInTheDocument()
-      
+
       // Check for specific colored stat numbers
       expect(document.querySelector('.text-blue-600')).toBeInTheDocument() // Years Experience
       expect(document.querySelector('.text-green-600')).toBeInTheDocument() // Projects Completed  

@@ -59,9 +59,8 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               disabled={isSubmitting}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-                errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
-              } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               placeholder="Your name"
             />
             {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
@@ -78,9 +77,8 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               disabled={isSubmitting}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-                errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
-              } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               placeholder="your.email@example.com"
             />
             {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
@@ -98,9 +96,8 @@ const ContactForm = () => {
             value={formData.subject}
             onChange={handleChange}
             disabled={isSubmitting}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-              errors.subject ? 'border-red-300 bg-red-50' : 'border-gray-300'
-            } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${errors.subject ? 'border-red-300 bg-red-50' : 'border-gray-300'
+              } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
             placeholder="What's this about?"
           />
           {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
@@ -117,9 +114,8 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             disabled={isSubmitting}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${
-              errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
-            } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+              } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
             placeholder="Tell me more about your project or how we can work together..."
           />
           {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
@@ -193,8 +189,8 @@ const Contact = () => {
                     <Mail className="w-6 h-6 text-blue-600" />
                     <div>
                       <p className="text-gray-900 font-medium">Email</p>
-                      <a 
-                        href="mailto:bholsinger@gmail.com" 
+                      <a
+                        href="mailto:bholsinger@gmail.com"
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
                         bholsinger@gmail.com
@@ -208,8 +204,8 @@ const Contact = () => {
                     <Phone className="w-6 h-6 text-blue-600" />
                     <div>
                       <p className="text-gray-900 font-medium">Phone</p>
-                      <a 
-                        href="tel:+12082841929" 
+                      <a
+                        href="tel:+12082841929"
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
                         +1 (208) 284-1929
