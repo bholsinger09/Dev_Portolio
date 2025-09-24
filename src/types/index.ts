@@ -21,6 +21,26 @@ export interface Project {
   github: string;
   demo: string;
   category: string;
+  featured?: boolean;
+  metrics?: {
+    users?: string;
+    performance?: string;
+    codeQuality?: string;
+    businessImpact?: string;
+  };
+  challenges?: string[];
+  keyFeatures?: string[];
+  caseStudy?: {
+    overview: string;
+    problem: string;
+    solution: string;
+    results: string;
+    testimonial?: {
+      quote: string;
+      author: string;
+      role: string;
+    };
+  };
 }
 
 export interface ContactFormData {
