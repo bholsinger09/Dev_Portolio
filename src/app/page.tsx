@@ -101,41 +101,176 @@ export default function HomePage() {
       {/* Technical Skills */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h4 className="font-bold text-gray-900 mb-4">Frontend</h4>
-            <div className="space-y-2 text-sm text-gray-600">
-              <div>React/Next.js</div>
-              <div>TypeScript</div>
-              <div>Tailwind CSS</div>
-              <div>Vue.js</div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Frontend Skills */}
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Frontend Development</h3>
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">React/Next.js</span>
+                  <span className="text-sm text-gray-500">90%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-blue-600 h-2 rounded-full" style={{width: '90%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">TypeScript</span>
+                  <span className="text-sm text-gray-500">85%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-blue-600 h-2 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Tailwind CSS</span>
+                  <span className="text-sm text-gray-500">88%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-blue-600 h-2 rounded-full" style={{width: '88%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Vue.js</span>
+                  <span className="text-sm text-gray-500">75%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-blue-600 h-2 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h4 className="font-bold text-gray-900 mb-4">Backend</h4>
-            <div className="space-y-2 text-sm text-gray-600">
-              <div>Node.js/Express</div>
-              <div>Spring Boot</div>
-              <div>Python/Django</div>
-              <div>C#/.NET</div>
+
+          {/* Backend Skills */}
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Backend Development</h3>
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Node.js/Express</span>
+                  <span className="text-sm text-gray-500">87%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full" style={{width: '87%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Java/Spring Boot</span>
+                  <span className="text-sm text-gray-500">82%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full" style={{width: '82%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Python/Django</span>
+                  <span className="text-sm text-gray-500">80%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full" style={{width: '80%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">C#/.NET</span>
+                  <span className="text-sm text-gray-500">78%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full" style={{width: '78%'}}></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h4 className="font-bold text-gray-900 mb-4">Database</h4>
-            <div className="space-y-2 text-sm text-gray-600">
-              <div>PostgreSQL</div>
-              <div>MongoDB</div>
-              <div>MySQL</div>
-              <div>Redis</div>
+
+          {/* Database Skills */}
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Database & DevOps</h3>
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">PostgreSQL</span>
+                  <span className="text-sm text-gray-500">85%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-purple-600 h-2 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">MongoDB</span>
+                  <span className="text-sm text-gray-500">83%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-purple-600 h-2 rounded-full" style={{width: '83%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Docker/AWS</span>
+                  <span className="text-sm text-gray-500">75%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-purple-600 h-2 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Redis</span>
+                  <span className="text-sm text-gray-500">70%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-purple-600 h-2 rounded-full" style={{width: '70%'}}></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <h4 className="font-bold text-gray-900 mb-4">Mobile</h4>
-            <div className="space-y-2 text-sm text-gray-600">
-              <div>React Native</div>
-              <div>iOS/Swift</div>
-              <div>Flutter</div>
-              <div>Xamarin</div>
+
+          {/* Mobile Development */}
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Mobile Development</h3>
+            <div className="space-y-4">
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">React Native</span>
+                  <span className="text-sm text-gray-500">88%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-orange-600 h-2 rounded-full" style={{width: '88%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">iOS/Swift</span>
+                  <span className="text-sm text-gray-500">82%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-orange-600 h-2 rounded-full" style={{width: '82%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Flutter/Dart</span>
+                  <span className="text-sm text-gray-500">75%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-orange-600 h-2 rounded-full" style={{width: '75%'}}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium text-gray-700">Xamarin</span>
+                  <span className="text-sm text-gray-500">65%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-orange-600 h-2 rounded-full" style={{width: '65%'}}></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
