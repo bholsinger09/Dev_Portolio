@@ -4,7 +4,7 @@ import createMDX from '@next/mdx';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 
-const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const withMDX = createMDX({
   options: {
