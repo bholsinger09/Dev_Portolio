@@ -7,6 +7,7 @@ import { useContactForm } from '@/hooks';
 import { ErrorBoundary, CompactErrorFallback } from './ErrorBoundary';
 import { InlineLoader } from './LoadingStates';
 import { Button } from './ui';
+import { analytics } from './Analytics';
 
 const ContactForm = () => {
   const {
@@ -58,6 +59,7 @@ const ContactForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              onFocus={() => analytics.contactFormStart()}
               disabled={isSubmitting}
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 ${errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
                 } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}

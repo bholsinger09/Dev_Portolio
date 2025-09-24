@@ -1,0 +1,162 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact",
+        "resume": "Resume"
+    },
+    "hero": {
+        "name": "Ben H.",
+        "title": "Full-Stack Software Engineer",
+        "description": "Experienced software engineer specializing in full-stack development with expertise in {technologies}. Building scalable applications from web platforms to mobile solutions.",
+        "technologies": {
+            "javascript": "JavaScript/TypeScript",
+            "java": "Java",
+            "python": "Python",
+            "csharp": "C#",
+            "swift": "Swift"
+        },
+        "cta": {
+            "viewWork": "View My Work",
+            "downloadResume": "Download Resume"
+        },
+        "social": {
+            "github": "GitHub Profile",
+            "linkedin": "LinkedIn Profile",
+            "email": "Send Email"
+        }
+    },
+    "about": {
+        "title": "About Me",
+        "subtitle": "Passionate about creating exceptional digital experiences",
+        "description": "I'm a dedicated full-stack software engineer with {experience} years of experience building scalable web applications and mobile solutions. My passion lies in solving complex problems through clean, efficient code and innovative solutions.",
+        "highlights": {
+            "experience": "5+ Years Experience",
+            "projects": "50+ Projects Completed",
+            "technologies": "15+ Technologies Mastered",
+            "clients": "Happy Clients Worldwide"
+        },
+        "journey": {
+            "title": "My Journey",
+            "content": "Started as a curious problem-solver, I've evolved into a versatile engineer who thrives on turning ideas into reality. From frontend interfaces to backend architectures, I love the entire development lifecycle."
+        },
+        "approach": {
+            "title": "My Approach",
+            "content": "I believe in writing clean, maintainable code, following best practices, and staying current with emerging technologies. Collaboration and continuous learning are at the core of my development philosophy."
+        }
+    },
+    "skills": {
+        "title": "Skills & Technologies",
+        "subtitle": "Technologies I work with to bring ideas to life",
+        "categories": {
+            "frontend": {
+                "title": "Frontend Development",
+                "description": "Creating responsive, interactive user interfaces"
+            },
+            "backend": {
+                "title": "Backend Development",
+                "description": "Building robust server-side applications"
+            },
+            "database": {
+                "title": "Database & Storage",
+                "description": "Designing efficient data solutions"
+            },
+            "tools": {
+                "title": "Tools & DevOps",
+                "description": "Streamlining development and deployment"
+            },
+            "mobile": {
+                "title": "Mobile Development",
+                "description": "Native and cross-platform mobile apps"
+            }
+        }
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "subtitle": "A showcase of my recent work and achievements",
+        "viewProject": "View Project",
+        "viewCode": "View Code",
+        "liveDemo": "Live Demo",
+        "comingSoon": "More projects coming soon...",
+        "technologies": "Technologies Used",
+        "challenges": "Key Challenges",
+        "solutions": "Solutions Implemented"
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "subtitle": "Let's discuss your next project or collaboration opportunity",
+        "form": {
+            "name": {
+                "label": "Full Name",
+                "placeholder": "Your full name",
+                "required": "Name is required",
+                "minLength": "Name must be at least {min} characters",
+                "maxLength": "Name must not exceed {max} characters"
+            },
+            "email": {
+                "label": "Email Address",
+                "placeholder": "your.email@example.com",
+                "required": "Email address is required",
+                "invalid": "Please enter a valid email address"
+            },
+            "subject": {
+                "label": "Subject",
+                "placeholder": "What's this about?",
+                "required": "Subject is required"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Tell me about your project, idea, or just say hello!",
+                "required": "Message is required",
+                "minLength": "Message must be at least {min} characters"
+            },
+            "submit": "Send Message",
+            "submitting": "Sending...",
+            "success": "Message sent successfully! I'll get back to you soon.",
+            "error": "Failed to send message. Please try again or contact me directly.",
+            "rateLimit": "Too many submissions. Please try again later."
+        },
+        "info": {
+            "email": {
+                "label": "Email",
+                "value": "ben.holsinger@example.com"
+            },
+            "location": {
+                "label": "Location",
+                "value": "Available Worldwide"
+            },
+            "response": {
+                "label": "Response Time",
+                "value": "Within 24 hours"
+            }
+        },
+        "social": {
+            "title": "Connect With Me",
+            "description": "Find me on these platforms"
+        }
+    },
+    "footer": {
+        "copyright": "© {year} Ben H. All rights reserved.",
+        "builtWith": "Built with {technologies}",
+        "madeWith": "Made with ❤️ and lots of ☕"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "retry": "Try Again",
+        "close": "Close",
+        "open": "Open",
+        "next": "Next",
+        "previous": "Previous",
+        "readMore": "Read More",
+        "showLess": "Show Less",
+        "learnMore": "Learn More"
+    },
+    "meta": {
+        "title": "Ben H. - Full-Stack Developer | JavaScript, Java, Python Expert",
+        "description": "Experienced full-stack software engineer specializing in JavaScript, TypeScript, Java, Python, C#, and Swift. Building scalable web applications and mobile solutions.",
+        "keywords": "Full-Stack Developer, Software Engineer, JavaScript, TypeScript, Java, Python, Web Development, Mobile Apps"
+    }
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { analytics } from './Analytics';
 
 /**
  * Performance Monitoring Component
@@ -17,37 +18,41 @@ export const PerformanceMonitor: React.FC = () => {
         // Track Core Web Vitals
         const trackWebVitals = async () => {
             try {
-                const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+                const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
 
                 // Largest Contentful Paint
-                getLCP((metric: any) => {
-                    console.log('LCP:', metric);
-                    // Send to analytics service
-                    sendToAnalytics('LCP', metric);
+                onLCP((metric: any) => {
+                    const rating = metric.value <= 2500 ? 'good' : metric.value <= 4000 ? 'needs-improvement' : 'poor';
+                    console.log('LCP:', metric.value, rating);
+                    analytics.performanceMetric('LCP', metric.value, rating);
                 });
 
-                // First Input Delay  
-                getFID((metric: any) => {
-                    console.log('FID:', metric);
-                    sendToAnalytics('FID', metric);
+                // Interaction to Next Paint (replaces FID)
+                onINP((metric: any) => {
+                    const rating = metric.value <= 200 ? 'good' : metric.value <= 500 ? 'needs-improvement' : 'poor';
+                    console.log('INP:', metric.value, rating);
+                    analytics.performanceMetric('INP', metric.value, rating);
                 });
 
                 // Cumulative Layout Shift
-                getCLS((metric: any) => {
-                    console.log('CLS:', metric);
-                    sendToAnalytics('CLS', metric);
+                onCLS((metric: any) => {
+                    const rating = metric.value <= 0.1 ? 'good' : metric.value <= 0.25 ? 'needs-improvement' : 'poor';
+                    console.log('CLS:', metric.value, rating);
+                    analytics.performanceMetric('CLS', metric.value, rating);
                 });
 
                 // First Contentful Paint
-                getFCP((metric: any) => {
-                    console.log('FCP:', metric);
-                    sendToAnalytics('FCP', metric);
+                onFCP((metric: any) => {
+                    const rating = metric.value <= 1800 ? 'good' : metric.value <= 3000 ? 'needs-improvement' : 'poor';
+                    console.log('FCP:', metric.value, rating);
+                    analytics.performanceMetric('FCP', metric.value, rating);
                 });
 
                 // Time to First Byte
-                getTTFB((metric: any) => {
-                    console.log('TTFB:', metric);
-                    sendToAnalytics('TTFB', metric);
+                onTTFB((metric: any) => {
+                    const rating = metric.value <= 800 ? 'good' : metric.value <= 1800 ? 'needs-improvement' : 'poor';
+                    console.log('TTFB:', metric.value, rating);
+                    analytics.performanceMetric('TTFB', metric.value, rating);
                 });
             } catch (error) {
                 console.warn('Web Vitals tracking failed:', error);
@@ -64,11 +69,7 @@ export const PerformanceMonitor: React.FC = () => {
                             // Track slow resources
                             if (entry.duration > 1000) {
                                 console.log('Slow resource:', entry.name, entry.duration);
-                                sendToAnalytics('slow-resource', {
-                                    name: entry.name,
-                                    duration: entry.duration,
-                                    size: (entry as any).transferSize,
-                                });
+                                analytics.performanceMetric('slow_resource', entry.duration, 'poor');
                             }
                         }
                     }
@@ -81,10 +82,7 @@ export const PerformanceMonitor: React.FC = () => {
                     for (const entry of list.getEntries()) {
                         if (entry.duration > 50) {
                             console.log('Long task detected:', entry.duration);
-                            sendToAnalytics('long-task', {
-                                duration: entry.duration,
-                                startTime: entry.startTime,
-                            });
+                            analytics.performanceMetric('long_task', entry.duration, 'needs-improvement');
                         }
                     }
                 });
@@ -101,11 +99,7 @@ export const PerformanceMonitor: React.FC = () => {
         const trackNetworkInfo = () => {
             if ('connection' in navigator) {
                 const connection = (navigator as any).connection;
-                sendToAnalytics('network-info', {
-                    effectiveType: connection.effectiveType,
-                    downlink: connection.downlink,
-                    rtt: connection.rtt,
-                });
+                analytics.performanceMetric('network_effective_type', 0, connection.effectiveType || 'unknown');
             }
         };
 
@@ -116,10 +110,11 @@ export const PerformanceMonitor: React.FC = () => {
 
         // Track page visibility changes
         const handleVisibilityChange = () => {
-            sendToAnalytics('visibility-change', {
-                visibilityState: document.visibilityState,
-                timestamp: Date.now(),
-            });
+            if (typeof window !== 'undefined' && window.gtag) {
+                window.gtag('event', 'page_visibility_change', {
+                    visibility_state: document.visibilityState
+                });
+            }
         };
 
         document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -131,41 +126,5 @@ export const PerformanceMonitor: React.FC = () => {
 
     return null; // This component doesn't render anything
 };
-
-/**
- * Send performance data to analytics service
- * Replace with your preferred analytics service (Google Analytics, Vercel Analytics, etc.)
- */
-function sendToAnalytics(metricName: string, data: any) {
-    // Example: Send to Google Analytics 4
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metricName, {
-            custom_parameter_1: data.value || data.duration || JSON.stringify(data),
-            custom_parameter_2: data.rating || 'info',
-        });
-    }
-
-    // Example: Send to Vercel Analytics
-    if (typeof window !== 'undefined' && (window as any).va) {
-        (window as any).va('track', metricName, data);
-    }
-
-    // Example: Send to custom analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                metric: metricName,
-                data,
-                timestamp: Date.now(),
-                userAgent: navigator.userAgent,
-                url: window.location.href,
-            }),
-        }).catch(() => {
-            // Silently fail for analytics
-        });
-    }
-}
 
 export default PerformanceMonitor;

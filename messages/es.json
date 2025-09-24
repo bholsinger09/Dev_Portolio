@@ -1,0 +1,162 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "contact": "Contacto",
+        "resume": "Currículum"
+    },
+    "hero": {
+        "name": "Ben H.",
+        "title": "Ingeniero de Software Full-Stack",
+        "description": "Ingeniero de software experimentado especializado en desarrollo full-stack con experiencia en {technologies}. Construyendo aplicaciones escalables desde plataformas web hasta soluciones móviles.",
+        "technologies": {
+            "javascript": "JavaScript/TypeScript",
+            "java": "Java",
+            "python": "Python",
+            "csharp": "C#",
+            "swift": "Swift"
+        },
+        "cta": {
+            "viewWork": "Ver Mi Trabajo",
+            "downloadResume": "Descargar Currículum"
+        },
+        "social": {
+            "github": "Perfil de GitHub",
+            "linkedin": "Perfil de LinkedIn",
+            "email": "Enviar Email"
+        }
+    },
+    "about": {
+        "title": "Acerca de Mí",
+        "subtitle": "Apasionado por crear experiencias digitales excepcionales",
+        "description": "Soy un ingeniero de software full-stack dedicado con {experience} años de experiencia construyendo aplicaciones web escalables y soluciones móviles. Mi pasión radica en resolver problemas complejos a través de código limpio y eficiente e soluciones innovadoras.",
+        "highlights": {
+            "experience": "5+ Años de Experiencia",
+            "projects": "50+ Proyectos Completados",
+            "technologies": "15+ Tecnologías Dominadas",
+            "clients": "Clientes Satisfechos en Todo el Mundo"
+        },
+        "journey": {
+            "title": "Mi Trayectoria",
+            "content": "Comencé como un solucionador de problemas curioso, he evolucionado hacia un ingeniero versátil que prospera convirtiendo ideas en realidad. Desde interfaces frontend hasta arquitecturas backend, me encanta todo el ciclo de vida del desarrollo."
+        },
+        "approach": {
+            "title": "Mi Enfoque",
+            "content": "Creo en escribir código limpio y mantenible, siguiendo las mejores prácticas y manteniéndome actualizado con las tecnologías emergentes. La colaboración y el aprendizaje continuo están en el núcleo de mi filosofía de desarrollo."
+        }
+    },
+    "skills": {
+        "title": "Habilidades y Tecnologías",
+        "subtitle": "Tecnologías con las que trabajo para dar vida a las ideas",
+        "categories": {
+            "frontend": {
+                "title": "Desarrollo Frontend",
+                "description": "Creando interfaces de usuario responsivas e interactivas"
+            },
+            "backend": {
+                "title": "Desarrollo Backend",
+                "description": "Construyendo aplicaciones robustas del lado del servidor"
+            },
+            "database": {
+                "title": "Base de Datos y Almacenamiento",
+                "description": "Diseñando soluciones de datos eficientes"
+            },
+            "tools": {
+                "title": "Herramientas y DevOps",
+                "description": "Optimizando el desarrollo y despliegue"
+            },
+            "mobile": {
+                "title": "Desarrollo Móvil",
+                "description": "Aplicaciones móviles nativas y multiplataforma"
+            }
+        }
+    },
+    "projects": {
+        "title": "Proyectos Destacados",
+        "subtitle": "Una muestra de mi trabajo y logros recientes",
+        "viewProject": "Ver Proyecto",
+        "viewCode": "Ver Código",
+        "liveDemo": "Demo en Vivo",
+        "comingSoon": "Más proyectos próximamente...",
+        "technologies": "Tecnologías Utilizadas",
+        "challenges": "Desafíos Clave",
+        "solutions": "Soluciones Implementadas"
+    },
+    "contact": {
+        "title": "Ponte en Contacto",
+        "subtitle": "Hablemos sobre tu próximo proyecto u oportunidad de colaboración",
+        "form": {
+            "name": {
+                "label": "Nombre Completo",
+                "placeholder": "Tu nombre completo",
+                "required": "El nombre es obligatorio",
+                "minLength": "El nombre debe tener al menos {min} caracteres",
+                "maxLength": "El nombre no debe exceder {max} caracteres"
+            },
+            "email": {
+                "label": "Dirección de Email",
+                "placeholder": "tu.email@ejemplo.com",
+                "required": "La dirección de email es obligatoria",
+                "invalid": "Por favor ingresa una dirección de email válida"
+            },
+            "subject": {
+                "label": "Asunto",
+                "placeholder": "¿De qué se trata?",
+                "required": "El asunto es obligatorio"
+            },
+            "message": {
+                "label": "Mensaje",
+                "placeholder": "¡Cuéntame sobre tu proyecto, idea, o simplemente saluda!",
+                "required": "El mensaje es obligatorio",
+                "minLength": "El mensaje debe tener al menos {min} caracteres"
+            },
+            "submit": "Enviar Mensaje",
+            "submitting": "Enviando...",
+            "success": "¡Mensaje enviado exitosamente! Te responderé pronto.",
+            "error": "Error al enviar el mensaje. Por favor intenta de nuevo o contáctame directamente.",
+            "rateLimit": "Demasiados envíos. Por favor intenta más tarde."
+        },
+        "info": {
+            "email": {
+                "label": "Email",
+                "value": "ben.holsinger@example.com"
+            },
+            "location": {
+                "label": "Ubicación",
+                "value": "Disponible en Todo el Mundo"
+            },
+            "response": {
+                "label": "Tiempo de Respuesta",
+                "value": "Dentro de 24 horas"
+            }
+        },
+        "social": {
+            "title": "Conéctate Conmigo",
+            "description": "Encuéntrame en estas plataformas"
+        }
+    },
+    "footer": {
+        "copyright": "© {year} Ben H. Todos los derechos reservados.",
+        "builtWith": "Construido con {technologies}",
+        "madeWith": "Hecho con ❤️ y mucho ☕"
+    },
+    "common": {
+        "loading": "Cargando...",
+        "error": "Algo salió mal",
+        "retry": "Intentar de Nuevo",
+        "close": "Cerrar",
+        "open": "Abrir",
+        "next": "Siguiente",
+        "previous": "Anterior",
+        "readMore": "Leer Más",
+        "showLess": "Mostrar Menos",
+        "learnMore": "Aprender Más"
+    },
+    "meta": {
+        "title": "Ben H. - Desarrollador Full-Stack | Experto en JavaScript, Java, Python",
+        "description": "Ingeniero de software full-stack experimentado especializado en JavaScript, TypeScript, Java, Python, C# y Swift. Construyendo aplicaciones web escalables y soluciones móviles.",
+        "keywords": "Desarrollador Full-Stack, Ingeniero de Software, JavaScript, TypeScript, Java, Python, Desarrollo Web, Aplicaciones Móviles"
+    }
+}

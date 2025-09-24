@@ -2,31 +2,34 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const About = () => {
+  const t = useTranslations('about');
+
   const skills = [
     {
-      category: 'Mobile Development',
+      category: t('skills.mobile.category'),
       technologies: ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'MapKit'],
       color: 'blue'
     },
     {
-      category: 'Backend & APIs',
+      category: t('skills.backend.category'),
       technologies: ['Python', 'FastAPI', 'Node.js', 'Express', 'OpenAI API'],
       color: 'green'
     },
     {
-      category: 'Languages',
+      category: t('skills.languages.category'),
       technologies: ['Swift', 'Python', 'JavaScript', 'Java', 'TypeScript'],
       color: 'purple'
     },
     {
-      category: 'Frontend Web',
+      category: t('skills.frontend.category'),
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'JavaScript'],
       color: 'orange'
     },
     {
-      category: 'Tools & Platforms',
+      category: t('skills.tools.category'),
       technologies: ['Xcode', 'Git', 'Docker', 'VS Code', 'Uvicorn'],
       color: 'indigo'
     }
@@ -34,17 +37,17 @@ const About = () => {
 
   const getColorClasses = (color: string) => {
     const colors = {
-      blue: 'bg-blue-100 text-blue-800',
-      green: 'bg-green-100 text-green-800',
-      purple: 'bg-purple-100 text-purple-800',
-      orange: 'bg-orange-100 text-orange-800',
-      indigo: 'bg-indigo-100 text-indigo-800'
+      blue: 'bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300',
+      green: 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-300',
+      purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-300',
+      orange: 'bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-300',
+      indigo: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-300'
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,19 +56,13 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">{t('title')}</h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-              I&apos;m a passionate full-stack software engineer with hands-on experience developing applications
-              across mobile, web, and AI integration platforms. My portfolio includes iOS applications,
-              FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms,
-              showcasing my versatility in tackling diverse technical challenges.
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-center">
+              {t('description.paragraph1')}
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed text-center">
-              From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities,
-              I excel at selecting the right technology stack for each project. My experience spans real estate
-              applications, e-commerce platforms, task management systems, and identity verification solutions,
-              demonstrating my ability to deliver practical, user-focused applications.
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-center">
+              {t('description.paragraph2')}
             </p>
           </div>
         </motion.div>
@@ -85,10 +82,10 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl hover:shadow-lg transition-shadow duration-300"
                 style={{ textAlign: 'center' }}
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">{skillGroup.category}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">{skillGroup.category}</h3>
                 <div className="flex flex-wrap gap-2" style={{ justifyContent: 'center' }}>
                   {skillGroup.technologies.map((tech) => (
                     <span

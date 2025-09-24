@@ -1,0 +1,162 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "about": "À propos",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "contact": "Contact",
+        "resume": "CV"
+    },
+    "hero": {
+        "name": "Ben H.",
+        "title": "Ingénieur Logiciel Full-Stack",
+        "description": "Ingénieur logiciel expérimenté spécialisé dans le développement full-stack avec une expertise en {technologies}. Création d'applications évolutives des plateformes web aux solutions mobiles.",
+        "technologies": {
+            "javascript": "JavaScript/TypeScript",
+            "java": "Java",
+            "python": "Python",
+            "csharp": "C#",
+            "swift": "Swift"
+        },
+        "cta": {
+            "viewWork": "Voir Mon Travail",
+            "downloadResume": "Télécharger CV"
+        },
+        "social": {
+            "github": "Profil GitHub",
+            "linkedin": "Profil LinkedIn",
+            "email": "Envoyer Email"
+        }
+    },
+    "about": {
+        "title": "À Propos de Moi",
+        "subtitle": "Passionné par la création d'expériences numériques exceptionnelles",
+        "description": "Je suis un ingénieur logiciel full-stack dévoué avec {experience} années d'expérience dans la construction d'applications web évolutives et de solutions mobiles. Ma passion réside dans la résolution de problèmes complexes grâce à du code propre et efficace et des solutions innovantes.",
+        "highlights": {
+            "experience": "5+ Années d'Expérience",
+            "projects": "50+ Projets Terminés",
+            "technologies": "15+ Technologies Maîtrisées",
+            "clients": "Clients Satisfaits dans le Monde Entier"
+        },
+        "journey": {
+            "title": "Mon Parcours",
+            "content": "Ayant commencé comme un résolveur de problèmes curieux, j'ai évolué vers un ingénieur polyvalent qui s'épanouit en transformant les idées en réalité. Des interfaces frontend aux architectures backend, j'adore tout le cycle de vie du développement."
+        },
+        "approach": {
+            "title": "Mon Approche",
+            "content": "Je crois en l'écriture de code propre et maintenable, en suivant les meilleures pratiques et en restant à jour avec les technologies émergentes. La collaboration et l'apprentissage continu sont au cœur de ma philosophie de développement."
+        }
+    },
+    "skills": {
+        "title": "Compétences et Technologies",
+        "subtitle": "Technologies avec lesquelles je travaille pour donner vie aux idées",
+        "categories": {
+            "frontend": {
+                "title": "Développement Frontend",
+                "description": "Création d'interfaces utilisateur réactives et interactives"
+            },
+            "backend": {
+                "title": "Développement Backend",
+                "description": "Construction d'applications robustes côté serveur"
+            },
+            "database": {
+                "title": "Base de Données et Stockage",
+                "description": "Conception de solutions de données efficaces"
+            },
+            "tools": {
+                "title": "Outils et DevOps",
+                "description": "Rationalisation du développement et du déploiement"
+            },
+            "mobile": {
+                "title": "Développement Mobile",
+                "description": "Applications mobiles natives et multiplateformes"
+            }
+        }
+    },
+    "projects": {
+        "title": "Projets Vedettes",
+        "subtitle": "Une vitrine de mon travail et de mes réalisations récents",
+        "viewProject": "Voir le Projet",
+        "viewCode": "Voir le Code",
+        "liveDemo": "Démo en Direct",
+        "comingSoon": "Plus de projets à venir...",
+        "technologies": "Technologies Utilisées",
+        "challenges": "Défis Clés",
+        "solutions": "Solutions Implémentées"
+    },
+    "contact": {
+        "title": "Entrer en Contact",
+        "subtitle": "Discutons de votre prochain projet ou opportunité de collaboration",
+        "form": {
+            "name": {
+                "label": "Nom Complet",
+                "placeholder": "Votre nom complet",
+                "required": "Le nom est obligatoire",
+                "minLength": "Le nom doit comporter au moins {min} caractères",
+                "maxLength": "Le nom ne doit pas dépasser {max} caractères"
+            },
+            "email": {
+                "label": "Adresse Email",
+                "placeholder": "votre.email@exemple.com",
+                "required": "L'adresse email est obligatoire",
+                "invalid": "Veuillez saisir une adresse email valide"
+            },
+            "subject": {
+                "label": "Sujet",
+                "placeholder": "De quoi s'agit-il ?",
+                "required": "Le sujet est obligatoire"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Parlez-moi de votre projet, idée, ou dites simplement bonjour !",
+                "required": "Le message est obligatoire",
+                "minLength": "Le message doit comporter au moins {min} caractères"
+            },
+            "submit": "Envoyer le Message",
+            "submitting": "Envoi...",
+            "success": "Message envoyé avec succès ! Je vous répondrai bientôt.",
+            "error": "Échec de l'envoi du message. Veuillez réessayer ou me contacter directement.",
+            "rateLimit": "Trop d'envois. Veuillez réessayer plus tard."
+        },
+        "info": {
+            "email": {
+                "label": "Email",
+                "value": "ben.holsinger@example.com"
+            },
+            "location": {
+                "label": "Localisation",
+                "value": "Disponible Partout dans le Monde"
+            },
+            "response": {
+                "label": "Temps de Réponse",
+                "value": "Dans les 24 heures"
+            }
+        },
+        "social": {
+            "title": "Connectez-vous avec Moi",
+            "description": "Trouvez-moi sur ces plateformes"
+        }
+    },
+    "footer": {
+        "copyright": "© {year} Ben H. Tous droits réservés.",
+        "builtWith": "Construit avec {technologies}",
+        "madeWith": "Fait avec ❤️ et beaucoup de ☕"
+    },
+    "common": {
+        "loading": "Chargement...",
+        "error": "Quelque chose s'est mal passé",
+        "retry": "Réessayer",
+        "close": "Fermer",
+        "open": "Ouvrir",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "readMore": "Lire Plus",
+        "showLess": "Afficher Moins",
+        "learnMore": "En Savoir Plus"
+    },
+    "meta": {
+        "title": "Ben H. - Développeur Full-Stack | Expert JavaScript, Java, Python",
+        "description": "Ingénieur logiciel full-stack expérimenté spécialisé en JavaScript, TypeScript, Java, Python, C# et Swift. Construction d'applications web évolutives et de solutions mobiles.",
+        "keywords": "Développeur Full-Stack, Ingénieur Logiciel, JavaScript, TypeScript, Java, Python, Développement Web, Applications Mobiles"
+    }
+}

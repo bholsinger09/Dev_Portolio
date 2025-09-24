@@ -271,19 +271,59 @@ export const useContactForm = () => {
 
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setSubmitError(null);
 
     try {
-      // Here you would typically make an API call to submit the form
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || `HTTP error! status: ${response.status}`);
+      }
+
+      if (!result.success) {
+        throw new Error(result.error || 'Unknown error occurred');
+      }
+
+      // Success!
       setSubmitStatus('success');
+      setSubmitSuccess(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({});
 
-      // Show success message for 3 seconds
-      setTimeout(() => setSubmitStatus('idle'), 3000);
+      // Track successful submission
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'contact_form_submit', {
+          method: 'api',
+          success: true,
+        });
+      }
+
+      // Show success message for 5 seconds
+      setTimeout(() => {
+        setSubmitStatus('idle');
+        setSubmitSuccess(false);
+      }, 5000);
+
     } catch (error) {
       setSubmitStatus('error');
+      const errorMessage = error instanceof Error ? error.message : 'Something went wrong. Please try again.';
+      setSubmitError(errorMessage);
+
+      // Track failed submission
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'contact_form_error', {
+          error_type: errorMessage,
+        });
+      }
+
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
