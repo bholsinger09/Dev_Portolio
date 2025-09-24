@@ -1,14 +1,21 @@
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
+      {/* Hero Section with Profile Picture */}
       <section className="container mx-auto px-6 py-20 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Ben H.
-        </h1>
-        <h2 className="text-2xl text-blue-600 font-semibold mb-8">
-          Full-Stack Developer
-        </h2>
+        <div className="flex flex-col items-center mb-8">
+          <img 
+            src="/profile-optimized.jpg" 
+            alt="Ben H. - Full-Stack Developer" 
+            className="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mb-6"
+          />
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            Ben H.
+          </h1>
+          <h2 className="text-2xl text-blue-600 font-semibold mb-8">
+            Full-Stack Developer
+          </h2>
+        </div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
           Experienced developer specializing in JavaScript, Java, Python, and C#. 
           Building innovative solutions across web, mobile, and enterprise applications.
@@ -43,6 +50,16 @@ export default function HomePage() {
             <p className="text-gray-600">Web & Mobile Development</p>
           </div>
         </div>
+        
+        <div className="mt-16 bg-white p-8 rounded-lg shadow-sm">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">My Journey</h3>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
+            As a passionate full-stack developer, I bring ideas to life through code. With extensive experience 
+            in modern web technologies, backend systems, and mobile development, I create solutions that are 
+            both technically robust and user-friendly. My expertise spans across JavaScript/TypeScript ecosystems, 
+            Java enterprise applications, Python data solutions, and native mobile development.
+          </p>
+        </div>
       </section>
 
       {/* Projects Preview */}
@@ -52,7 +69,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Web Applications</h3>
-              <p className="text-gray-600 mb-4">Modern React and Next.js applications with responsive design</p>
+              <p className="text-gray-600 mb-4">Modern React and Next.js applications with responsive design and optimal performance</p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">React</span>
                 <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Next.js</span>
@@ -61,7 +78,7 @@ export default function HomePage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Backend Systems</h3>
-              <p className="text-gray-600 mb-4">Scalable APIs and microservices with modern frameworks</p>
+              <p className="text-gray-600 mb-4">Scalable APIs and microservices with modern frameworks and cloud deployment</p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Node.js</span>
                 <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Spring Boot</span>
@@ -70,7 +87,7 @@ export default function HomePage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Mobile Development</h3>
-              <p className="text-gray-600 mb-4">Native and cross-platform mobile applications</p>
+              <p className="text-gray-600 mb-4">Native and cross-platform mobile applications with intuitive user experiences</p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">React Native</span>
                 <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">iOS</span>
@@ -81,19 +98,87 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="container mx-auto px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-          Interested in working together? Let's discuss your project and see how I can help bring your ideas to life.
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <a href="mailto:contact@example.com" className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-            Send Email
-          </a>
-          <a href="#" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold">
-            View Resume
-          </a>
+      {/* Technical Skills */}
+      <section className="container mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <h4 className="font-bold text-gray-900 mb-4">Frontend</h4>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div>React/Next.js</div>
+              <div>TypeScript</div>
+              <div>Tailwind CSS</div>
+              <div>Vue.js</div>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <h4 className="font-bold text-gray-900 mb-4">Backend</h4>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div>Node.js/Express</div>
+              <div>Spring Boot</div>
+              <div>Python/Django</div>
+              <div>C#/.NET</div>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <h4 className="font-bold text-gray-900 mb-4">Database</h4>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div>PostgreSQL</div>
+              <div>MongoDB</div>
+              <div>MySQL</div>
+              <div>Redis</div>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-sm text-center">
+            <h4 className="font-bold text-gray-900 mb-4">Mobile</h4>
+            <div className="space-y-2 text-sm text-gray-600">
+              <div>React Native</div>
+              <div>iOS/Swift</div>
+              <div>Flutter</div>
+              <div>Xamarin</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="bg-blue-600 text-white py-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-8">Let's Work Together</h2>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
+            Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life. 
+            Let's create something amazing together.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-blue-700 p-6 rounded-lg">
+              <h4 className="font-bold mb-2">Email</h4>
+              <a href="mailto:contact@example.com" className="text-blue-100 hover:text-white transition-colors">
+                contact@example.com
+              </a>
+            </div>
+            <div className="bg-blue-700 p-6 rounded-lg">
+              <h4 className="font-bold mb-2">LinkedIn</h4>
+              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+                Connect with me
+              </a>
+            </div>
+            <div className="bg-blue-700 p-6 rounded-lg">
+              <h4 className="font-bold mb-2">GitHub</h4>
+              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+                View my code
+              </a>
+            </div>
+          </div>
+          
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a href="mailto:contact@example.com" className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+              Send Email
+            </a>
+            <a href="/resume.pdf" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
+              Download Resume
+            </a>
+          </div>
         </div>
       </section>
     </div>
