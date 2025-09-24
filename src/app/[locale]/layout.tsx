@@ -12,14 +12,14 @@ export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    
     // Import messages for the current locale
     const messages = await getMessages({ locale });
-
+    
     // Get meta translations
-    const meta = messages.meta as any;
-
-    return {
+    const meta = messages.meta as any;    return {
         title: {
             default: meta.title.default,
             template: meta.title.template
@@ -90,16 +90,18 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default async function LocaleLayout({
     children,
-    params: { locale }
+    params
 }: {
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
+    const { locale } = await params;
+    
     // Validate that the incoming `locale` parameter is valid
     if (!locales.includes(locale as any)) notFound();
 
     // Providing all messages to the client side is the easiest way to get started
-    const messages = await getMessages();
+    const messages = await getMessages({ locale });
 
     return (
         <html lang={locale} suppressHydrationWarning>

@@ -9,27 +9,27 @@ const About = () => {
 
   const skills = [
     {
-      category: t('skills.mobile.category'),
+      category: t('skills.categories.mobile.title'),
       technologies: ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'MapKit'],
       color: 'blue'
     },
     {
-      category: t('skills.backend.category'),
+      category: t('skills.categories.backend.title'),
       technologies: ['Python', 'FastAPI', 'Node.js', 'Express', 'OpenAI API'],
       color: 'green'
     },
     {
-      category: t('skills.languages.category'),
+      category: 'Languages',
       technologies: ['Swift', 'Python', 'JavaScript', 'Java', 'TypeScript'],
       color: 'purple'
     },
     {
-      category: t('skills.frontend.category'),
+      category: t('skills.categories.frontend.title'),
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS', 'JavaScript'],
       color: 'orange'
     },
     {
-      category: t('skills.tools.category'),
+      category: t('skills.categories.tools.title'),
       technologies: ['Xcode', 'Git', 'Docker', 'VS Code', 'Uvicorn'],
       color: 'indigo'
     }
@@ -59,10 +59,16 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">{t('title')}</h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-center">
-              {t('description.paragraph1')}
+              I'm a passionate full-stack software engineer with hands-on experience developing applications
+              across mobile, web, and AI integration platforms. My portfolio includes iOS applications,
+              FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms,
+              showcasing my versatility in tackling diverse technical challenges.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed text-center">
-              {t('description.paragraph2')}
+              From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities,
+              I excel at selecting the right technology stack for each project. My experience spans real estate
+              applications, e-commerce platforms, task management systems, and identity verification solutions,
+              demonstrating my ability to deliver practical, user-focused applications.
             </p>
           </div>
         </motion.div>

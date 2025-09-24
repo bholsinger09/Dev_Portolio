@@ -27,7 +27,7 @@ const ProfileImage = withErrorBoundary(() => {
       <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl relative">
         {imageLoading && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-            <div className="text-gray-400">{t('loading')}</div>
+            <div className="text-gray-400">Loading...</div>
           </div>
         )}
 
@@ -38,7 +38,7 @@ const ProfileImage = withErrorBoundary(() => {
         ) : (
           <Image
             src="/profile-optimized.jpg"
-            alt={t('profileAlt')}
+            alt="Ben H. - Full-Stack Software Engineer and Developer Portfolio"
             width={224}
             height={224}
             className={`w-full h-full object-cover transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
@@ -78,13 +78,13 @@ const Hero = () => {
 
           <div className="max-w-4xl mx-auto">
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              {t.rich('description', {
-                javascript: (chunks) => <span className="text-blue-600 dark:text-blue-400 font-semibold">{chunks}</span>,
-                java: (chunks) => <span className="text-red-600 dark:text-red-400 font-semibold">{chunks}</span>,
-                python: (chunks) => <span className="text-green-600 dark:text-green-400 font-semibold">{chunks}</span>,
-                csharp: (chunks) => <span className="text-purple-600 dark:text-purple-400 font-semibold">{chunks}</span>,
-                swift: (chunks) => <span className="text-orange-600 dark:text-orange-400 font-semibold">{chunks}</span>
-              })}
+              Experienced software engineer specializing in full-stack development with expertise in{' '}
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">JavaScript/TypeScript</span>,{' '}
+              <span className="text-red-600 dark:text-red-400 font-semibold">Java</span>,{' '}
+              <span className="text-green-600 dark:text-green-400 font-semibold">Python</span>,{' '}
+              <span className="text-purple-600 dark:text-purple-400 font-semibold">C#</span>, and{' '}
+              <span className="text-orange-600 dark:text-orange-400 font-semibold">Swift</span>.
+              Building scalable applications from web platforms to mobile solutions.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ const Hero = () => {
               onClick={() => analytics.sectionView('projects')}
               className="w-full sm:w-auto bg-blue-600 dark:bg-blue-700 text-white px-8 py-4 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              {t('viewWork')}
+              {t('cta.viewWork')}
             </a>
             <a
               href="/resume.pdf"
@@ -104,7 +104,7 @@ const Hero = () => {
               className="w-full sm:w-auto border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Download size={20} />
-              {t('downloadResume')}
+              {t('cta.downloadResume')}
             </a>
           </div>
 
@@ -115,7 +115,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               onClick={() => analytics.socialClick('github')}
               className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors transform hover:scale-110"
-              aria-label={t('githubAria')}
+              aria-label={t('social.github')}
             >
               <Github size={32} />
             </a>
@@ -125,7 +125,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               onClick={() => analytics.socialClick('linkedin')}
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors transform hover:scale-110"
-              aria-label={t('linkedinAria')}
+              aria-label={t('social.linkedin')}
             >
               <Linkedin size={32} />
             </a>
@@ -133,7 +133,7 @@ const Hero = () => {
               href="mailto:ben.holsinger@example.com"
               onClick={() => analytics.socialClick('email')}
               className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors transform hover:scale-110"
-              aria-label={t('emailAria')}
+              aria-label={t('social.email')}
             >
               <Mail size={32} />
             </a>

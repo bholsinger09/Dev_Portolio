@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
           {/* Contact Info */}
           <div className="max-w-md mx-auto text-center">
-            <h4 className="text-lg font-semibold mb-4">{t('connect.title')}</h4>
+            <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="space-y-2">
               <a
                 href="mailto:bholsinger@gmail.com"
@@ -35,7 +35,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label={t('connect.github')}
+                aria-label="GitHub Profile"
               >
                 <Github size={24} />
               </a>
@@ -44,14 +44,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label={t('connect.linkedin')}
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin size={24} />
               </a>
               <a
                 href="mailto:bholsinger@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"
-                aria-label={t('connect.email')}
+                aria-label="Send Email"
               >
                 <Mail size={24} />
               </a>
@@ -66,11 +66,7 @@ const Footer = () => {
             {t('copyright', { year: new Date().getFullYear() })}
           </p>
           <p className="text-gray-400 text-sm flex items-center mt-2 md:mt-0">
-            {t.rich('madeWith', {
-              heart: () => <Heart size={16} className="mx-1 text-red-500" />,
-              tea: () => <span>🍵</span>,
-              monkey: () => <span>🐒</span>
-            })}
+            Made with <Heart size={16} className="mx-1 text-red-500" /> and lots of 🍵 by a code monkey 🐒
           </p>
         </div>
       </div>
