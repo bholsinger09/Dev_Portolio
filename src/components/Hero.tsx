@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { ErrorBoundary, withErrorBoundary } from './ErrorBoundary';
 import { PulseLoader } from './LoadingStates';
@@ -32,14 +33,19 @@ const ProfileImage = withErrorBoundary(() => {
             BH
           </div>
         ) : (
-          <img
-            src="/profile-small.png"
-            alt="Ben H. - Full-Stack Software Engineer"
+          <Image
+            src="/profile-optimized.jpg"
+            alt="Ben H. - Full-Stack Software Engineer and Developer Portfolio"
+            width={224}
+            height={224}
             className={`w-full h-full object-cover transition-opacity duration-300 ${
               imageLoading ? 'opacity-0' : 'opacity-100'
             }`}
             onLoad={handleImageLoad}
             onError={handleImageError}
+            priority
+            quality={95}
+            sizes="(max-width: 768px) 192px, 224px"
           />
         )}
       </div>

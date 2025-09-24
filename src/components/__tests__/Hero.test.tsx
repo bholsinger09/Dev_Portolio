@@ -17,15 +17,15 @@ describe('Hero Component', () => {
 
   describe('Profile Image', () => {
     it('renders profile image with correct attributes', () => {
-      const profileImage = screen.getByAltText('Ben H. - Full-Stack Software Engineer')
+      const profileImage = screen.getByAltText('Ben H. - Full-Stack Software Engineer and Developer Portfolio')
 
       expect(profileImage).toBeInTheDocument()
-      expect(profileImage).toHaveAttribute('src', '/profile-small.png')
+      expect(profileImage).toHaveAttribute('src', '/profile-optimized.jpg')
       expect(profileImage).toHaveClass('w-full', 'h-full', 'object-cover')
     })
 
     it('handles image load error with fallback', () => {
-      const profileImage = screen.getByAltText('Ben H. - Full-Stack Software Engineer')
+      const profileImage = screen.getByAltText('Ben H. - Full-Stack Software Engineer and Developer Portfolio')
 
       // Simulate image load error
       fireEvent.error(profileImage)
@@ -119,7 +119,7 @@ describe('Hero Component', () => {
     })
 
     it('applies responsive classes correctly', () => {
-      const profileContainer = screen.getByAltText('Ben H. - Full-Stack Software Engineer').parentElement
+      const profileContainer = screen.getByAltText('Ben H. - Full-Stack Software Engineer and Developer Portfolio').parentElement
 
       expect(profileContainer).toHaveClass('w-48', 'h-48', 'md:w-56', 'md:h-56')
     })
@@ -127,7 +127,7 @@ describe('Hero Component', () => {
 
   describe('Accessibility', () => {
     it('has proper alt text for profile image', () => {
-      const profileImage = screen.getByAltText('Ben H. - Full-Stack Software Engineer')
+      const profileImage = screen.getByAltText('Ben H. - Full-Stack Software Engineer and Developer Portfolio')
       expect(profileImage).toBeInTheDocument()
     })
 
