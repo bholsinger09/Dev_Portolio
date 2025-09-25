@@ -106,54 +106,62 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Frontend Skills */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Frontend Development</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Frontend Development</h3>
                 <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">React/Next.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">90%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-blue-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '90%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">TypeScript</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">85%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-blue-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '85%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Tailwind CSS</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">88%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-blue-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '88%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Vue.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-blue-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '75%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -161,54 +169,62 @@ export default function HomePage() {
 
               {/* Backend Skills */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Backend Development</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Backend Development</h3>
                 <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Node.js/Express</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">87%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-green-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '87%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Java/Spring Boot</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">82%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-green-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '82%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Python/Django</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">80%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-green-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '80%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">C#/.NET</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">78%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-green-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '78%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -216,54 +232,62 @@ export default function HomePage() {
 
               {/* Database Skills */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Database & DevOps</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Database & DevOps</h3>
                 <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">PostgreSQL</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">85%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-purple-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '85%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">MongoDB</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">83%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-purple-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '83%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Docker/AWS</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-purple-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '75%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Redis</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">70%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-purple-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '70%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -271,54 +295,62 @@ export default function HomePage() {
 
               {/* Mobile Development */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Mobile Development</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Mobile Development</h3>
                 <div className="space-y-6">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">React Native</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">88%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-orange-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '88%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">iOS/Swift</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">82%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-orange-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '82%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Flutter/Dart</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-orange-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '75%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
                       <span className="font-medium text-gray-700">Xamarin</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">65%</span>
                     </div>
-                    <div className="w-full bg-gray-300 rounded-full h-4 border border-gray-400">
+                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
                       <div
-                        className="bg-orange-500 h-full rounded-full transition-all duration-1000 ease-out"
+                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
                         style={{ width: '65%' }}
-                      ></div>
+                      >
+                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
