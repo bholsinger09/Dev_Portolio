@@ -14,12 +14,12 @@ jest.mock('next-intl', () => ({
       'cta.viewWork': 'View My Work',
       'cta.downloadResume': 'Download Resume',
       'social.github': 'GitHub Profile',
-      'social.linkedin': 'LinkedIn Profile', 
+      'social.linkedin': 'LinkedIn Profile',
       'social.email': 'Send Email',
-      
+
       // Footer translations
       'copyright': params ? `© ${params.year} Ben H. All rights reserved.` : '© 2025 Ben H. All rights reserved.',
-      
+
       // Navigation translations
       'home': 'Home',
       'about': 'About',
@@ -27,7 +27,7 @@ jest.mock('next-intl', () => ({
       'projects': 'Projects',
       'blog': 'Blog',
       'contact': 'Contact',
-      
+
       // Skills translations
       'skills.categories.mobile.title': 'Mobile Development',
       'skills.categories.backend.title': 'Backend & APIs',

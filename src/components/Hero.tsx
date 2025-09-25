@@ -148,7 +148,7 @@ const Hero = () => {
                     hoverColor: 'hover:text-gray-900 dark:hover:text-white'
                   },
                   {
-                    href: "https://linkedin.com/in/ben-holsinger",
+                    href: "https://www.linkedin.com/in/benjamin-holsinger-a1712a32",
                     icon: Linkedin,
                     label: t('social.linkedin'),
                     onClick: () => analytics.socialClick('linkedin'),

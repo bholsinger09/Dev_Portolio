@@ -93,11 +93,11 @@ describe('Hero Component', () => {
 
     it('renders LinkedIn link with correct attributes', () => {
       const linkedinLinks = screen.getAllByRole('link').filter(link =>
-        link.getAttribute('href') === 'https://linkedin.com/in/ben-holsinger'
+        link.getAttribute('href') === 'https://www.linkedin.com/in/benjamin-holsinger-a1712a32'
       )
 
       expect(linkedinLinks[0]).toBeInTheDocument()
-      expect(linkedinLinks[0]).toHaveAttribute('href', 'https://linkedin.com/in/ben-holsinger')
+      expect(linkedinLinks[0]).toHaveAttribute('href', 'https://www.linkedin.com/in/benjamin-holsinger-a1712a32')
       expect(linkedinLinks[0]).toHaveAttribute('target', '_blank')
     })
 

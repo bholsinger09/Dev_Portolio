@@ -179,5 +179,7 @@
         - text: © 2025 Ben H. Portfolio. Made with
         - img [ref=e237]
         - text: and Next.js
-  - alert [ref=e239]
+  - button "Open Next.js Dev Tools" [ref=e244] [cursor=pointer]:
+    - img [ref=e245] [cursor=pointer]
+  - alert [ref=e249]
 ```

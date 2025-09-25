@@ -179,5 +179,4 @@
         - text: © 2025 Ben H. Portfolio. Made with
         - img [ref=e234]
         - text: and Next.js
-  - alert [ref=e236]
 ```

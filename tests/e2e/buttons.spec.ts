@@ -68,7 +68,7 @@ test.describe('Button Functionality', () => {
                 label: 'GitHub Profile'
             },
             {
-                href: 'https://linkedin.com/in/ben-holsinger',
+                href: 'https://www.linkedin.com/in/benjamin-holsinger-a1712a32',
                 label: 'LinkedIn Profile'
             },
             {

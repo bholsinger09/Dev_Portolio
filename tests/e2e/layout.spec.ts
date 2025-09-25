@@ -152,7 +152,7 @@ test.describe('Layout and Spacing', () => {
             'a[href="#projects"]', // CTA button
             'a[href="/resume.pdf"]', // Resume button
             'a[href="https://github.com/bholsinger09"]', // Social links
-            'a[href="https://linkedin.com/in/ben-holsinger"]',
+            'a[href="https://www.linkedin.com/in/benjamin-holsinger-a1712a32"]',
             'a[href="mailto:ben.holsinger@example.com"]'
         ];
 

@@ -167,6 +167,6 @@ export const defaultAuthor: BlogAuthor = {
   avatar: '/profile-small.png',
   social: {
     github: 'https://github.com/bholsinger09',
-    linkedin: 'https://linkedin.com/in/ben-holsinger'
+    linkedin: 'https://www.linkedin.com/in/benjamin-holsinger-a1712a32'
   }
 };
