@@ -99,15 +99,15 @@ export default function HomePage() {
       </section>
 
       {/* Technical Skills */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 py-12">
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Technical Skills</h2>
           <div className="max-w-6xl w-full">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               {/* Frontend Skills */}
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Frontend Development</h3>
-                <div className="space-y-4">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Frontend Development</h3>
+                <div className="space-y-3">
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium text-gray-700">React/Next.js</span>
@@ -148,9 +148,9 @@ export default function HomePage() {
               </div>
 
               {/* Backend Skills */}
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Backend Development</h3>
-                <div className="space-y-4">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Backend Development</h3>
+                <div className="space-y-3">
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium text-gray-700">Node.js/Express</span>
@@ -191,9 +191,9 @@ export default function HomePage() {
               </div>
 
               {/* Database Skills */}
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Database & DevOps</h3>
-                <div className="space-y-4">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Database & DevOps</h3>
+                <div className="space-y-3">
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium text-gray-700">PostgreSQL</span>
@@ -234,9 +234,9 @@ export default function HomePage() {
               </div>
 
               {/* Mobile Development */}
-              <div className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Mobile Development</h3>
-                <div className="space-y-4">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Mobile Development</h3>
+                <div className="space-y-3">
                   <div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium text-gray-700">React Native</span>
