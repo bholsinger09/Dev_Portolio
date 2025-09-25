@@ -147,7 +147,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Frontend Development</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">React/Next.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">90%</span>
                     </div>
@@ -156,7 +156,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">TypeScript</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">85%</span>
                     </div>
@@ -165,7 +165,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Tailwind CSS</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">88%</span>
                     </div>
@@ -174,7 +174,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Vue.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">75%</span>
                     </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Backend Development</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Node.js/Express</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">87%</span>
                     </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Java/Spring Boot</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">82%</span>
                     </div>
@@ -208,7 +208,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Python/Django</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">80%</span>
                     </div>
@@ -217,7 +217,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">C#/.NET</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">78%</span>
                     </div>
@@ -233,7 +233,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Database & DevOps</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">PostgreSQL</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">85%</span>
                     </div>
@@ -242,7 +242,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">MongoDB</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">83%</span>
                     </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Docker/AWS</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">75%</span>
                     </div>
@@ -267,7 +267,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Mobile Development</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">React Native</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">88%</span>
                     </div>
@@ -276,7 +276,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">iOS/Swift</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">82%</span>
                     </div>
@@ -286,13 +286,13 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Testing & QA */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Testing & QA</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Scrum/Agile</span>
                       <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">90%</span>
                     </div>
@@ -301,7 +301,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">TestRails</span>
                       <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">85%</span>
                     </div>
@@ -310,7 +310,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Easy Redmine</span>
                       <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">80%</span>
                     </div>
@@ -319,7 +319,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Regression Testing</span>
                       <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">88%</span>
                     </div>
@@ -328,7 +328,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
+                    <div className="flex justify-center items-center gap-8 mb-3">
                       <span className="font-medium text-gray-700">Automation Testing</span>
                       <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">75%</span>
                     </div>
