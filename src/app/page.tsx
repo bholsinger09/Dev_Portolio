@@ -105,31 +105,8 @@ export default function HomePage() {
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Technical Skills</h2>
 
-          {/* Test Progress Bar */}
-          <div className="mb-8 max-w-md mx-auto">
-            <p className="text-center mb-2 font-semibold text-red-600">TEST BAR - This should be clearly visible:</p>
-            <div className="test-progress-container">
-              <div className="test-progress-bar"></div>
-            </div>
-            <p className="text-center mt-2 text-sm text-gray-600">If you can't see the red bar above, there's a CSS issue</p>
-          </div>
-
           {/* Add CSS styles */}
           <style jsx>{`
-            .test-progress-container {
-              width: 100%;
-              height: 30px;
-              background-color: #f3f4f6;
-              border: 2px solid #374151;
-              border-radius: 15px;
-              overflow: hidden;
-            }
-            .test-progress-bar {
-              width: 75%;
-              height: 100%;
-              background-color: #ef4444;
-              border-radius: 13px;
-            }
             .skill-progress-container {
               width: 100%;
               height: 24px;
@@ -160,9 +137,11 @@ export default function HomePage() {
             .database-bar:hover { background-color: #7c3aed; }
             .mobile-bar { background-color: #f59e0b; }
             .mobile-bar:hover { background-color: #d97706; }
+            .testing-bar { background-color: #ef4444; }
+            .testing-bar:hover { background-color: #dc2626; }
           `}</style>
           <div className="max-w-6xl w-full">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6">
               {/* Frontend Skills */}
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Frontend Development</h3>
@@ -280,15 +259,6 @@ export default function HomePage() {
                       <div className="skill-progress-bar database-bar" style={{ width: '75%' }}></div>
                     </div>
                   </div>
-                  <div className="text-center">
-                    <div className="flex justify-center items-center gap-4 mb-3">
-                      <span className="font-medium text-gray-700">Redis</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">70%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar database-bar" style={{ width: '70%' }}></div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -314,22 +284,56 @@ export default function HomePage() {
                       <div className="skill-progress-bar mobile-bar" style={{ width: '82%' }}></div>
                     </div>
                   </div>
+                </div>
+              </div>
+              
+              {/* Testing & QA */}
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Testing & QA</h3>
+                <div className="space-y-6">
                   <div className="text-center">
                     <div className="flex justify-center items-center gap-4 mb-3">
-                      <span className="font-medium text-gray-700">Flutter/Dart</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">75%</span>
+                      <span className="font-medium text-gray-700">Scrum/Agile</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">90%</span>
                     </div>
                     <div className="skill-progress-container">
-                      <div className="skill-progress-bar mobile-bar" style={{ width: '75%' }}></div>
+                      <div className="skill-progress-bar testing-bar" style={{ width: '90%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="flex justify-center items-center gap-4 mb-3">
-                      <span className="font-medium text-gray-700">Xamarin</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">65%</span>
+                      <span className="font-medium text-gray-700">TestRails</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">85%</span>
                     </div>
                     <div className="skill-progress-container">
-                      <div className="skill-progress-bar mobile-bar" style={{ width: '65%' }}></div>
+                      <div className="skill-progress-bar testing-bar" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
+                      <span className="font-medium text-gray-700">Easy Redmine</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">80%</span>
+                    </div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar testing-bar" style={{ width: '80%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
+                      <span className="font-medium text-gray-700">Regression Testing</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">88%</span>
+                    </div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar testing-bar" style={{ width: '88%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center gap-4 mb-3">
+                      <span className="font-medium text-gray-700">Automation Testing</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">75%</span>
+                    </div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar testing-bar" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                 </div>
