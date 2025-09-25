@@ -113,13 +113,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">React/Next.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">90%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
                         style={{ width: '90%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -127,13 +125,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">TypeScript</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
                         style={{ width: '85%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -141,13 +137,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Tailwind CSS</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">88%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
                         style={{ width: '88%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -155,13 +149,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Vue.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-blue-400 to-blue-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-blue-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
                         style={{ width: '75%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -176,13 +168,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Node.js/Express</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">87%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
                         style={{ width: '87%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -190,13 +180,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Java/Spring Boot</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">82%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
                         style={{ width: '82%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -204,13 +192,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Python/Django</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">80%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
                         style={{ width: '80%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -218,13 +204,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">C#/.NET</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">78%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-green-400 to-green-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-green-500 group-hover:to-green-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
                         style={{ width: '78%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -239,13 +223,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">PostgreSQL</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
                         style={{ width: '85%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -253,13 +235,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">MongoDB</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">83%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
                         style={{ width: '83%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -267,13 +247,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Docker/AWS</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
                         style={{ width: '75%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -281,13 +259,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Redis</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">70%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-purple-400 to-purple-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-purple-500 group-hover:to-purple-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
                         style={{ width: '70%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -302,13 +278,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">React Native</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">88%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
                         style={{ width: '88%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -316,13 +290,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">iOS/Swift</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">82%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
                         style={{ width: '82%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -330,13 +302,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Flutter/Dart</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
                         style={{ width: '75%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -344,13 +314,11 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Xamarin</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">65%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-6 shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer group">
+                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
                       <div
-                        className="bg-gradient-to-r from-orange-400 to-orange-600 h-full rounded-full transition-all duration-1000 ease-out group-hover:from-orange-500 group-hover:to-orange-700 group-hover:shadow-lg relative overflow-hidden"
+                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
                         style={{ width: '65%' }}
-                      >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      </div>
+                      ></div>
                     </div>
                   </div>
                 </div>
