@@ -6,7 +6,6 @@ import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-reac
 import { useContactForm } from '@/hooks';
 import { ErrorBoundary, CompactErrorFallback } from './ErrorBoundary';
 import { InlineLoader } from './LoadingStates';
-import { Button } from './ui';
 import { analytics } from './Analytics';
 import { ScrollReveal } from './ScrollAnimations';
 import { StatusIndicator, PulseButton, FloatingActionButton } from './MicroInteractions';

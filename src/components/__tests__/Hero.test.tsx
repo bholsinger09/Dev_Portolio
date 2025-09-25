@@ -41,7 +41,7 @@ describe('Hero Component', () => {
       const subHeading = screen.getByRole('heading', { level: 2 })
 
       expect(mainHeading).toHaveTextContent('Ben H.')
-      expect(subHeading).toHaveTextContent('Full-Stack Software Engineer')
+      expect(subHeading).toHaveTextContent('Full-Stack Developer')
     })
 
     it('displays all programming languages', () => {
@@ -67,7 +67,7 @@ describe('Hero Component', () => {
 
       expect(viewWorkButton).toBeInTheDocument()
       expect(viewWorkButton).toHaveAttribute('href', '#projects')
-      expect(viewWorkButton).toHaveClass('bg-blue-600')
+      expect(viewWorkButton).toHaveClass('bg-gradient-to-r', 'from-blue-600', 'to-purple-600')
     })
 
     it('renders "Download Resume" button with correct attributes', () => {
@@ -75,7 +75,7 @@ describe('Hero Component', () => {
 
       expect(downloadButton).toBeInTheDocument()
       expect(downloadButton).toHaveAttribute('href', '/resume.pdf')
-      expect(downloadButton).toHaveClass('border-2', 'border-gray-300')
+      expect(downloadButton).toHaveClass('border-2', 'border-blue-600')
     })
   })
 
