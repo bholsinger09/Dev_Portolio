@@ -30,10 +30,10 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         <StatusIndicator
           status={
-            isSuccess ? 'success' : 
-            isError ? 'error' : 
-            isSubmitting ? 'loading' : 
-            'idle'
+            isSuccess ? 'success' :
+              isError ? 'error' :
+                isSubmitting ? 'loading' :
+                  'idle'
           }
           successText="Message sent successfully!"
           errorText="Failed to send message. Please try again."
@@ -191,7 +191,7 @@ const ContactForm = () => {
           className="flex flex-col sm:flex-row gap-4"
         >
           <PulseButton
-            onClick={() => {}}
+            onClick={() => { }}
             disabled={isSubmitting}
             loading={isSubmitting}
             variant="primary"

@@ -124,7 +124,7 @@ export const blogCategories: BlogCategory[] = [
     icon: '🌐'
   },
   {
-    slug: 'mobile-development', 
+    slug: 'mobile-development',
     name: 'Mobile Development',
     description: 'iOS, Android, and cross-platform mobile development',
     color: 'green',

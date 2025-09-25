@@ -4,9 +4,9 @@ export default function HomePage() {
       {/* Hero Section with Profile Picture */}
       <section className="container mx-auto px-6 py-20 text-center">
         <div className="flex flex-col items-center mb-8">
-          <img 
-            src="/profile-optimized.jpg" 
-            alt="Ben H. - Full-Stack Developer" 
+          <img
+            src="/profile-optimized.jpg"
+            alt="Ben H. - Full-Stack Developer"
             className="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mb-6"
           />
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
@@ -17,7 +17,7 @@ export default function HomePage() {
           </h2>
         </div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-          Experienced developer specializing in JavaScript, Java, Python, and C#. 
+          Experienced developer specializing in JavaScript, Java, Python, and C#.
           Building innovative solutions across web, mobile, and enterprise applications.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -50,13 +50,13 @@ export default function HomePage() {
             <p className="text-gray-600">Web & Mobile Development</p>
           </div>
         </div>
-        
+
         <div className="mt-16 bg-white p-8 rounded-lg shadow-sm">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">My Journey</h3>
           <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
-            As a passionate full-stack developer, I bring ideas to life through code. With extensive experience 
-            in modern web technologies, backend systems, and mobile development, I create solutions that are 
-            both technically robust and user-friendly. My expertise spans across JavaScript/TypeScript ecosystems, 
+            As a passionate full-stack developer, I bring ideas to life through code. With extensive experience
+            in modern web technologies, backend systems, and mobile development, I create solutions that are
+            both technically robust and user-friendly. My expertise spans across JavaScript/TypeScript ecosystems,
             Java enterprise applications, Python data solutions, and native mobile development.
           </p>
         </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">90%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{width: '90%'}}></div>
+                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '90%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -123,7 +123,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">85%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{width: '85%'}}></div>
+                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -132,7 +132,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">88%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{width: '88%'}}></div>
+                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -141,7 +141,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">75%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{width: '75%'}}></div>
+                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">87%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{width: '87%'}}></div>
+                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '87%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -166,7 +166,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">82%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{width: '82%'}}></div>
+                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '82%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -175,7 +175,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">80%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{width: '80%'}}></div>
+                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '80%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -184,7 +184,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">78%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{width: '78%'}}></div>
+                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '78%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">85%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{width: '85%'}}></div>
+                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -209,7 +209,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">83%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{width: '83%'}}></div>
+                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '83%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -218,7 +218,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">75%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{width: '75%'}}></div>
+                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -227,7 +227,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">70%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{width: '70%'}}></div>
+                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '70%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">88%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{width: '88%'}}></div>
+                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -252,7 +252,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">82%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{width: '82%'}}></div>
+                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '82%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -261,7 +261,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">75%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{width: '75%'}}></div>
+                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                   <div>
@@ -270,7 +270,7 @@ export default function HomePage() {
                       <span className="text-sm text-gray-500">65%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{width: '65%'}}></div>
+                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '65%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -285,10 +285,10 @@ export default function HomePage() {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-8">Let's Work Together</h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
-            Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life. 
+            Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
             Let's create something amazing together.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-blue-700 p-6 rounded-lg">
               <h4 className="font-bold mb-2">Email</h4>
@@ -309,7 +309,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="mailto:contact@example.com" className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
               Send Email

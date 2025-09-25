@@ -191,7 +191,7 @@ async def stream_chat(request: ChatRequest):
       'Auto-scaling implementation based on request volume'
     ]
   },
-  
+
   {
     id: 'java-task-management',
     title: 'Java Task Management System',

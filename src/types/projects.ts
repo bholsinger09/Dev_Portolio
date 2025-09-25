@@ -104,7 +104,7 @@ export interface Testimonial {
 }
 
 // Project filtering and categorization
-export type ProjectCategory = 
+export type ProjectCategory =
   | 'API & AI Integration'
   | 'Desktop Application'
   | 'Mobile Application'
@@ -114,7 +114,7 @@ export type ProjectCategory =
   | 'Web Application'
   | 'Full-Stack Application';
 
-export type ProjectTechnology = 
+export type ProjectTechnology =
   | 'Python' | 'FastAPI' | 'OpenAI API' | 'asyncio' | 'Uvicorn'
   | 'Java' | 'OOP Design' | 'Collections' | 'File I/O' | 'Scanner'
   | 'Swift' | 'SwiftUI' | 'UIKit' | 'MapKit' | 'Core Data' | 'URLSession' | 'Stripe SDK' | 'CloudKit'

@@ -19,7 +19,7 @@ const SimpleFooter = () => {
                 contact@example.com
               </a>
             </div>
-            
+
             {/* Social Links */}
             <div className="flex justify-center space-x-4 mt-6">
               <a
@@ -51,7 +51,7 @@ const SimpleFooter = () => {
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm flex items-center justify-center">
             © 2025 Ben H. Portfolio. Made with{' '}
-            <Heart className="w-4 h-4 text-red-500 mx-1" /> 
+            <Heart className="w-4 h-4 text-red-500 mx-1" />
             and Next.js
           </p>
         </div>

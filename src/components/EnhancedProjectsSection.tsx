@@ -12,15 +12,15 @@ import type { Project } from '@/types';
 const EnhancedProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
-  
-  const displayProjects = showFeaturedOnly 
-    ? projects.filter(p => p.featured) 
+
+  const displayProjects = showFeaturedOnly
+    ? projects.filter(p => p.featured)
     : projects;
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,10 +33,10 @@ const EnhancedProjectsSection: React.FC = () => {
             Featured Projects & Case Studies
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            In-depth showcases of full-stack development projects with detailed technical implementations, 
+            In-depth showcases of full-stack development projects with detailed technical implementations,
             problem-solving approaches, and measurable business impact.
           </p>
-          
+
           {/* Portfolio Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
             {[
@@ -64,21 +64,19 @@ const EnhancedProjectsSection: React.FC = () => {
           <div className="flex justify-center mb-8">
             <button
               onClick={() => setShowFeaturedOnly(false)}
-              className={`px-6 py-3 rounded-l-lg font-medium transition-all duration-200 ${
-                !showFeaturedOnly 
-                  ? 'bg-blue-600 text-white shadow-lg' 
+              className={`px-6 py-3 rounded-l-lg font-medium transition-all duration-200 ${!showFeaturedOnly
+                  ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-              }`}
+                }`}
             >
               All Projects
             </button>
             <button
               onClick={() => setShowFeaturedOnly(true)}
-              className={`px-6 py-3 rounded-r-lg font-medium transition-all duration-200 ${
-                showFeaturedOnly 
-                  ? 'bg-blue-600 text-white shadow-lg' 
+              className={`px-6 py-3 rounded-r-lg font-medium transition-all duration-200 ${showFeaturedOnly
+                  ? 'bg-blue-600 text-white shadow-lg'
                   : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-              }`}
+                }`}
             >
               Featured Only
             </button>
@@ -111,7 +109,7 @@ const EnhancedProjectsSection: React.FC = () => {
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
               {projects.filter(p => p.featured).map((project, index) => (
-                <CaseStudyPreview 
+                <CaseStudyPreview
                   key={`featured-${project.title}`}
                   project={project}
                   index={index}
@@ -124,9 +122,9 @@ const EnhancedProjectsSection: React.FC = () => {
       </div>
 
       {/* Case Study Modal */}
-      <CaseStudyModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
+      <CaseStudyModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
       />
     </section>
   );
@@ -146,7 +144,7 @@ const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({ project, inde
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ 
+      whileHover={{
         y: -8,
         boxShadow: '0 20px 40px rgba(0, 0, 0, 0.1)',
         transition: { duration: 0.3 }
@@ -167,7 +165,7 @@ const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({ project, inde
             <div className="text-sm font-medium opacity-75">{project.category}</div>
           </div>
         </div>
-        
+
         {/* Featured Badge */}
         {project.featured && (
           <div className="absolute top-4 right-4">
@@ -194,7 +192,7 @@ const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({ project, inde
           </h3>
           <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors duration-200" />
         </div>
-        
+
         <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
           {project.shortDescription || project.description}
         </p>
@@ -227,7 +225,7 @@ const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({ project, inde
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
             {project.technologies.slice(0, 4).map(tech => (
-              <span 
+              <span
                 key={tech}
                 className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
               >
@@ -305,7 +303,7 @@ const CaseStudyPreview: React.FC<CaseStudyPreviewProps> = ({ project, index, onV
         <div className="text-2xl">{getProjectEmoji(project.category)}</div>
         <h4 className="text-lg font-bold text-gray-900">{project.title}</h4>
       </div>
-      
+
       <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
         {project.caseStudy.overview}
       </p>
@@ -387,7 +385,7 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
                 <X className="w-6 h-6" />
               </button>
             </div>
-            
+
             {/* Tab Navigation */}
             <div className="flex gap-4 mt-6">
               {[
@@ -399,11 +397,10 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                    activeTab === tab.id 
-                      ? 'bg-white text-blue-600' 
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${activeTab === tab.id
+                      ? 'bg-white text-blue-600'
                       : 'text-blue-100 hover:text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -455,7 +452,7 @@ const OverviewTab: React.FC<{ project: Project }> = ({ project }) => (
       <h3 className="text-xl font-semibold mb-3">Problem Statement</h3>
       <p className="text-gray-600 leading-relaxed">{project.caseStudy?.problem}</p>
     </div>
-    
+
     <div>
       <h3 className="text-xl font-semibold mb-3">Solution</h3>
       <p className="text-gray-600 leading-relaxed">{project.caseStudy?.solution}</p>
@@ -621,17 +618,17 @@ const ResultsTab: React.FC<{ project: Project }> = ({ project }) => (
           <li><strong>Role:</strong> {project.role || 'Developer'}</li>
         </ul>
       </div>
-      
+
       <div>
         <h4 className="font-semibold mb-2">Links</h4>
         <div className="space-y-2">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" 
-             className="flex items-center text-blue-600 hover:text-blue-700 text-sm">
+          <a href={project.github} target="_blank" rel="noopener noreferrer"
+            className="flex items-center text-blue-600 hover:text-blue-700 text-sm">
             <Github className="w-4 h-4 mr-2" />
             Source Code
           </a>
           <a href={project.demo} target="_blank" rel="noopener noreferrer"
-             className="flex items-center text-purple-600 hover:text-purple-700 text-sm">
+            className="flex items-center text-purple-600 hover:text-purple-700 text-sm">
             <ExternalLink className="w-4 h-4 mr-2" />
             Live Demo
           </a>

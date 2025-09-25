@@ -28,7 +28,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
   once = true,
 }) => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { 
+  const isInView = useInView(ref, {
     amount: threshold,
     once
   });
@@ -107,7 +107,7 @@ const StaggeredReveal: React.FC<StaggeredRevealProps> = ({
   itemClassName = '',
 }) => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { 
+  const isInView = useInView(ref, {
     amount: 0.1,
     once: true
   });

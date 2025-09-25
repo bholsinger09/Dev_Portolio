@@ -166,14 +166,14 @@ export const PulseButton: React.FC<PulseButtonProps> = ({
   type = 'button'
 }) => {
   const baseClasses = 'relative overflow-hidden font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg';
-  
+
   const variantClasses = {
     primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
     secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-900 focus:ring-gray-400',
     success: 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-6 py-2.5 text-base',
@@ -291,7 +291,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           transition-all duration-300
           focus:outline-none focus:ring-4 focus:ring-offset-2
         `}
-        whileHover={{ 
+        whileHover={{
           scale: 1.1,
           rotate: 5
         }}

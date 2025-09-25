@@ -126,8 +126,8 @@ const StatisticsSection: React.FC = () => {
         {statistics.map((stat) => (
           <div key={stat.label} className="group">
             <div className={`text-4xl font-bold ${stat.color} mb-2 transition-transform group-hover:scale-110`}>
-              <AnimatedCounter 
-                end={stat.value} 
+              <AnimatedCounter
+                end={stat.value}
                 suffix={stat.suffix}
                 duration={2}
               />

@@ -53,7 +53,7 @@ const ProfileImage = withErrorBoundary(() => {
               sizes="(max-width: 768px) 192px, 224px"
             />
           )}
-          
+
           {/* Animated ring effect */}
           <div className="absolute -inset-4 rounded-full border-2 border-blue-500/20 animate-pulse" />
         </div>
@@ -75,7 +75,7 @@ const Hero = () => {
         <div className="absolute bottom-40 left-20 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
         <div className="absolute bottom-20 right-10 w-16 h-16 bg-purple-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '0.5s' }} />
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="space-y-8">
           {/* Professional Photo with Error Handling */}

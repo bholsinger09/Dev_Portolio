@@ -28,9 +28,8 @@ export default function BlogPreviewClient({ featuredPosts }: BlogPreviewClientPr
           {featuredPosts.map((post, index) => (
             <article
               key={post.slug}
-              className={`group bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden transform hover:-translate-y-1 ${
-                index === 0 && featuredPosts.length > 1 ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
+              className={`group bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden transform hover:-translate-y-1 ${index === 0 && featuredPosts.length > 1 ? 'md:col-span-2 lg:col-span-1' : ''
+                }`}
             >
               {/* Featured Badge */}
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold px-3 py-1">

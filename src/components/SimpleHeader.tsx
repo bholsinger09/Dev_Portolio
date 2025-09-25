@@ -45,11 +45,10 @@ const SimpleHeader = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' 
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg'
         : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm'
-    }`}>
+      }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}

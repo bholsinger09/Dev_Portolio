@@ -11,7 +11,7 @@ interface PageTransitionProps {
  * Page Transition Wrapper with smooth animations and scroll behavior
  */
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
-  
+
   useEffect(() => {
     // Smooth scrolling for anchor links
     const handleClick = (e: Event) => {
@@ -20,7 +20,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
         e.preventDefault();
         const targetId = target.href.split('#')[1];
         const element = document.getElementById(targetId);
-        
+
         if (element) {
           element.scrollIntoView({
             behavior: 'smooth',
@@ -33,7 +33,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
 
     // Add click listeners to all anchor links
     document.addEventListener('click', handleClick);
-    
+
     return () => {
       document.removeEventListener('click', handleClick);
     };
@@ -100,7 +100,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
           transition={{ duration: 0.3 }}
           className="fixed inset-0 bg-gradient-to-br from-blue-50/20 to-purple-50/20 pointer-events-none z-0"
         />
-        
+
         {/* Main content with staggered animations */}
         <motion.div
           variants={childVariants}
@@ -133,9 +133,9 @@ const CursorFollower: React.FC = () => {
 
     // Add listeners to interactive elements
     const interactiveElements = document.querySelectorAll('button, a, [role="button"]');
-    
+
     document.addEventListener('mousemove', handleMouseMove);
-    
+
     interactiveElements.forEach(el => {
       el.addEventListener('mouseenter', handleMouseEnter);
       el.addEventListener('mouseleave', handleMouseLeave);

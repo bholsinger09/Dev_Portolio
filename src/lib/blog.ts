@@ -39,20 +39,20 @@ export function getBlogPostSlugs(): string[] {
 export function getBlogPostBySlug(slug: string): BlogPost | null {
   try {
     const fullPath = path.join(postsDirectory, `${slug}.mdx`);
-    
+
     if (!fs.existsSync(fullPath)) {
       return null;
     }
 
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
-    
+
     const metadata = data as BlogMetadata;
     const readingTimeStats = readingTime(content);
-    
+
     // Find category by slug
     const category = blogCategories.find(cat => cat.slug === metadata.category) || blogCategories[0];
-    
+
     return {
       slug,
       title: metadata.title,
@@ -88,39 +88,39 @@ export function getAllBlogPosts(filters?: BlogSearchFilters): BlogPost[] {
     if (filters.category) {
       posts = posts.filter(post => post.category.slug === filters.category);
     }
-    
+
     if (filters.tags && filters.tags.length > 0) {
-      posts = posts.filter(post => 
+      posts = posts.filter(post =>
         filters.tags!.some(tag => post.tags.includes(tag))
       );
     }
-    
+
     if (filters.query) {
       const query = filters.query.toLowerCase();
-      posts = posts.filter(post => 
+      posts = posts.filter(post =>
         post.title.toLowerCase().includes(query) ||
         post.excerpt.toLowerCase().includes(query) ||
         post.tags.some(tag => tag.toLowerCase().includes(query))
       );
     }
-    
+
     if (filters.featured !== undefined) {
       posts = posts.filter(post => post.featured === filters.featured);
     }
-    
+
     // Sort posts
     const sortBy = filters.sortBy || 'publishedAt';
     const sortOrder = filters.sortOrder || 'desc';
-    
+
     posts.sort((a, b) => {
       let aValue: string | number = a[sortBy as keyof BlogPost] as string | number;
       let bValue: string | number = b[sortBy as keyof BlogPost] as string | number;
-      
+
       if (sortBy === 'publishedAt' || sortBy === 'updatedAt') {
         aValue = new Date(aValue as string).getTime();
         bValue = new Date(bValue as string).getTime();
       }
-      
+
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1;
       } else {
@@ -129,7 +129,7 @@ export function getAllBlogPosts(filters?: BlogSearchFilters): BlogPost[] {
     });
   } else {
     // Default sort by published date, newest first
-    posts.sort((a, b) => 
+    posts.sort((a, b) =>
       new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
     );
   }
@@ -149,26 +149,26 @@ export function getFeaturedBlogPosts(limit: number = 3): BlogPost[] {
  */
 export function getRelatedBlogPosts(currentPost: BlogPost, limit: number = 3): BlogPost[] {
   const allPosts = getAllBlogPosts();
-  
+
   // Filter out the current post
   const otherPosts = allPosts.filter(post => post.slug !== currentPost.slug);
-  
+
   // Calculate relevance score based on category and tags
   const postsWithScore = otherPosts.map(post => {
     let score = 0;
-    
+
     // Same category gets higher score
     if (post.category.slug === currentPost.category.slug) {
       score += 3;
     }
-    
+
     // Shared tags get points
     const sharedTags = post.tags.filter(tag => currentPost.tags.includes(tag));
     score += sharedTags.length;
-    
+
     return { post, score };
   });
-  
+
   // Sort by score and return top posts
   return postsWithScore
     .sort((a, b) => b.score - a.score)
@@ -207,11 +207,11 @@ export function filterBlogPosts(
 export function getAllBlogTags(): string[] {
   const posts = getAllBlogPosts();
   const tagSet = new Set<string>();
-  
+
   posts.forEach(post => {
     post.tags.forEach(tag => tagSet.add(tag));
   });
-  
+
   return Array.from(tagSet).sort();
 }
 
@@ -224,7 +224,7 @@ export function getPostNavigation(currentSlug: string): {
 } {
   const posts = getAllBlogPosts();
   const currentIndex = posts.findIndex(post => post.slug === currentSlug);
-  
+
   return {
     previousPost: currentIndex > 0 ? posts[currentIndex - 1] : null,
     nextPost: currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null
@@ -255,14 +255,14 @@ export function generateExcerpt(content: string, maxLength: number = 160): strin
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Remove links, keep text
     .replace(/\n+/g, ' ') // Replace newlines with spaces
     .trim();
-  
+
   if (plainText.length <= maxLength) {
     return plainText;
   }
-  
+
   // Truncate at word boundary
   const truncated = plainText.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  
+
   return truncated.substring(0, lastSpace) + '...';
 }
