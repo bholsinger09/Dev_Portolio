@@ -1,0 +1,182 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "BH" [ref=e5]:
+        - /url: /
+        - generic [ref=e7]: BH
+      - generic [ref=e8]:
+        - button "Toggle theme" [ref=e9]:
+          - img [ref=e10]
+        - button "Toggle mobile menu" [ref=e12]:
+          - img [ref=e13]
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - img "Ben H. - Full-Stack Developer" [ref=e18]
+          - heading "Ben H." [level=1] [ref=e19]
+          - heading "Full-Stack Developer" [level=2] [ref=e20]
+        - paragraph [ref=e21]: Experienced developer specializing in JavaScript, Java, Python, and C#. Building innovative solutions across web, mobile, and enterprise applications.
+        - generic [ref=e22]:
+          - link "View Blog" [ref=e23]:
+            - /url: /blog
+          - link "View Projects" [ref=e24]:
+            - /url: "#projects"
+          - link "Get In Touch" [ref=e25]:
+            - /url: "#contact"
+      - generic [ref=e26]:
+        - heading "About Me" [level=2] [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - heading "5+ Years" [level=3] [ref=e30]
+            - paragraph [ref=e31]: Professional Development Experience
+          - generic [ref=e32]:
+            - heading "Multiple" [level=3] [ref=e33]
+            - paragraph [ref=e34]: Programming Languages & Frameworks
+          - generic [ref=e35]:
+            - heading "Full-Stack" [level=3] [ref=e36]
+            - paragraph [ref=e37]: Web & Mobile Development
+        - generic [ref=e38]:
+          - heading "My Journey" [level=3] [ref=e39]
+          - paragraph [ref=e40]: As a passionate full-stack developer, I bring ideas to life through code. With extensive experience in modern web technologies, backend systems, and mobile development, I create solutions that are both technically robust and user-friendly. My expertise spans across JavaScript/TypeScript ecosystems, Java enterprise applications, Python data solutions, and native mobile development.
+      - generic [ref=e42]:
+        - heading "Featured Projects" [level=2] [ref=e43]
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - heading "Web Applications" [level=3] [ref=e46]
+            - paragraph [ref=e47]: Modern React and Next.js applications with responsive design and optimal performance
+            - generic [ref=e48]:
+              - generic [ref=e49]: React
+              - generic [ref=e50]: Next.js
+              - generic [ref=e51]: TypeScript
+          - generic [ref=e52]:
+            - heading "Backend Systems" [level=3] [ref=e53]
+            - paragraph [ref=e54]: Scalable APIs and microservices with modern frameworks and cloud deployment
+            - generic [ref=e55]:
+              - generic [ref=e56]: Node.js
+              - generic [ref=e57]: Spring Boot
+              - generic [ref=e58]: Python
+          - generic [ref=e59]:
+            - heading "Mobile Development" [level=3] [ref=e60]
+            - paragraph [ref=e61]: Native and cross-platform mobile applications with intuitive user experiences
+            - generic [ref=e62]:
+              - generic [ref=e63]: React Native
+              - generic [ref=e64]: iOS
+              - generic [ref=e65]: Swift
+      - generic [ref=e67]:
+        - heading "Technical Skills" [level=2] [ref=e68]
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - heading "Frontend Development" [level=3] [ref=e72]
+            - generic [ref=e73]:
+              - generic [ref=e75]:
+                - generic [ref=e76]: React/Next.js
+                - generic [ref=e77]: 90%
+              - generic [ref=e79]:
+                - generic [ref=e80]: TypeScript
+                - generic [ref=e81]: 85%
+              - generic [ref=e83]:
+                - generic [ref=e84]: Tailwind CSS
+                - generic [ref=e85]: 88%
+              - generic [ref=e87]:
+                - generic [ref=e88]: Vue.js
+                - generic [ref=e89]: 75%
+          - generic [ref=e90]:
+            - heading "Backend Development" [level=3] [ref=e91]
+            - generic [ref=e92]:
+              - generic [ref=e94]:
+                - generic [ref=e95]: Node.js/Express
+                - generic [ref=e96]: 87%
+              - generic [ref=e98]:
+                - generic [ref=e99]: Java/Spring Boot
+                - generic [ref=e100]: 82%
+              - generic [ref=e102]:
+                - generic [ref=e103]: Python/Django
+                - generic [ref=e104]: 80%
+              - generic [ref=e106]:
+                - generic [ref=e107]: C#/.NET
+                - generic [ref=e108]: 78%
+          - generic [ref=e109]:
+            - heading "Database & DevOps" [level=3] [ref=e110]
+            - generic [ref=e111]:
+              - generic [ref=e113]:
+                - generic [ref=e114]: PostgreSQL
+                - generic [ref=e115]: 85%
+              - generic [ref=e117]:
+                - generic [ref=e118]: MongoDB
+                - generic [ref=e119]: 83%
+              - generic [ref=e121]:
+                - generic [ref=e122]: Docker/AWS
+                - generic [ref=e123]: 75%
+          - generic [ref=e124]:
+            - heading "Mobile Development" [level=3] [ref=e125]
+            - generic [ref=e126]:
+              - generic [ref=e128]:
+                - generic [ref=e129]: React Native
+                - generic [ref=e130]: 88%
+              - generic [ref=e132]:
+                - generic [ref=e133]: iOS/Swift
+                - generic [ref=e134]: 82%
+          - generic [ref=e135]:
+            - heading "Testing & QA" [level=3] [ref=e136]
+            - generic [ref=e137]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: Scrum/Agile
+                - generic [ref=e141]: 90%
+              - generic [ref=e143]:
+                - generic [ref=e144]: TestRails
+                - generic [ref=e145]: 85%
+              - generic [ref=e147]:
+                - generic [ref=e148]: Easy Redmine
+                - generic [ref=e149]: 80%
+              - generic [ref=e151]:
+                - generic [ref=e152]: Regression Testing
+                - generic [ref=e153]: 88%
+              - generic [ref=e155]:
+                - generic [ref=e156]: Automation Testing
+                - generic [ref=e157]: 75%
+      - generic [ref=e159]:
+        - heading "Let's Work Together" [level=2] [ref=e160]
+        - paragraph [ref=e161]: Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life. Let's create something amazing together.
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - heading "Email" [level=4] [ref=e164]
+            - link "contact@example.com" [ref=e165]:
+              - /url: mailto:contact@example.com
+          - generic [ref=e166]:
+            - heading "LinkedIn" [level=4] [ref=e167]
+            - link "Connect with me" [ref=e168]:
+              - /url: "#"
+          - generic [ref=e169]:
+            - heading "GitHub" [level=4] [ref=e170]
+            - link "View my code" [ref=e171]:
+              - /url: "#"
+        - generic [ref=e172]:
+          - link "Send Email" [ref=e173]:
+            - /url: mailto:contact@example.com
+          - link "Download Resume" [ref=e174]:
+            - /url: /resume.pdf
+  - contentinfo [ref=e175]:
+    - generic [ref=e176]:
+      - generic [ref=e178]:
+        - heading "Connect" [level=4] [ref=e179]
+        - link "contact@example.com" [ref=e181]:
+          - /url: mailto:contact@example.com
+        - generic [ref=e182]:
+          - link "GitHub" [ref=e183]:
+            - /url: "#"
+            - img [ref=e184]
+          - link "LinkedIn" [ref=e187]:
+            - /url: "#"
+            - img [ref=e188]
+          - link "Email" [ref=e192]:
+            - /url: mailto:contact@example.com
+            - img [ref=e193]
+      - paragraph [ref=e197]:
+        - text: © 2025 Ben H. Portfolio. Made with
+        - img [ref=e198]
+        - text: and Next.js
+```

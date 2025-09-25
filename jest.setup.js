@@ -14,6 +14,7 @@ jest.mock('framer-motion', () => ({
     a: ({ children, ...props }) => <a {...props}>{children}</a>,
   },
   AnimatePresence: ({ children }) => children,
+  useInView: jest.fn(() => true), // Mock useInView to always return true for tests
 }))
 
 // Mock window.matchMedia for responsive components

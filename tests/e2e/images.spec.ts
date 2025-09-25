@@ -11,8 +11,8 @@ test.describe('Image Handling', () => {
         await expect(profileImage).toBeVisible();
 
         // Check image attributes
-        await expect(profileImage).toHaveAttribute('src', '/profile-small.png');
-        await expect(profileImage).toHaveAttribute('alt', 'Ben H. - Full-Stack Software Engineer');
+        await expect(profileImage).toHaveAttribute('src', '/profile-optimized.jpg');
+        await expect(profileImage).toHaveAttribute('alt', 'Ben H. - Full-Stack Developer');
 
         // Check image container styling
         const imageContainer = profileImage.locator('..');
@@ -41,7 +41,7 @@ test.describe('Image Handling', () => {
 
     test('should show fallback when profile image fails to load', async ({ page }) => {
         // Block the profile image request to simulate failure
-        await page.route('/profile-small.png', route => route.abort());
+        await page.route('/profile-optimized.jpg', route => route.abort());
 
         // Reload the page to trigger the image error
         await page.reload();
@@ -131,7 +131,7 @@ test.describe('Image Handling', () => {
         const altText = await profileImage.getAttribute('alt');
         expect(altText).toBeTruthy();
         expect(altText).toContain('Ben H.');
-        expect(altText).toContain('Software Engineer');
+        expect(altText).toContain('Full-Stack Developer');
 
         // Should not have empty or generic alt text
         expect(altText).not.toBe('');
@@ -143,7 +143,7 @@ test.describe('Image Handling', () => {
         // Monitor network requests
         const imageRequests: any[] = [];
         page.on('response', response => {
-            if (response.url().includes('/profile-small.png')) {
+            if (response.url().includes('/profile-optimized.jpg')) {
                 imageRequests.push(response);
             }
         });

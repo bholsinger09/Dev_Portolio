@@ -8,7 +8,7 @@ test.describe('Layout and Spacing', () => {
     test('should have proper header spacing and no content overlap', async ({ page }) => {
         // Check that hero section doesn't overlap with header
         const header = page.locator('header');
-        const heroSection = page.locator('section[id="home"]');
+        const heroSection = page.locator('section').first(); // First section is the hero section
 
         const headerBox = await header.boundingBox();
         const heroBox = await heroSection.boundingBox();
@@ -21,8 +21,8 @@ test.describe('Layout and Spacing', () => {
     });
 
     test('should have centered content in hero section', async ({ page }) => {
-        const heroSection = page.locator('section[id="home"]');
-        const heroContainer = heroSection.locator('.max-w-7xl');
+        const heroSection = page.locator('section').first(); // First section is the hero section
+        const heroContainer = heroSection.locator('.container');
 
         // Hero section should have centering (either text-center or flex justify-center)
         await expect(heroSection).toHaveClass(/justify-center|text-center/);
@@ -58,8 +58,8 @@ test.describe('Layout and Spacing', () => {
             await page.setViewportSize(viewport);
 
             // Check that content is visible and not overflowing
-            const heroSection = page.locator('section[id="home"]');
-            const heroContainer = heroSection.locator('.max-w-7xl');
+            const heroSection = page.locator('section').first(); // First section is the hero section
+            const heroContainer = heroSection.locator('.container');
 
             await expect(heroSection).toBeVisible();
             await expect(heroContainer).toBeVisible();
@@ -101,7 +101,7 @@ test.describe('Layout and Spacing', () => {
         expect(sectionCount).toBeGreaterThanOrEqual(1);
 
         // Check hero section spacing
-        const heroSection = page.locator('section[id="home"]');
+        const heroSection = page.locator('section').first(); // First section is the hero section
         await expect(heroSection).toHaveClass(/min-h-screen/);
 
         // Check that hero content has proper internal spacing
@@ -121,7 +121,7 @@ test.describe('Layout and Spacing', () => {
             await page.waitForTimeout(500);
 
             // Check that content is still properly centered and visible
-            const heroSection = page.locator('section[id="home"]');
+            const heroSection = page.locator('section').first(); // First section is the hero section
             const mainHeading = page.locator('h1');
 
             await expect(heroSection).toBeVisible();

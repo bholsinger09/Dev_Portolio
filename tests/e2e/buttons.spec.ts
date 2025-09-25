@@ -5,11 +5,11 @@ test.describe('Button Functionality', () => {
         await page.goto('/');
     });
 
-    test('should have working "View My Work" button', async ({ page }) => {
-        const viewWorkButton = page.locator('a[href="#projects"]').filter({ hasText: 'View My Work' });
+    test('should have working "View Projects" button', async ({ page }) => {
+        const viewWorkButton = page.locator('a[href="#projects"]').filter({ hasText: 'View Projects' });
 
         await expect(viewWorkButton).toBeVisible();
-        await expect(viewWorkButton).toHaveText('View My Work');
+        await expect(viewWorkButton).toHaveText('View Projects');
 
         // Button should have proper styling
         await expect(viewWorkButton).toHaveClass(/bg-blue-600/);
@@ -133,9 +133,9 @@ test.describe('Button Functionality', () => {
     test('should have proper button accessibility', async ({ page }) => {
         // Check that all buttons have proper focus states
         const interactiveElements = [
-            'button[title*="Switch to"]', // Theme toggle
-            'button[aria-label*="main menu"]', // Mobile menu
-            'a[href="#projects"]:has-text("View My Work")', // CTA button
+            'button[aria-label="Toggle theme"]', // Theme toggle
+            'button[aria-label*="Toggle mobile menu"]', // Mobile menu
+            'a[href="#projects"]:has-text("View Projects")', // CTA button
             'a[href="/resume.pdf"]', // Resume button
         ];
 
@@ -219,7 +219,7 @@ test.describe('Button Functionality', () => {
             await page.waitForTimeout(500);
 
             // Main CTA buttons should always be visible and functional
-            const viewWorkButton = page.locator('a[href="#projects"]').filter({ hasText: 'View My Work' });
+            const viewWorkButton = page.locator('a[href="#projects"]').filter({ hasText: 'View Projects' });
             const resumeButton = page.locator('a[href="/resume.pdf"]');
 
             await expect(viewWorkButton).toBeVisible();

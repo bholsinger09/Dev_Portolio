@@ -16,18 +16,18 @@ test.describe('Navigation Components', () => {
         await expect(header).toHaveClass(/top-0/);
         await expect(header).toHaveClass(/z-50/);
 
-        // Check logo/brand name
+        // Check logo/brand name - SimpleHeader uses "BH" in a circle, not "Ben H."
         const logo = page.locator('header a[href="/"]');
         await expect(logo).toBeVisible();
-        await expect(logo).toHaveText('Ben H.');
+        await expect(logo).toContainText('BH');
 
-        // Check desktop navigation items are present
+        // Check desktop navigation items are present (SimpleHeader structure)
         const navItems = [
-            { href: '#home', text: 'Home' },
+            { href: '/', text: 'Home' },
             { href: '#about', text: 'About' },
             { href: '#projects', text: 'Projects' },
-            { href: '#skills', text: 'Skills' },
-            { href: '#contact', text: 'Contact' }
+            { href: '#contact', text: 'Contact' },
+            { href: '/blog', text: 'Blog' }
         ];
 
         // Check if we're on mobile viewport
@@ -35,8 +35,8 @@ test.describe('Navigation Components', () => {
         const isMobile = viewport && viewport.width < 768;
 
         if (isMobile) {
-            // On mobile, check that mobile menu button exists
-            const mobileMenuButton = page.locator('button[aria-label*="menu"]');
+            // On mobile, check that mobile menu button exists (SimpleHeader uses "Toggle mobile menu")
+            const mobileMenuButton = page.locator('button[aria-label*="Toggle mobile menu"]');
             await expect(mobileMenuButton).toBeVisible();
 
             // Click mobile menu to reveal navigation
@@ -44,11 +44,11 @@ test.describe('Navigation Components', () => {
             await page.waitForTimeout(300);
         }
 
-        // Now check navigation items - they may be in desktop nav (.hidden.md:flex) or mobile menu
+        // Now check navigation items - SimpleHeader uses .hidden.md:flex for desktop nav
         for (const item of navItems) {
-            // Try desktop navigation first
-            const desktopNavLink = page.locator('div.hidden.md\\:flex').locator(`a[href="${item.href}"]`).first();
-            const mobileNavLink = page.locator('#mobile-navigation').locator(`a[href="${item.href}"]`).first();
+            // Try desktop navigation first (SimpleHeader structure)
+            const desktopNavLink = page.locator('nav.hidden.md\\:flex').locator(`a[href="${item.href}"]`).first();
+            const mobileNavLink = page.locator('nav.md\\:hidden').locator(`a[href="${item.href}"]`).first();
 
             // Check which location has visible navigation
             const desktopVisible = await desktopNavLink.isVisible();
@@ -82,17 +82,14 @@ test.describe('Navigation Components', () => {
             return;
         }
 
-        // Check theme toggle buttons exist and find visible one
-        const desktopThemeToggle = page.locator('div.hidden.md\\:flex button[title*="Switch to"]').first();
-        const mobileThemeToggle = page.locator('div.md\\:hidden button[title*="Switch to"]').first();
-        const desktopVisible = await desktopThemeToggle.isVisible();
-        const visibleThemeToggle = desktopVisible ? desktopThemeToggle : mobileThemeToggle;
+        // Check theme toggle button exists (SimpleHeader uses aria-label="Toggle theme")
+        const themeToggle = page.locator('button[aria-label="Toggle theme"]');
 
         // Test theme toggle functionality
-        await expect(visibleThemeToggle).toBeVisible();
+        await expect(themeToggle).toBeVisible();
 
         // Click to toggle theme
-        await visibleThemeToggle.click();
+        await themeToggle.click();
 
         // Check if dark class is applied to html or body
         const htmlElement = page.locator('html');
@@ -103,12 +100,12 @@ test.describe('Navigation Components', () => {
         // Set mobile viewport
         await page.setViewportSize({ width: 375, height: 667 });
 
-        // Mobile menu button should be visible
-        const mobileMenuButton = page.locator('button[aria-label*="main menu"]');
+        // Mobile menu button should be visible (SimpleHeader uses "Toggle mobile menu")
+        const mobileMenuButton = page.locator('button[aria-label*="Toggle mobile menu"]');
         await expect(mobileMenuButton).toBeVisible();
 
-        // Mobile navigation should be hidden initially
-        const mobileNav = page.locator('#mobile-navigation');
+        // Mobile navigation should be hidden initially (SimpleHeader uses conditional rendering)
+        const mobileNav = page.locator('nav.md\\:hidden');
         await expect(mobileNav).not.toBeVisible();
 
         // Click mobile menu button to open
@@ -117,16 +114,16 @@ test.describe('Navigation Components', () => {
         // Mobile navigation should now be visible
         await expect(mobileNav).toBeVisible();
 
-        // Check all navigation links are present in mobile menu
+        // Check all navigation links are present in mobile menu (SimpleHeader has 5 links)
         const mobileNavLinks = mobileNav.locator('a');
         await expect(mobileNavLinks).toHaveCount(5);
 
-        // Verify navigation items in mobile menu
-        await expect(mobileNav.locator('a[href="#home"]')).toHaveText('Home');
+        // Verify navigation items in mobile menu (SimpleHeader structure)
+        await expect(mobileNav.locator('a[href="/"]')).toHaveText('Home');
         await expect(mobileNav.locator('a[href="#about"]')).toHaveText('About');
         await expect(mobileNav.locator('a[href="#projects"]')).toHaveText('Projects');
-        await expect(mobileNav.locator('a[href="#skills"]')).toHaveText('Skills');
         await expect(mobileNav.locator('a[href="#contact"]')).toHaveText('Contact');
+        await expect(mobileNav.locator('a[href="/blog"]')).toHaveText('Blog');
 
         // Click a navigation link should close the menu
         await mobileNav.locator('a[href="#about"]').click();
@@ -137,10 +134,10 @@ test.describe('Navigation Components', () => {
         await page.setViewportSize({ width: 375, height: 667 });
 
         // Open mobile menu
-        const mobileMenuButton = page.locator('button[aria-label*="main menu"]');
+        const mobileMenuButton = page.locator('button[aria-label*="Toggle mobile menu"]');
         await mobileMenuButton.click();
 
-        const mobileNav = page.locator('#mobile-navigation');
+        const mobileNav = page.locator('nav.md\\:hidden');
         await expect(mobileNav).toBeVisible();
 
         // Click outside the menu area
@@ -154,10 +151,10 @@ test.describe('Navigation Components', () => {
         await page.setViewportSize({ width: 375, height: 667 });
 
         // Open mobile menu
-        const mobileMenuButton = page.locator('button[aria-label*="main menu"]');
+        const mobileMenuButton = page.locator('button[aria-label*="Toggle mobile menu"]');
         await mobileMenuButton.click();
 
-        const mobileNav = page.locator('#mobile-navigation');
+        const mobileNav = page.locator('nav.md\\:hidden');
         await expect(mobileNav).toBeVisible();
 
         // Press Escape key
