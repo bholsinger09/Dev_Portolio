@@ -147,36 +147,36 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Frontend Development</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">React/Next.js</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">90%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">React/Next.js</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">90%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar frontend-bar" style={{ width: '90%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">TypeScript</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">85%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">TypeScript</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar frontend-bar" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Tailwind CSS</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">88%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Tailwind CSS</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar frontend-bar" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Vue.js</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">75%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Vue.js</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar frontend-bar" style={{ width: '75%' }}></div>
@@ -190,36 +190,36 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Backend Development</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Node.js/Express</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">87%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Node.js/Express</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">87%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar backend-bar" style={{ width: '87%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Java/Spring Boot</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">82%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Java/Spring Boot</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">82%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar backend-bar" style={{ width: '82%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Python/Django</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">80%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Python/Django</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">80%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar backend-bar" style={{ width: '80%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">C#/.NET</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">78%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">C#/.NET</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">78%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar backend-bar" style={{ width: '78%' }}></div>
@@ -233,27 +233,27 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Database & DevOps</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">PostgreSQL</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">85%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">PostgreSQL</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar database-bar" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">MongoDB</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">83%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">MongoDB</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">83%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar database-bar" style={{ width: '83%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Docker/AWS</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">75%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Docker/AWS</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar database-bar" style={{ width: '75%' }}></div>
@@ -267,18 +267,18 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Mobile Development</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">React Native</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">88%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">React Native</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar mobile-bar" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">iOS/Swift</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">82%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">iOS/Swift</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">82%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar mobile-bar" style={{ width: '82%' }}></div>
@@ -292,45 +292,45 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Testing & QA</h3>
                 <div className="space-y-6">
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Scrum/Agile</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">90%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Scrum/Agile</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">90%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar testing-bar" style={{ width: '90%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">TestRails</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">85%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">TestRails</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar testing-bar" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Easy Redmine</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">80%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Easy Redmine</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">80%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar testing-bar" style={{ width: '80%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Regression Testing</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">88%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Regression Testing</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar testing-bar" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex justify-between items-center mb-3 max-w-xs mx-auto">
-                      <span className="font-medium text-gray-700">Automation Testing</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full">75%</span>
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">Automation Testing</span>
+                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar testing-bar" style={{ width: '75%' }}></div>
