@@ -13,31 +13,35 @@ const SimpleFooter = () => {
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="space-y-2">
               <a
-                href="mailto:contact@example.com"
+                href="mailto:bholsinger@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors block"
               >
-                contact@example.com
+                bholsinger@gmail.com
               </a>
             </div>
 
             {/* Social Links */}
             <div className="flex justify-center space-x-4 mt-6">
               <a
-                href="#"
+                href="https://github.com/bholsinger09?tab=repositories"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/benjamin-holsinger-a1712a32"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:bholsinger@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Email"
               >

@@ -355,26 +355,26 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-blue-700 p-6 rounded-lg">
               <h4 className="font-bold mb-2">Email</h4>
-              <a href="mailto:contact@example.com" className="text-blue-100 hover:text-white transition-colors">
-                contact@example.com
+              <a href="mailto:bholsinger@gmail.com" className="text-blue-100 hover:text-white transition-colors">
+                bholsinger@gmail.com
               </a>
             </div>
             <div className="bg-blue-700 p-6 rounded-lg">
               <h4 className="font-bold mb-2">LinkedIn</h4>
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/benjamin-holsinger-a1712a32" className="text-blue-100 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 Connect with me
               </a>
             </div>
             <div className="bg-blue-700 p-6 rounded-lg">
               <h4 className="font-bold mb-2">GitHub</h4>
-              <a href="#" className="text-blue-100 hover:text-white transition-colors">
+              <a href="https://github.com/bholsinger09?tab=repositories" className="text-blue-100 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 View my code
               </a>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="mailto:contact@example.com" className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+            <a href="mailto:bholsinger@gmail.com" className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
               Send Email
             </a>
             <a href="/resume.pdf" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
