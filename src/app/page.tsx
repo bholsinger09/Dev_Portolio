@@ -1,3 +1,5 @@
+"use client"
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
@@ -102,6 +104,63 @@ export default function HomePage() {
       <section className="container mx-auto px-6 py-12">
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Technical Skills</h2>
+
+          {/* Test Progress Bar */}
+          <div className="mb-8 max-w-md mx-auto">
+            <p className="text-center mb-2 font-semibold text-red-600">TEST BAR - This should be clearly visible:</p>
+            <div className="test-progress-container">
+              <div className="test-progress-bar"></div>
+            </div>
+            <p className="text-center mt-2 text-sm text-gray-600">If you can't see the red bar above, there's a CSS issue</p>
+          </div>
+
+          {/* Add CSS styles */}
+          <style jsx>{`
+            .test-progress-container {
+              width: 100%;
+              height: 30px;
+              background-color: #f3f4f6;
+              border: 2px solid #374151;
+              border-radius: 15px;
+              overflow: hidden;
+            }
+            .test-progress-bar {
+              width: 75%;
+              height: 100%;
+              background-color: #ef4444;
+              border-radius: 13px;
+            }
+            .skill-progress-container {
+              width: 100%;
+              height: 24px;
+              background-color: #e5e7eb;
+              border-radius: 12px;
+              border: 2px solid #9ca3af;
+              overflow: hidden;
+              box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+              margin-bottom: 8px;
+            }
+            .skill-progress-bar {
+              height: 100%;
+              border-radius: 10px;
+              transition: all 0.3s ease;
+              cursor: pointer;
+              transform-origin: left;
+            }
+            .skill-progress-bar:hover {
+              transform: scaleY(1.15);
+              filter: brightness(1.1);
+              box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            }
+            .frontend-bar { background-color: #3b82f6; }
+            .frontend-bar:hover { background-color: #2563eb; }
+            .backend-bar { background-color: #10b981; }
+            .backend-bar:hover { background-color: #059669; }
+            .database-bar { background-color: #8b5cf6; }
+            .database-bar:hover { background-color: #7c3aed; }
+            .mobile-bar { background-color: #f59e0b; }
+            .mobile-bar:hover { background-color: #d97706; }
+          `}</style>
           <div className="max-w-6xl w-full">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Frontend Skills */}
@@ -113,11 +172,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">React/Next.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">90%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
-                        style={{ width: '90%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar frontend-bar" style={{ width: '90%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -125,11 +181,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">TypeScript</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
-                        style={{ width: '85%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar frontend-bar" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -137,11 +190,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Tailwind CSS</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">88%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
-                        style={{ width: '88%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar frontend-bar" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -149,11 +199,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Vue.js</span>
                       <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-blue-500 h-4 rounded-full transition-all duration-300 hover:bg-blue-600"
-                        style={{ width: '75%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar frontend-bar" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -168,11 +215,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Node.js/Express</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">87%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
-                        style={{ width: '87%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar backend-bar" style={{ width: '87%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -180,11 +224,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Java/Spring Boot</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">82%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
-                        style={{ width: '82%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar backend-bar" style={{ width: '82%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -192,11 +233,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Python/Django</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">80%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
-                        style={{ width: '80%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar backend-bar" style={{ width: '80%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -204,11 +242,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">C#/.NET</span>
                       <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">78%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-green-500 h-4 rounded-full transition-all duration-300 hover:bg-green-600"
-                        style={{ width: '78%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar backend-bar" style={{ width: '78%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -223,11 +258,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">PostgreSQL</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
-                        style={{ width: '85%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar database-bar" style={{ width: '85%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -235,11 +267,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">MongoDB</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">83%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
-                        style={{ width: '83%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar database-bar" style={{ width: '83%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -247,11 +276,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Docker/AWS</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
-                        style={{ width: '75%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar database-bar" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -259,11 +285,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Redis</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">70%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-purple-500 h-4 rounded-full transition-all duration-300 hover:bg-purple-600"
-                        style={{ width: '70%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar database-bar" style={{ width: '70%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -278,11 +301,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">React Native</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">88%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
-                        style={{ width: '88%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar mobile-bar" style={{ width: '88%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -290,11 +310,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">iOS/Swift</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">82%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
-                        style={{ width: '82%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar mobile-bar" style={{ width: '82%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -302,11 +319,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Flutter/Dart</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
-                        style={{ width: '75%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar mobile-bar" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                   <div className="text-center">
@@ -314,11 +328,8 @@ export default function HomePage() {
                       <span className="font-medium text-gray-700">Xamarin</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">65%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-4 mb-2">
-                      <div
-                        className="bg-orange-500 h-4 rounded-full transition-all duration-300 hover:bg-orange-600"
-                        style={{ width: '65%' }}
-                      ></div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar mobile-bar" style={{ width: '65%' }}></div>
                     </div>
                   </div>
                 </div>
