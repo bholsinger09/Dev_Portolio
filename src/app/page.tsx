@@ -108,40 +108,40 @@ export default function HomePage() {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Frontend Development</h3>
                 <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">React/Next.js</span>
-                      <span className="text-sm text-gray-500">90%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">React/Next.js</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">90%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">TypeScript</span>
-                      <span className="text-sm text-gray-500">85%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '85%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '90%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Tailwind CSS</span>
-                      <span className="text-sm text-gray-500">88%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">TypeScript</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '88%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '85%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Vue.js</span>
-                      <span className="text-sm text-gray-500">75%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Tailwind CSS</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">88%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-blue-600 h-2 rounded-full transition-all duration-700" style={{ width: '75%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '88%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Vue.js</span>
+                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">75%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '75%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -151,40 +151,40 @@ export default function HomePage() {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Backend Development</h3>
                 <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Node.js/Express</span>
-                      <span className="text-sm text-gray-500">87%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Node.js/Express</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-2 py-1 rounded">87%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '87%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Java/Spring Boot</span>
-                      <span className="text-sm text-gray-500">82%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '82%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '87%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Python/Django</span>
-                      <span className="text-sm text-gray-500">80%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Java/Spring Boot</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-2 py-1 rounded">82%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '80%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '82%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">C#/.NET</span>
-                      <span className="text-sm text-gray-500">78%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Python/Django</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-2 py-1 rounded">80%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-600 h-2 rounded-full transition-all duration-700" style={{ width: '78%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '80%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">C#/.NET</span>
+                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-2 py-1 rounded">78%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '78%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -194,40 +194,40 @@ export default function HomePage() {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Database & DevOps</h3>
                 <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">PostgreSQL</span>
-                      <span className="text-sm text-gray-500">85%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">PostgreSQL</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded">85%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">MongoDB</span>
-                      <span className="text-sm text-gray-500">83%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '83%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '85%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Docker/AWS</span>
-                      <span className="text-sm text-gray-500">75%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">MongoDB</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded">83%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '75%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '83%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Redis</span>
-                      <span className="text-sm text-gray-500">70%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Docker/AWS</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-purple-600 h-2 rounded-full transition-all duration-700" style={{ width: '70%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '75%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Redis</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-2 py-1 rounded">70%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '70%' }}></div>
                     </div>
                   </div>
                 </div>
@@ -237,40 +237,40 @@ export default function HomePage() {
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Mobile Development</h3>
                 <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">React Native</span>
-                      <span className="text-sm text-gray-500">88%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">React Native</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded">88%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '88%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">iOS/Swift</span>
-                      <span className="text-sm text-gray-500">82%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '82%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '88%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Flutter/Dart</span>
-                      <span className="text-sm text-gray-500">75%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">iOS/Swift</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded">82%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '75%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '82%' }}></div>
                     </div>
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-gray-700">Xamarin</span>
-                      <span className="text-sm text-gray-500">65%</span>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Flutter/Dart</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded">75%</span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-orange-600 h-2 rounded-full transition-all duration-700" style={{ width: '65%' }}></div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '75%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center mb-3">
+                      <span className="font-medium text-gray-700 mr-3">Xamarin</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-2 py-1 rounded">65%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-3 mb-1">
+                      <div className="bg-gradient-to-r from-orange-500 to-orange-600 h-3 rounded-full transition-all duration-700 shadow-sm" style={{ width: '65%' }}></div>
                     </div>
                   </div>
                 </div>
