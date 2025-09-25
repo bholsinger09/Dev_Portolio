@@ -22,7 +22,7 @@ export default function HomePage() {
           Experienced developer specializing in JavaScript, Java, Python, and C#.
           Building innovative solutions across web, mobile, and enterprise applications.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-wrap gap-8 justify-center">
           <a href="/blog" className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
             View Blog
           </a>
