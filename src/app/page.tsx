@@ -70,12 +70,22 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Applications</h3>
-              <p className="text-gray-600 mb-4">Modern React and Next.js applications with responsive design and optimal performance</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">React</span>
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Next.js</span>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">FindBook - Discover Your Next Great Read</h3>
+              <p className="text-gray-600 mb-4">A sophisticated Angular book discovery application featuring smart search, favorites management, and performance monitoring. Built with Angular 19 and integrated with Google Books API.</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Angular 19</span>
                 <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">TypeScript</span>
+                <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Angular Material</span>
+                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">RxJS</span>
+                <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Google Books API</span>
+              </div>
+              <div className="flex gap-3">
+                <a href="https://bholsinger09.github.io/FindBook" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                  Live Demo →
+                </a>
+                <a href="https://github.com/bholsinger09/FindBook" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 text-sm font-medium">
+                  GitHub →
+                </a>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
