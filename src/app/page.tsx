@@ -80,7 +80,7 @@ export default function HomePage() {
                 <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">RxJS</span>
                 <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Google Books API</span>
               </div>
-              <div className="flex gap-10">
+              <div className="flex flex-wrap gap-12">
                 <a href="https://bholsinger09.github.io/FindBook" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center gap-2">
                   📖 View FindBook Demo - Click Here
                 </a>

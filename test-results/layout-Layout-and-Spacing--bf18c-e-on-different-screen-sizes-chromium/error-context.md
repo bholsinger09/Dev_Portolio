@@ -46,140 +46,147 @@
         - heading "Featured Projects" [level=2] [ref=e43]
         - generic [ref=e44]:
           - generic [ref=e45]:
-            - heading "Web Applications" [level=3] [ref=e46]
-            - paragraph [ref=e47]: Modern React and Next.js applications with responsive design and optimal performance
+            - heading "FindBook - Discover Your Next Great Read" [level=3] [ref=e46]
+            - paragraph [ref=e47]: A sophisticated Angular book discovery application featuring smart search, favorites management, and performance monitoring. Built with Angular 19 and integrated with Google Books API.
             - generic [ref=e48]:
-              - generic [ref=e49]: React
-              - generic [ref=e50]: Next.js
-              - generic [ref=e51]: TypeScript
-          - generic [ref=e52]:
-            - heading "Backend Systems" [level=3] [ref=e53]
-            - paragraph [ref=e54]: Scalable APIs and microservices with modern frameworks and cloud deployment
-            - generic [ref=e55]:
-              - generic [ref=e56]: Node.js
-              - generic [ref=e57]: Spring Boot
-              - generic [ref=e58]: Python
-          - generic [ref=e59]:
-            - heading "Mobile Development" [level=3] [ref=e60]
-            - paragraph [ref=e61]: Native and cross-platform mobile applications with intuitive user experiences
-            - generic [ref=e62]:
-              - generic [ref=e63]: React Native
-              - generic [ref=e64]: iOS
-              - generic [ref=e65]: Swift
-      - generic [ref=e67]:
-        - heading "Technical Skills" [level=2] [ref=e68]
-        - generic [ref=e70]:
-          - generic [ref=e71]:
-            - heading "Frontend Development" [level=3] [ref=e72]
-            - generic [ref=e73]:
-              - generic [ref=e75]:
-                - generic [ref=e76]: React/Next.js
-                - generic [ref=e77]: 90%
-              - generic [ref=e81]:
-                - generic [ref=e82]: TypeScript
-                - generic [ref=e83]: 85%
-              - generic [ref=e87]:
-                - generic [ref=e88]: Tailwind CSS
-                - generic [ref=e89]: 88%
-              - generic [ref=e93]:
-                - generic [ref=e94]: Vue.js
-                - generic [ref=e95]: 75%
-          - generic [ref=e98]:
-            - heading "Backend Development" [level=3] [ref=e99]
-            - generic [ref=e100]:
-              - generic [ref=e102]:
-                - generic [ref=e103]: Node.js/Express
-                - generic [ref=e104]: 87%
-              - generic [ref=e108]:
-                - generic [ref=e109]: Java/Spring Boot
-                - generic [ref=e110]: 82%
-              - generic [ref=e114]:
-                - generic [ref=e115]: Python/Django
-                - generic [ref=e116]: 80%
-              - generic [ref=e120]:
-                - generic [ref=e121]: C#/.NET
-                - generic [ref=e122]: 78%
-          - generic [ref=e125]:
-            - heading "Database & DevOps" [level=3] [ref=e126]
-            - generic [ref=e127]:
-              - generic [ref=e129]:
-                - generic [ref=e130]: PostgreSQL
-                - generic [ref=e131]: 85%
-              - generic [ref=e135]:
-                - generic [ref=e136]: MongoDB
-                - generic [ref=e137]: 83%
-              - generic [ref=e141]:
-                - generic [ref=e142]: Docker/AWS
-                - generic [ref=e143]: 75%
-          - generic [ref=e146]:
-            - heading "Mobile Development" [level=3] [ref=e147]
-            - generic [ref=e148]:
-              - generic [ref=e150]:
-                - generic [ref=e151]: React Native
-                - generic [ref=e152]: 88%
-              - generic [ref=e156]:
-                - generic [ref=e157]: iOS/Swift
-                - generic [ref=e158]: 82%
-          - generic [ref=e161]:
-            - heading "Testing & QA" [level=3] [ref=e162]
-            - generic [ref=e163]:
-              - generic [ref=e165]:
-                - generic [ref=e166]: Scrum/Agile
-                - generic [ref=e167]: 90%
-              - generic [ref=e171]:
-                - generic [ref=e172]: TestRails
-                - generic [ref=e173]: 85%
-              - generic [ref=e177]:
-                - generic [ref=e178]: Easy Redmine
-                - generic [ref=e179]: 80%
-              - generic [ref=e183]:
-                - generic [ref=e184]: Regression Testing
-                - generic [ref=e185]: 88%
-              - generic [ref=e189]:
-                - generic [ref=e190]: Automation Testing
-                - generic [ref=e191]: 75%
-      - generic [ref=e195]:
-        - heading "Let's Work Together" [level=2] [ref=e196]
-        - paragraph [ref=e197]: Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life. Let's create something amazing together.
-        - generic [ref=e198]:
-          - generic [ref=e199]:
-            - heading "Email" [level=4] [ref=e200]
-            - link "contact@example.com" [ref=e201] [cursor=pointer]:
-              - /url: mailto:contact@example.com
-          - generic [ref=e202]:
-            - heading "LinkedIn" [level=4] [ref=e203]
-            - link "Connect with me" [ref=e204] [cursor=pointer]:
-              - /url: "#"
-          - generic [ref=e205]:
-            - heading "GitHub" [level=4] [ref=e206]
-            - link "View my code" [ref=e207] [cursor=pointer]:
-              - /url: "#"
-        - generic [ref=e208]:
-          - link "Send Email" [ref=e209] [cursor=pointer]:
-            - /url: mailto:contact@example.com
-          - link "Download Resume" [ref=e210] [cursor=pointer]:
+              - generic [ref=e49]: Angular 19
+              - generic [ref=e50]: TypeScript
+              - generic [ref=e51]: Angular Material
+              - generic [ref=e52]: RxJS
+              - generic [ref=e53]: Google Books API
+            - generic [ref=e54]:
+              - link "Live Demo →" [ref=e55] [cursor=pointer]:
+                - /url: https://bholsinger09.github.io/FindBook
+              - link "GitHub →" [ref=e56] [cursor=pointer]:
+                - /url: https://github.com/bholsinger09/FindBook
+          - generic [ref=e57]:
+            - heading "Backend Systems" [level=3] [ref=e58]
+            - paragraph [ref=e59]: Scalable APIs and microservices with modern frameworks and cloud deployment
+            - generic [ref=e60]:
+              - generic [ref=e61]: Node.js
+              - generic [ref=e62]: Spring Boot
+              - generic [ref=e63]: Python
+          - generic [ref=e64]:
+            - heading "Mobile Development" [level=3] [ref=e65]
+            - paragraph [ref=e66]: Native and cross-platform mobile applications with intuitive user experiences
+            - generic [ref=e67]:
+              - generic [ref=e68]: React Native
+              - generic [ref=e69]: iOS
+              - generic [ref=e70]: Swift
+      - generic [ref=e72]:
+        - heading "Technical Skills" [level=2] [ref=e73]
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - heading "Frontend Development" [level=3] [ref=e77]
+            - generic [ref=e78]:
+              - generic [ref=e80]:
+                - generic [ref=e81]: React/Next.js
+                - generic [ref=e82]: 90%
+              - generic [ref=e86]:
+                - generic [ref=e87]: TypeScript
+                - generic [ref=e88]: 85%
+              - generic [ref=e92]:
+                - generic [ref=e93]: Tailwind CSS
+                - generic [ref=e94]: 88%
+              - generic [ref=e98]:
+                - generic [ref=e99]: Vue.js
+                - generic [ref=e100]: 75%
+          - generic [ref=e103]:
+            - heading "Backend Development" [level=3] [ref=e104]
+            - generic [ref=e105]:
+              - generic [ref=e107]:
+                - generic [ref=e108]: Node.js/Express
+                - generic [ref=e109]: 87%
+              - generic [ref=e113]:
+                - generic [ref=e114]: Java/Spring Boot
+                - generic [ref=e115]: 82%
+              - generic [ref=e119]:
+                - generic [ref=e120]: Python/Django
+                - generic [ref=e121]: 80%
+              - generic [ref=e125]:
+                - generic [ref=e126]: C#/.NET
+                - generic [ref=e127]: 78%
+          - generic [ref=e130]:
+            - heading "Database & DevOps" [level=3] [ref=e131]
+            - generic [ref=e132]:
+              - generic [ref=e134]:
+                - generic [ref=e135]: PostgreSQL
+                - generic [ref=e136]: 85%
+              - generic [ref=e140]:
+                - generic [ref=e141]: MongoDB
+                - generic [ref=e142]: 83%
+              - generic [ref=e146]:
+                - generic [ref=e147]: Docker/AWS
+                - generic [ref=e148]: 75%
+          - generic [ref=e151]:
+            - heading "Mobile Development" [level=3] [ref=e152]
+            - generic [ref=e153]:
+              - generic [ref=e155]:
+                - generic [ref=e156]: React Native
+                - generic [ref=e157]: 88%
+              - generic [ref=e161]:
+                - generic [ref=e162]: iOS/Swift
+                - generic [ref=e163]: 82%
+          - generic [ref=e166]:
+            - heading "Testing & QA" [level=3] [ref=e167]
+            - generic [ref=e168]:
+              - generic [ref=e170]:
+                - generic [ref=e171]: Scrum/Agile
+                - generic [ref=e172]: 90%
+              - generic [ref=e176]:
+                - generic [ref=e177]: TestRails
+                - generic [ref=e178]: 85%
+              - generic [ref=e182]:
+                - generic [ref=e183]: Easy Redmine
+                - generic [ref=e184]: 80%
+              - generic [ref=e188]:
+                - generic [ref=e189]: Regression Testing
+                - generic [ref=e190]: 88%
+              - generic [ref=e194]:
+                - generic [ref=e195]: Automation Testing
+                - generic [ref=e196]: 75%
+      - generic [ref=e200]:
+        - heading "Let's Work Together" [level=2] [ref=e201]
+        - paragraph [ref=e202]: Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life. Let's create something amazing together.
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - heading "Email" [level=4] [ref=e205]
+            - link "bholsinger@gmail.com" [ref=e206] [cursor=pointer]:
+              - /url: mailto:bholsinger@gmail.com
+          - generic [ref=e207]:
+            - heading "LinkedIn" [level=4] [ref=e208]
+            - link "Connect with me" [ref=e209] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/benjamin-holsinger-a1712a32
+          - generic [ref=e210]:
+            - heading "GitHub" [level=4] [ref=e211]
+            - link "View my code" [ref=e212] [cursor=pointer]:
+              - /url: https://github.com/bholsinger09?tab=repositories
+        - generic [ref=e213]:
+          - link "Send Email" [ref=e214] [cursor=pointer]:
+            - /url: mailto:bholsinger@gmail.com
+          - link "Download Resume" [ref=e215] [cursor=pointer]:
             - /url: /resume.pdf
-  - contentinfo [ref=e211]:
-    - generic [ref=e212]:
-      - generic [ref=e214]:
-        - heading "Connect" [level=4] [ref=e215]
-        - link "contact@example.com" [ref=e217] [cursor=pointer]:
-          - /url: mailto:contact@example.com
-        - generic [ref=e218]:
-          - link "GitHub" [ref=e219] [cursor=pointer]:
-            - /url: "#"
-            - img [ref=e220] [cursor=pointer]
-          - link "LinkedIn" [ref=e223] [cursor=pointer]:
-            - /url: "#"
-            - img [ref=e224] [cursor=pointer]
-          - link "Email" [ref=e228] [cursor=pointer]:
-            - /url: mailto:contact@example.com
+  - contentinfo [ref=e216]:
+    - generic [ref=e217]:
+      - generic [ref=e219]:
+        - heading "Connect" [level=4] [ref=e220]
+        - link "bholsinger@gmail.com" [ref=e222] [cursor=pointer]:
+          - /url: mailto:bholsinger@gmail.com
+        - generic [ref=e223]:
+          - link "GitHub" [ref=e224] [cursor=pointer]:
+            - /url: https://github.com/bholsinger09?tab=repositories
+            - img [ref=e225] [cursor=pointer]
+          - link "LinkedIn" [ref=e228] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/benjamin-holsinger-a1712a32
             - img [ref=e229] [cursor=pointer]
-      - paragraph [ref=e233]:
+          - link "Email" [ref=e233] [cursor=pointer]:
+            - /url: mailto:bholsinger@gmail.com
+            - img [ref=e234] [cursor=pointer]
+      - paragraph [ref=e238]:
         - text: © 2025 Ben H. Portfolio. Made with
-        - img [ref=e234]
+        - img [ref=e239]
         - text: and Next.js
-  - button "Open Next.js Dev Tools" [ref=e241] [cursor=pointer]:
-    - img [ref=e242] [cursor=pointer]
-  - alert [ref=e245]
+  - button "Open Next.js Dev Tools" [ref=e246] [cursor=pointer]:
+    - img [ref=e247] [cursor=pointer]
+  - alert [ref=e250]
 ```
