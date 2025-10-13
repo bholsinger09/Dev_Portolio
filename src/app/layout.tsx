@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SimpleHeader from '@/components/SimpleHeader';
 import SimpleFooter from '@/components/SimpleFooter';
+import CustomCursor from '@/components/ui/CustomCursor';
+import InteractiveParticles from '@/components/ui/InteractiveParticles';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -119,6 +121,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300`}
       >
+        <InteractiveParticles />
+        <CustomCursor />
         <SimpleHeader />
         <main>
           {children}

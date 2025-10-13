@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion';
 import PageWrapper from '@/components/ui/PageWrapper';
+import Tilt3D from '@/components/ui/Tilt3D';
+import Parallax from '@/components/ui/Parallax';
+import SkillVisualization, { SkillData } from '@/components/ui/SkillVisualization';
 import { useEffect } from 'react';
 import { 
   heroContainer, 
@@ -33,6 +36,41 @@ export default function HomePage() {
       });
     }
   }, []);
+
+  // Define skill data for interactive visualizations
+  const frontendSkills: SkillData[] = [
+    { name: 'React', level: 92, color: '#61dafb', category: 'frontend' },
+    { name: 'Next.js', level: 88, color: '#000000', category: 'frontend' },
+    { name: 'TypeScript', level: 85, color: '#3178c6', category: 'frontend' },
+    { name: 'Tailwind', level: 88, color: '#06b6d4', category: 'frontend' },
+    { name: 'Angular', level: 82, color: '#dd0031', category: 'frontend' },
+    { name: 'Vue.js', level: 75, color: '#4fc08d', category: 'frontend' },
+  ];
+
+  const backendSkills: SkillData[] = [
+    { name: 'Node.js', level: 88, color: '#339933', category: 'backend' },
+    { name: 'Python', level: 85, color: '#3776ab', category: 'backend' },
+    { name: 'Java', level: 90, color: '#f89820', category: 'backend' },
+    { name: 'C#/.NET', level: 78, color: '#239120', category: 'backend' },
+    { name: 'Express', level: 85, color: '#000000', category: 'backend' },
+    { name: 'Django', level: 80, color: '#092e20', category: 'backend' },
+  ];
+
+  const databaseSkills: SkillData[] = [
+    { name: 'MongoDB', level: 85, color: '#47a248', category: 'database' },
+    { name: 'PostgreSQL', level: 82, color: '#336791', category: 'database' },
+    { name: 'MySQL', level: 80, color: '#4479a1', category: 'database' },
+    { name: 'SQLite', level: 88, color: '#003b57', category: 'database' },
+    { name: 'Redis', level: 75, color: '#dc382d', category: 'database' },
+    { name: 'Firebase', level: 78, color: '#ffca28', category: 'database' },
+  ];
+
+  const mobileSkills: SkillData[] = [
+    { name: 'iOS/Swift', level: 85, color: '#fa7343', category: 'mobile' },
+    { name: 'SwiftUI', level: 82, color: '#007aff', category: 'mobile' },
+    { name: 'React Native', level: 78, color: '#61dafb', category: 'mobile' },
+    { name: 'Core Data', level: 80, color: '#ff6b35', category: 'mobile' },
+  ];
 
   return (
     <PageWrapper className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
@@ -91,6 +129,7 @@ export default function HomePage() {
             href="/blog" 
             className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             {...buttonHover}
+            data-cursor="button"
           >
             View Blog
           </motion.a>
@@ -98,6 +137,7 @@ export default function HomePage() {
             href="#projects" 
             className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             {...buttonHover}
+            data-cursor="button"
           >
             View Projects
           </motion.a>
@@ -105,6 +145,7 @@ export default function HomePage() {
             href="#contact" 
             className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
             {...buttonHover}
+            data-cursor="button"
           >
             Get In Touch
           </motion.a>
@@ -149,26 +190,23 @@ export default function HomePage() {
             variants={fadeInUp}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
-            <h3 className="text-2xl font-bold text-blue-600 mb-4">Multiple</h3>
-            <p className="text-gray-600">Programming Languages & Frameworks</p>
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">50+ Projects</h3>
+            <p className="text-gray-600">Completed Successfully</p>
           </motion.div>
           <motion.div 
             className="bg-white p-8 rounded-lg shadow-sm"
             variants={fadeInUp}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           >
-            <h3 className="text-2xl font-bold text-blue-600 mb-4">Full-Stack</h3>
-            <p className="text-gray-600">Web & Mobile Development</p>
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">Multiple Languages</h3>
+            <p className="text-gray-600">Full-Stack Expertise</p>
           </motion.div>
         </motion.div>
-
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-sm">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">My Journey</h3>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
-            As a passionate full-stack developer, I bring ideas to life through code. With extensive experience
-            in modern web technologies, backend systems, and mobile development, I create solutions that are
-            both technically robust and user-friendly. My expertise spans across JavaScript/TypeScript ecosystems,
-            Java enterprise applications, Python data solutions, and native iOS development with Swift, SwiftUI, and MVVM architecture patterns.
+        <div className="mt-12 text-center">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            I'm passionate about creating efficient, scalable solutions that solve real-world problems. 
+            With experience across multiple programming languages and frameworks, I bring a comprehensive 
+            approach to every project, from initial concept to final deployment.
           </p>
         </div>
       </motion.section>
@@ -199,102 +237,59 @@ export default function HomePage() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            <motion.div 
-              className="bg-white p-6 rounded-lg shadow-sm"
-              variants={fadeInUp}
-              whileHover={{ 
-                y: -8, 
-                scale: 1.02,
-                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
-                transition: { duration: 0.3 } 
-              }}
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">FindBook - Discover Your Next Great Read</h3>
-              <p className="text-gray-600 mb-4">A sophisticated Angular book discovery application featuring smart search, favorites management, and performance monitoring. Built with Angular 19 and integrated with Google Books API.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Angular 19</span>
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">TypeScript</span>
-                <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Angular Material</span>
-                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">RxJS</span>
-                <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Google Books API</span>
-              </div>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-12">
-                <a href="https://bholsinger09.github.io/FindBook" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center gap-2">
-                  📖 View FindBook Demo - Click Here
-                </a>
-                <a href="https://github.com/bholsinger09/FindBook" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                  </svg>
-                  View FindBook on GitHub - Click Here
-                </a>
-              </div>
-            </motion.div>
-            <motion.div 
-              className="bg-white p-6 rounded-lg shadow-sm"
-              variants={fadeInUp}
-              whileHover={{ 
-                y: -8, 
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
-              }}
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Python Trivia - Interactive Quiz Application</h3>
-              <p className="text-gray-600 mb-4">An engaging Python-based trivia application with dynamic question generation, score tracking, and interactive gameplay. Features a clean web interface and comprehensive question database covering various topics.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Python</span>
-                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Flask</span>
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">HTML/CSS</span>
-                <span className="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">JavaScript</span>
-                <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Render</span>
-              </div>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-12">
-                <a href="https://pythontrivia.onrender.com" target="_blank" rel="noopener noreferrer" className="bg-yellow-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-700 transition-colors text-sm font-medium flex items-center gap-2">
-                  🐍 Play Python Trivia - Click Here
-                </a>
-                <a href="https://github.com/bholsinger09/PythonTrivia" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                  </svg>
-                  View Python Trivia on GitHub - Click Here
-                </a>
-              </div>
-            </motion.div>
-            <motion.div 
-              className="bg-white p-6 rounded-lg shadow-sm"
-              variants={fadeInUp}
-              whileHover={{ 
-                y: -8, 
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
-              }}
-            >
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Swift Offline Notes - iOS Note-Taking App</h3>
-              <p className="text-gray-600 mb-4">A powerful native iOS application for offline note-taking with robust data persistence using SQLite. Features seamless synchronization, local storage optimization, and modern Swift UI design patterns demonstrating advanced iOS development skills.</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded">Swift</span>
-                <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">SQLite</span>
-                <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">SwiftUI</span>
-                <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Core Data</span>
-                <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">iOS</span>
-              </div>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-12">
-                <a href="https://swiftofflinenotes.onrender.com" target="_blank" rel="noopener noreferrer" className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors text-sm font-medium flex items-center gap-2">
-                  📱 View Swift Notes Demo - Click Here
-                </a>
-                <a href="https://github.com/bholsinger09/SwiftOfflineNotes" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                  </svg>
-                  View Swift Notes on GitHub - Click Here
-                </a>
-              </div>
-            </motion.div>
+            <Parallax speed={0.3} direction="up">
+              <Tilt3D
+                tiltMaxAngle={15}
+                perspective={1000}
+                scale={1.05}
+                transitionDuration={400}
+                glareEnable={true}
+                glareMaxOpacity={0.2}
+                glareColor="#ffffff"
+                glarePosition="bottom"
+                gyroscope={false}
+              >
+                <motion.div 
+                  className="bg-white p-6 rounded-lg shadow-sm project-card"
+                  variants={fadeInUp}
+                  whileHover={{ 
+                    y: -8, 
+                    scale: 1.02,
+                    boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
+                    transition: { duration: 0.3 } 
+                  }}
+                  data-cursor="hover"
+                >
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">FindBook - Discover Your Next Great Read</h3>
+                  <p className="text-gray-600 mb-4">A sophisticated Angular book discovery application featuring smart search, favorites management, and performance monitoring. Built with Angular 19 and integrated with Google Books API.</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Angular 19</span>
+                    <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">TypeScript</span>
+                    <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Angular Material</span>
+                    <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">RxJS</span>
+                    <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Google Books API</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-12">
+                    <a href="https://bholsinger09.github.io/FindBook" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center gap-2" data-cursor="view">
+                      📖 View FindBook Demo - Click Here
+                    </a>
+                    <a href="https://github.com/bholsinger09/FindBook" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors text-sm font-medium flex items-center gap-2" data-cursor="view">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                      </svg>
+                      View FindBook on GitHub - Click Here
+                    </a>
+                  </div>
+                </motion.div>
+              </Tilt3D>
+            </Parallax>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Technical Skills */}
+      {/* Technical Skills - Interactive Visualizations */}
       <motion.section 
-        className="container mx-auto px-6 py-12"
+        className="container mx-auto px-6 py-16 bg-gradient-to-br from-gray-50 to-blue-50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -302,7 +297,7 @@ export default function HomePage() {
       >
         <div className="flex flex-col items-center">
           <motion.h2 
-            className="text-3xl font-bold text-center text-gray-900 mb-8"
+            className="text-3xl font-bold text-center text-gray-900 mb-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -310,335 +305,86 @@ export default function HomePage() {
           >
             Technical Skills
           </motion.h2>
+          
+          <motion.p 
+            className="text-lg text-gray-600 text-center max-w-2xl mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Interactive visualizations of my technical expertise across different domains
+          </motion.p>
 
-          {/* Add CSS styles */}
-          <style jsx>{`
-            .skill-progress-container {
-              width: 100%;
-              height: 24px;
-              background-color: #e5e7eb;
-              border-radius: 12px;
-              border: 2px solid #9ca3af;
-              overflow: hidden;
-              box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-              margin-bottom: 8px;
-            }
-            .skill-progress-bar {
-              height: 100%;
-              border-radius: 10px;
-              transition: all 0.3s ease;
-              cursor: pointer;
-              transform-origin: left;
-            }
-            .skill-progress-bar:hover {
-              transform: scaleY(1.15);
-              filter: brightness(1.1);
-              box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            }
-            .frontend-bar { background-color: #3b82f6; }
-            .frontend-bar:hover { background-color: #2563eb; }
-            .backend-bar { background-color: #10b981; }
-            .backend-bar:hover { background-color: #059669; }
-            .database-bar { background-color: #8b5cf6; }
-            .database-bar:hover { background-color: #7c3aed; }
-            .mobile-bar { background-color: #f59e0b; }
-            .mobile-bar:hover { background-color: #d97706; }
-            .testing-bar { background-color: #ef4444; }
-            .testing-bar:hover { background-color: #dc2626; }
-          `}</style>
-          <div className="max-w-6xl w-full">
-            <motion.div 
-              className="grid md:grid-cols-2 xl:grid-cols-2 gap-6"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              {/* Frontend Skills */}
-              <motion.div 
-                className="bg-white p-6 rounded-lg shadow-sm"
-                variants={skillCardVariants}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
-                }}
-              >
-                <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-6 text-center"
-                  variants={skillItemVariants}
-                >
-                  Frontend Development
-                </motion.h3>
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">React/Next.js</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">90%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar frontend-bar" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">TypeScript</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar frontend-bar" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Tailwind CSS</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar frontend-bar" style={{ width: '88%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Vue.js</span>
-                      <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar frontend-bar" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+          {/* Frontend Skills - Circular Progress */}
+          <motion.div 
+            className="w-full mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frontend Development</h3>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <SkillVisualization 
+                skills={frontendSkills} 
+                type="circular"
+                className="justify-center" 
+              />
+            </div>
+          </motion.div>
 
-              {/* Backend Skills */}
-              <motion.div 
-                className="bg-white p-6 rounded-lg shadow-sm"
-                variants={skillCardVariants}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
-                }}
-              >
-                <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-6 text-center"
-                  variants={skillItemVariants}
-                >
-                  Backend Development
-                </motion.h3>
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Node.js/Express</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">87%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar backend-bar" style={{ width: '87%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Java/Spring Boot</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">82%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar backend-bar" style={{ width: '82%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Python/Django</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">80%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar backend-bar" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">C#/.NET</span>
-                      <span className="text-sm font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full text-right justify-self-end">78%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar backend-bar" style={{ width: '78%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+          {/* Backend Skills - Radar Chart */}
+          <motion.div 
+            className="w-full mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Backend Development</h3>
+            <div className="bg-white rounded-xl shadow-lg">
+              <SkillVisualization 
+                skills={backendSkills} 
+                type="radar"
+              />
+            </div>
+          </motion.div>
 
-              {/* Database Skills */}
-              <motion.div 
-                className="bg-white p-6 rounded-lg shadow-sm"
-                variants={skillCardVariants}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
-                }}
-              >
-                <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-6 text-center"
-                  variants={skillItemVariants}
-                >
-                  Database & DevOps
-                </motion.h3>
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">PostgreSQL</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar database-bar" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">MongoDB</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">83%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar database-bar" style={{ width: '83%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">SQLite</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar database-bar" style={{ width: '88%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Docker/AWS</span>
-                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar database-bar" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+          {/* Database Skills - Animated Bars */}
+          <motion.div 
+            className="w-full mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Database & DevOps</h3>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <SkillVisualization 
+                skills={databaseSkills} 
+                type="bars"
+              />
+            </div>
+          </motion.div>
 
-              {/* Mobile Development */}
-              <motion.div 
-                className="bg-white p-6 rounded-lg shadow-sm"
-                variants={skillCardVariants}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
-                }}
-              >
-                <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-6 text-center"
-                  variants={skillItemVariants}
-                >
-                  Mobile Development
-                </motion.h3>
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">React Native</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar mobile-bar" style={{ width: '88%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">iOS/Swift</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar mobile-bar" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">SwiftUI</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">82%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar mobile-bar" style={{ width: '82%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">MVVM Architecture</span>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">80%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar mobile-bar" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Testing & QA */}
-              <motion.div 
-                className="bg-white p-6 rounded-lg shadow-sm"
-                variants={skillCardVariants}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
-                }}
-              >
-                <motion.h3 
-                  className="text-xl font-bold text-gray-900 mb-6 text-center"
-                  variants={skillItemVariants}
-                >
-                  Testing & QA
-                </motion.h3>
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Scrum/Agile</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">90%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar testing-bar" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">TestRails</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar testing-bar" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Easy Redmine</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">80%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar testing-bar" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Regression Testing</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar testing-bar" style={{ width: '88%' }}></div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
-                      <span className="font-medium text-gray-700 text-left">Automation Testing</span>
-                      <span className="text-sm font-semibold text-red-600 bg-red-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
-                    </div>
-                    <div className="skill-progress-container">
-                      <div className="skill-progress-bar testing-bar" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
+          {/* Mobile Skills - Circular Progress */}
+          <motion.div 
+            className="w-full"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Mobile Development</h3>
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <SkillVisualization 
+                skills={mobileSkills} 
+                type="circular"
+                className="justify-center" 
+              />
+            </div>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -666,17 +412,26 @@ export default function HomePage() {
             </div>
             <div className="bg-blue-700 p-6 rounded-lg">
               <h4 className="font-bold mb-2">GitHub</h4>
-              <a href="https://github.com/bholsinger09?tab=repositories" className="text-blue-100 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-                View my code
+              <a href="https://github.com/bholsinger09" className="text-blue-100 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                View my repositories
               </a>
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href="mailto:bholsinger@gmail.com" className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
-              Send Email
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a 
+              href="mailto:bholsinger@gmail.com" 
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+              data-cursor="button"
+            >
+              Send Message
             </a>
-            <a href="/resume.pdf" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold">
+            <a 
+              href="/resume.pdf" 
+              target="_blank" 
+              className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              data-cursor="button"
+            >
               Download Resume
             </a>
           </div>
@@ -684,4 +439,4 @@ export default function HomePage() {
       </section>
     </PageWrapper>
   );
-} 
+}
