@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { BlogPost } from '@/types/blog'
 import { formatDistance } from 'date-fns'
+import PageWrapper from '@/components/ui/PageWrapper'
 
 interface BlogListingClientProps {
   initialPosts: BlogPost[]
@@ -53,7 +54,7 @@ export default function BlogListingClient({ initialPosts }: BlogListingClientPro
   const paginatedPosts = filteredPosts.slice(startIndex, startIndex + postsPerPage)
 
   return (
-    <div className="min-h-screen pt-20">
+    <PageWrapper className="min-h-screen pt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center py-12">
@@ -236,6 +237,6 @@ export default function BlogListingClient({ initialPosts }: BlogListingClientPro
           </div>
         )}
       </div>
-    </div>
+    </PageWrapper>
   )
 }

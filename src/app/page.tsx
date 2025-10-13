@@ -1,57 +1,166 @@
 "use client"
 
+import { motion } from 'framer-motion';
+import PageWrapper from '@/components/ui/PageWrapper';
+import { useEffect } from 'react';
+import { 
+  heroContainer, 
+  heroItem, 
+  buttonHover, 
+  floatingAnimation, 
+  scrollFadeIn,
+  staggerContainer,
+  fadeInUp,
+  cardHover,
+  skillCardVariants,
+  skillProgressVariants,
+  skillItemVariants
+} from '@/utils/animations';
+
 export default function HomePage() {
+  useEffect(() => {
+    // Performance monitoring in development mode
+    if (process.env.NODE_ENV === 'development') {
+      import('@/utils/performance').then(({ testAnimationPerformance, monitorMemoryUsage }) => {
+        // Monitor hero section animations
+        setTimeout(() => {
+          testAnimationPerformance('Hero Section Animations');
+          const memoryUsage = monitorMemoryUsage();
+          if (memoryUsage) {
+            console.log('Memory Usage:', memoryUsage);
+          }
+        }, 1000);
+      });
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
+    <PageWrapper className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
       {/* Hero Section with Profile Picture */}
-      <section className="container mx-auto px-6 py-20 text-center">
-        <div className="flex flex-col items-center mb-8">
-          <img
+      <motion.section 
+        className="container mx-auto px-6 py-20 text-center"
+        variants={heroContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div 
+          className="flex flex-col items-center mb-8"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.img
             src="/profile-optimized.jpg"
             alt="Ben H. - Full-Stack Developer"
             className="w-32 h-32 rounded-full border-4 border-white shadow-lg object-cover mb-6"
+            variants={heroItem}
+            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+            animate={{
+              y: [-5, 5, -5],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+            }}
           />
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+          <motion.h1 
+            className="text-5xl font-bold text-gray-900 mb-4"
+            variants={heroItem}
+          >
             Ben H.
-          </h1>
-          <h2 className="text-2xl text-blue-600 font-semibold mb-8">
+          </motion.h1>
+          <motion.h2 
+            className="text-2xl text-blue-600 font-semibold mb-8"
+            variants={heroItem}
+          >
             Full-Stack Developer
-          </h2>
-        </div>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
+          </motion.h2>
+        </motion.div>
+        <motion.p 
+          className="text-xl text-gray-600 max-w-2xl mx-auto mb-12"
+          variants={heroItem}
+        >
           Experienced developer specializing in JavaScript, Java, Python, C#, and Swift.
           Building innovative solutions across web, mobile, and enterprise applications.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a href="/blog" className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+        </motion.p>
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          variants={heroItem}
+        >
+          <motion.a 
+            href="/blog" 
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+            {...buttonHover}
+          >
             View Blog
-          </a>
-          <a href="#projects" className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+          </motion.a>
+          <motion.a 
+            href="#projects" 
+            className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+            {...buttonHover}
+          >
             View Projects
-          </a>
-          <a href="#contact" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold">
+          </motion.a>
+          <motion.a 
+            href="#contact" 
+            className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
+            {...buttonHover}
+          >
             Get In Touch
-          </a>
-        </div>
-      </section>
+          </motion.a>
+        </motion.div>
+      </motion.section>
 
       {/* Quick Stats */}
-      <section id="about" className="container mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white p-8 rounded-lg shadow-sm">
+      <motion.section 
+        id="about" 
+        className="container mx-auto px-6 py-16"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.h2 
+          className="text-3xl font-bold text-center text-gray-900 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          About Me
+        </motion.h2>
+        <motion.div 
+          className="grid md:grid-cols-3 gap-8 text-center"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.div 
+            className="bg-white p-8 rounded-lg shadow-sm"
+            variants={fadeInUp}
+            whileHover={{ y: -5, transition: { duration: 0.3 } }}
+          >
             <h3 className="text-2xl font-bold text-blue-600 mb-4">5+ Years</h3>
             <p className="text-gray-600">Professional Development Experience</p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-sm">
+          </motion.div>
+          <motion.div 
+            className="bg-white p-8 rounded-lg shadow-sm"
+            variants={fadeInUp}
+            whileHover={{ y: -5, transition: { duration: 0.3 } }}
+          >
             <h3 className="text-2xl font-bold text-blue-600 mb-4">Multiple</h3>
             <p className="text-gray-600">Programming Languages & Frameworks</p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-sm">
+          </motion.div>
+          <motion.div 
+            className="bg-white p-8 rounded-lg shadow-sm"
+            variants={fadeInUp}
+            whileHover={{ y: -5, transition: { duration: 0.3 } }}
+          >
             <h3 className="text-2xl font-bold text-blue-600 mb-4">Full-Stack</h3>
             <p className="text-gray-600">Web & Mobile Development</p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div className="mt-16 bg-white p-8 rounded-lg shadow-sm">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">My Journey</h3>
@@ -62,15 +171,44 @@ export default function HomePage() {
             Java enterprise applications, Python data solutions, and native iOS development with Swift, SwiftUI, and MVVM architecture patterns.
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Preview */}
-      <section id="projects" className="bg-gray-50 py-16">
+      <motion.section 
+        id="projects" 
+        className="bg-gray-50 py-16"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
-          {/* Force redeploy */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+          <motion.h2 
+            className="text-3xl font-bold text-center text-gray-900 mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Featured Projects
+          </motion.h2>
+          <motion.div 
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              className="bg-white p-6 rounded-lg shadow-sm"
+              variants={fadeInUp}
+              whileHover={{ 
+                y: -8, 
+                scale: 1.02,
+                boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
+                transition: { duration: 0.3 } 
+              }}
+            >
               <h3 className="text-xl font-bold text-gray-900 mb-4">FindBook - Discover Your Next Great Read</h3>
               <p className="text-gray-600 mb-4">A sophisticated Angular book discovery application featuring smart search, favorites management, and performance monitoring. Built with Angular 19 and integrated with Google Books API.</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -91,8 +229,15 @@ export default function HomePage() {
                   View FindBook on GitHub - Click Here
                 </a>
               </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            </motion.div>
+            <motion.div 
+              className="bg-white p-6 rounded-lg shadow-sm"
+              variants={fadeInUp}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
+              }}
+            >
               <h3 className="text-xl font-bold text-gray-900 mb-4">Python Trivia - Interactive Quiz Application</h3>
               <p className="text-gray-600 mb-4">An engaging Python-based trivia application with dynamic question generation, score tracking, and interactive gameplay. Features a clean web interface and comprehensive question database covering various topics.</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -113,8 +258,15 @@ export default function HomePage() {
                   View Python Trivia on GitHub - Click Here
                 </a>
               </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
+            </motion.div>
+            <motion.div 
+              className="bg-white p-6 rounded-lg shadow-sm"
+              variants={fadeInUp}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" 
+              }}
+            >
               <h3 className="text-xl font-bold text-gray-900 mb-4">Swift Offline Notes - iOS Note-Taking App</h3>
               <p className="text-gray-600 mb-4">A powerful native iOS application for offline note-taking with robust data persistence using SQLite. Features seamless synchronization, local storage optimization, and modern Swift UI design patterns demonstrating advanced iOS development skills.</p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -135,15 +287,29 @@ export default function HomePage() {
                   View Swift Notes on GitHub - Click Here
                 </a>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Technical Skills */}
-      <section className="container mx-auto px-6 py-12">
+      <motion.section 
+        className="container mx-auto px-6 py-12"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Technical Skills</h2>
+          <motion.h2 
+            className="text-3xl font-bold text-center text-gray-900 mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Technical Skills
+          </motion.h2>
 
           {/* Add CSS styles */}
           <style jsx>{`
@@ -181,10 +347,28 @@ export default function HomePage() {
             .testing-bar:hover { background-color: #dc2626; }
           `}</style>
           <div className="max-w-6xl w-full">
-            <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-6">
+            <motion.div 
+              className="grid md:grid-cols-2 xl:grid-cols-2 gap-6"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+            >
               {/* Frontend Skills */}
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Frontend Development</h3>
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-sm"
+                variants={skillCardVariants}
+                whileHover={{ 
+                  y: -5, 
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
+                }}
+              >
+                <motion.h3 
+                  className="text-xl font-bold text-gray-900 mb-6 text-center"
+                  variants={skillItemVariants}
+                >
+                  Frontend Development
+                </motion.h3>
                 <div className="space-y-6">
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
@@ -223,11 +407,23 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Backend Skills */}
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Backend Development</h3>
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-sm"
+                variants={skillCardVariants}
+                whileHover={{ 
+                  y: -5, 
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
+                }}
+              >
+                <motion.h3 
+                  className="text-xl font-bold text-gray-900 mb-6 text-center"
+                  variants={skillItemVariants}
+                >
+                  Backend Development
+                </motion.h3>
                 <div className="space-y-6">
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
@@ -266,11 +462,23 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Database Skills */}
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Database & DevOps</h3>
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-sm"
+                variants={skillCardVariants}
+                whileHover={{ 
+                  y: -5, 
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
+                }}
+              >
+                <motion.h3 
+                  className="text-xl font-bold text-gray-900 mb-6 text-center"
+                  variants={skillItemVariants}
+                >
+                  Database & DevOps
+                </motion.h3>
                 <div className="space-y-6">
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
@@ -309,11 +517,23 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Mobile Development */}
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Mobile Development</h3>
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-sm"
+                variants={skillCardVariants}
+                whileHover={{ 
+                  y: -5, 
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
+                }}
+              >
+                <motion.h3 
+                  className="text-xl font-bold text-gray-900 mb-6 text-center"
+                  variants={skillItemVariants}
+                >
+                  Mobile Development
+                </motion.h3>
                 <div className="space-y-6">
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
@@ -352,11 +572,23 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Testing & QA */}
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Testing & QA</h3>
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-sm"
+                variants={skillCardVariants}
+                whileHover={{ 
+                  y: -5, 
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" 
+                }}
+              >
+                <motion.h3 
+                  className="text-xl font-bold text-gray-900 mb-6 text-center"
+                  variants={skillItemVariants}
+                >
+                  Testing & QA
+                </motion.h3>
                 <div className="space-y-6">
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
@@ -404,11 +636,11 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
       <section id="contact" className="bg-blue-600 text-white py-16">
@@ -450,6 +682,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageWrapper>
   );
 } 

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { formatDistance } from 'date-fns'
 import { getBlogPostBySlug, getRelatedBlogPosts, formatBlogDate } from '@/lib/blog'
 import { BlogPost } from '@/types/blog'
+import PageWrapper from '@/components/ui/PageWrapper'
 
 interface BlogPostPageProps {
   params: {
@@ -20,7 +21,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = getRelatedBlogPosts(post, 3)
 
   return (
-    <div className="min-h-screen pt-20">
+    <PageWrapper className="min-h-screen pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
@@ -186,7 +187,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </Link>
         </div>
       </div>
-    </div>
+    </PageWrapper>
   )
 }
 
