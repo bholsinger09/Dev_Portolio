@@ -19,7 +19,7 @@ export default function HomePage() {
           </h2>
         </div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-          Experienced developer specializing in JavaScript, Java, Python, and C#.
+          Experienced developer specializing in JavaScript, Java, Python, C#, and Swift.
           Building innovative solutions across web, mobile, and enterprise applications.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -59,7 +59,7 @@ export default function HomePage() {
             As a passionate full-stack developer, I bring ideas to life through code. With extensive experience
             in modern web technologies, backend systems, and mobile development, I create solutions that are
             both technically robust and user-friendly. My expertise spans across JavaScript/TypeScript ecosystems,
-            Java enterprise applications, Python data solutions, and native mobile development.
+            Java enterprise applications, Python data solutions, and native iOS development with Swift, SwiftUI, and MVVM architecture patterns.
           </p>
         </div>
       </section>
@@ -292,6 +292,15 @@ export default function HomePage() {
                   </div>
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">SQLite</span>
+                      <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">88%</span>
+                    </div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar database-bar" style={{ width: '88%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
                       <span className="font-medium text-gray-700 text-left">Docker/AWS</span>
                       <span className="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-right justify-self-end">75%</span>
                     </div>
@@ -318,10 +327,28 @@ export default function HomePage() {
                   <div className="text-center">
                     <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
                       <span className="font-medium text-gray-700 text-left">iOS/Swift</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">85%</span>
+                    </div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar mobile-bar" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">SwiftUI</span>
                       <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">82%</span>
                     </div>
                     <div className="skill-progress-container">
                       <div className="skill-progress-bar mobile-bar" style={{ width: '82%' }}></div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="grid grid-cols-2 gap-8 items-center mb-3 max-w-sm mx-auto">
+                      <span className="font-medium text-gray-700 text-left">MVVM Architecture</span>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-right justify-self-end">80%</span>
+                    </div>
+                    <div className="skill-progress-container">
+                      <div className="skill-progress-bar mobile-bar" style={{ width: '80%' }}></div>
                     </div>
                   </div>
                 </div>
