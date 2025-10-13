@@ -47,17 +47,17 @@ const SimpleHeader = () => {
   ];
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
         ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg'
         : 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm'
-      }`}
+        }`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container mx-auto px-6 py-4">
-        <motion.div 
+        <motion.div
           className="flex items-center justify-between"
           variants={navStaggerContainer}
           initial="initial"
@@ -65,7 +65,7 @@ const SimpleHeader = () => {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <motion.div 
+            <motion.div
               className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center border-2 border-blue-700 shadow-lg hover:shadow-xl transition-all duration-200"
               variants={logoVariants}
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -126,7 +126,7 @@ const SimpleHeader = () => {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.nav 
+            <motion.nav
               className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}

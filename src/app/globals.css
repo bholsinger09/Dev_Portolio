@@ -214,6 +214,7 @@ section#contact .space-y-2 li {
 
 /* Accessibility: Reduce motion for users who prefer less animation */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -222,7 +223,7 @@ section#contact .space-y-2 li {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   /* Disable transform animations specifically */
   * {
     transform: none !important;

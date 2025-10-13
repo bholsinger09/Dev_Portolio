@@ -6,11 +6,11 @@ import Tilt3D from '@/components/ui/Tilt3D';
 import Parallax from '@/components/ui/Parallax';
 import SkillVisualization, { SkillData } from '@/components/ui/SkillVisualization';
 import { useEffect } from 'react';
-import { 
-  heroContainer, 
-  heroItem, 
-  buttonHover, 
-  floatingAnimation, 
+import {
+  heroContainer,
+  heroItem,
+  buttonHover,
+  floatingAnimation,
   scrollFadeIn,
   staggerContainer,
   fadeInUp,
@@ -75,13 +75,13 @@ export default function HomePage() {
   return (
     <PageWrapper className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
       {/* Hero Section with Profile Picture */}
-      <motion.section 
+      <motion.section
         className="container mx-auto px-6 py-20 text-center"
         variants={heroContainer}
         initial="hidden"
         animate="visible"
       >
-        <motion.div 
+        <motion.div
           className="flex flex-col items-center mb-8"
           variants={staggerContainer}
           initial="initial"
@@ -101,48 +101,48 @@ export default function HomePage() {
               repeat: Infinity,
             }}
           />
-          <motion.h1 
+          <motion.h1
             className="text-5xl font-bold text-gray-900 mb-4"
             variants={heroItem}
           >
             Ben H.
           </motion.h1>
-          <motion.h2 
+          <motion.h2
             className="text-2xl text-blue-600 font-semibold mb-8"
             variants={heroItem}
           >
             Full-Stack Developer
           </motion.h2>
         </motion.div>
-        <motion.p 
+        <motion.p
           className="text-xl text-gray-600 max-w-2xl mx-auto mb-12"
           variants={heroItem}
         >
           Experienced developer specializing in JavaScript, Java, Python, C#, and Swift.
           Building innovative solutions across web, mobile, and enterprise applications.
         </motion.p>
-        <motion.div 
+        <motion.div
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           variants={heroItem}
         >
-          <motion.a 
-            href="/blog" 
+          <motion.a
+            href="/blog"
             className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
             {...buttonHover}
             data-cursor="button"
           >
             View Blog
           </motion.a>
-          <motion.a 
-            href="#projects" 
+          <motion.a
+            href="#projects"
             className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
             {...buttonHover}
             data-cursor="button"
           >
             View Projects
           </motion.a>
-          <motion.a 
-            href="#contact" 
+          <motion.a
+            href="#contact"
             className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
             {...buttonHover}
             data-cursor="button"
@@ -153,15 +153,15 @@ export default function HomePage() {
       </motion.section>
 
       {/* Quick Stats */}
-      <motion.section 
-        id="about" 
+      <motion.section
+        id="about"
         className="container mx-auto px-6 py-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold text-center text-gray-900 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -170,14 +170,14 @@ export default function HomePage() {
         >
           About Me
         </motion.h2>
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-3 gap-8 text-center"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <motion.div 
+          <motion.div
             className="bg-white p-8 rounded-lg shadow-sm"
             variants={fadeInUp}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
@@ -185,7 +185,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-bold text-blue-600 mb-4">5+ Years</h3>
             <p className="text-gray-600">Professional Development Experience</p>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="bg-white p-8 rounded-lg shadow-sm"
             variants={fadeInUp}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
@@ -193,7 +193,7 @@ export default function HomePage() {
             <h3 className="text-2xl font-bold text-blue-600 mb-4">50+ Projects</h3>
             <p className="text-gray-600">Completed Successfully</p>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="bg-white p-8 rounded-lg shadow-sm"
             variants={fadeInUp}
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
@@ -204,16 +204,16 @@ export default function HomePage() {
         </motion.div>
         <div className="mt-12 text-center">
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I'm passionate about creating efficient, scalable solutions that solve real-world problems. 
-            With experience across multiple programming languages and frameworks, I bring a comprehensive 
+            I'm passionate about creating efficient, scalable solutions that solve real-world problems.
+            With experience across multiple programming languages and frameworks, I bring a comprehensive
             approach to every project, from initial concept to final deployment.
           </p>
         </div>
       </motion.section>
 
       {/* Projects Preview */}
-      <motion.section 
-        id="projects" 
+      <motion.section
+        id="projects"
         className="bg-gray-50 py-16"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -221,7 +221,7 @@ export default function HomePage() {
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto px-6">
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold text-center text-gray-900 mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -230,7 +230,7 @@ export default function HomePage() {
           >
             Featured Projects
           </motion.h2>
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
             initial="initial"
@@ -249,14 +249,14 @@ export default function HomePage() {
                 glarePosition="bottom"
                 gyroscope={false}
               >
-                <motion.div 
+                <motion.div
                   className="bg-white p-6 rounded-lg shadow-sm project-card"
                   variants={fadeInUp}
-                  whileHover={{ 
-                    y: -8, 
+                  whileHover={{
+                    y: -8,
                     scale: 1.02,
                     boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
-                    transition: { duration: 0.3 } 
+                    transition: { duration: 0.3 }
                   }}
                   data-cursor="hover"
                 >
@@ -288,7 +288,7 @@ export default function HomePage() {
       </motion.section>
 
       {/* Technical Skills - Interactive Visualizations */}
-      <motion.section 
+      <motion.section
         className="container mx-auto px-6 py-16 bg-gradient-to-br from-gray-50 to-blue-50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -296,7 +296,7 @@ export default function HomePage() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex flex-col items-center">
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold text-center text-gray-900 mb-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -305,8 +305,8 @@ export default function HomePage() {
           >
             Technical Skills
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             className="text-lg text-gray-600 text-center max-w-2xl mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -317,7 +317,7 @@ export default function HomePage() {
           </motion.p>
 
           {/* Frontend Skills - Circular Progress */}
-          <motion.div 
+          <motion.div
             className="w-full mb-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -326,16 +326,16 @@ export default function HomePage() {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frontend Development</h3>
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <SkillVisualization 
-                skills={frontendSkills} 
+              <SkillVisualization
+                skills={frontendSkills}
                 type="circular"
-                className="justify-center" 
+                className="justify-center"
               />
             </div>
           </motion.div>
 
           {/* Backend Skills - Radar Chart */}
-          <motion.div 
+          <motion.div
             className="w-full mb-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -344,15 +344,15 @@ export default function HomePage() {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Backend Development</h3>
             <div className="bg-white rounded-xl shadow-lg">
-              <SkillVisualization 
-                skills={backendSkills} 
+              <SkillVisualization
+                skills={backendSkills}
                 type="radar"
               />
             </div>
           </motion.div>
 
           {/* Database Skills - Animated Bars */}
-          <motion.div 
+          <motion.div
             className="w-full mb-16"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -361,15 +361,15 @@ export default function HomePage() {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Database & DevOps</h3>
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <SkillVisualization 
-                skills={databaseSkills} 
+              <SkillVisualization
+                skills={databaseSkills}
                 type="bars"
               />
             </div>
           </motion.div>
 
           {/* Mobile Skills - Circular Progress */}
-          <motion.div 
+          <motion.div
             className="w-full"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -378,10 +378,10 @@ export default function HomePage() {
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Mobile Development</h3>
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <SkillVisualization 
-                skills={mobileSkills} 
+              <SkillVisualization
+                skills={mobileSkills}
                 type="circular"
-                className="justify-center" 
+                className="justify-center"
               />
             </div>
           </motion.div>
@@ -419,16 +419,16 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a 
-              href="mailto:bholsinger@gmail.com" 
+            <a
+              href="mailto:bholsinger@gmail.com"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               data-cursor="button"
             >
               Send Message
             </a>
-            <a 
-              href="/resume.pdf" 
-              target="_blank" 
+            <a
+              href="/resume.pdf"
+              target="_blank"
               className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               data-cursor="button"
             >

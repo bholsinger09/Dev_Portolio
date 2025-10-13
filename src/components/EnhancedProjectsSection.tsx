@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Award, Users, Calendar, TrendingUp, CheckCircle, X, ChevronRight } from 'lucide-react';
-import { projects } from '@/data';
-import type { Project } from '@/types';
+import { enhancedProjects } from '@/data/enhancedProjects';
+import type { Project } from '@/types/projects';
 
 /**
  * Enhanced Projects Section with Case Study Modal
@@ -14,8 +14,8 @@ const EnhancedProjectsSection: React.FC = () => {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
 
   const displayProjects = showFeaturedOnly
-    ? projects.filter(p => p.featured)
-    : projects;
+    ? enhancedProjects.filter(p => p.featured)
+    : enhancedProjects;
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -108,7 +108,7 @@ const EnhancedProjectsSection: React.FC = () => {
               🌟 Featured Case Studies
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              {projects.filter(p => p.featured).map((project, index) => (
+              {enhancedProjects.filter(p => p.featured).map((project, index) => (
                 <CaseStudyPreview
                   key={`featured-${project.title}`}
                   project={project}
@@ -478,14 +478,14 @@ const OverviewTab: React.FC<{ project: Project }> = ({ project }) => (
 
 const TechnicalTab: React.FC<{ project: Project }> = ({ project }) => (
   <div className="space-y-6">
-    {project.keyFeatures && (
+    {project.caseStudy?.technicalImplementation?.keyFeatures && (
       <div>
         <h3 className="text-xl font-semibold mb-3">Key Features</h3>
         <ul className="space-y-2">
-          {project.keyFeatures.map((feature, index) => (
+          {project.caseStudy.technicalImplementation.keyFeatures.map((feature, index) => (
             <li key={index} className="flex items-start">
               <CheckCircle className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-              <span className="text-gray-600">{feature}</span>
+              <span className="text-gray-600">{feature.title}: {feature.description}</span>
             </li>
           ))}
         </ul>

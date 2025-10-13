@@ -2,13 +2,9 @@ import { test, expect } from '@playwright/test';
 import type { Page } from '@playwright/test';
 
 test.describe('Theme Functionality', () => {
-    // Helper function to find the visible theme toggle button
-    const getVisibleThemeToggle = async (page: Page) => {
-        const desktopThemeToggle = page.locator('div.hidden.md\\:flex button[title*="Switch to"]').first();
-        const mobileThemeToggle = page.locator('div.md\\:hidden button[title*="Switch to"]').first();
-
-        const desktopVisible = await desktopThemeToggle.isVisible();
-        return desktopVisible ? desktopThemeToggle : mobileThemeToggle;
+    // Helper function to find the theme toggle button
+    const getThemeToggle = (page: Page) => {
+        return page.locator('button[aria-label="Toggle theme"]');
     };
 
     test.beforeEach(async ({ page }) => {
@@ -29,13 +25,13 @@ test.describe('Theme Functionality', () => {
         await page.waitForLoadState('domcontentloaded');
         await page.waitForTimeout(1000);
 
-        const themeToggle = await getVisibleThemeToggle(page);
+        const themeToggle = getThemeToggle(page);
         await expect(themeToggle).toBeVisible();
 
         // Button should have proper accessibility
-        const title = await themeToggle.getAttribute('title');
-        expect(title).toBeTruthy();
-        expect(title?.toLowerCase()).toMatch(/switch to|dark|light|mode/);
+        const ariaLabel = await themeToggle.getAttribute('aria-label');
+        expect(ariaLabel).toBeTruthy();
+        expect(ariaLabel?.toLowerCase()).toMatch(/toggle|theme/);
     });
 
     test('should toggle between light and dark modes', async ({ page }) => {
@@ -44,7 +40,7 @@ test.describe('Theme Functionality', () => {
         await page.waitForLoadState('domcontentloaded');
         await page.waitForTimeout(1000);
 
-        const themeToggle = await getVisibleThemeToggle(page);
+        const themeToggle = getThemeToggle(page);
         await expect(themeToggle).toBeVisible();
 
         // Get initial theme state
@@ -78,7 +74,7 @@ test.describe('Theme Functionality', () => {
         await page.waitForLoadState('domcontentloaded');
         await page.waitForTimeout(1000);
 
-        const themeToggle = await getVisibleThemeToggle(page);
+        const themeToggle = getThemeToggle(page);
         const html = page.locator('html');
 
         // Set to dark mode
@@ -106,7 +102,7 @@ test.describe('Theme Functionality', () => {
     });
 
     test('should apply proper dark mode styles', async ({ page }) => {
-        const themeToggle = page.locator('button[title*="Switch to"]').first();
+        const themeToggle = getThemeToggle(page);
         const body = page.locator('body');
 
         // Switch to dark mode
@@ -135,7 +131,7 @@ test.describe('Theme Functionality', () => {
     });
 
     test('should apply proper light mode styles', async ({ page }) => {
-        const themeToggle = page.locator('button[title*="Switch to"]').first();
+        const themeToggle = getThemeToggle(page);
         const html = page.locator('html');
 
         // Ensure we're in dark mode first
@@ -161,7 +157,7 @@ test.describe('Theme Functionality', () => {
     });
 
     test('should have accessible theme toggle', async ({ page }) => {
-        const themeToggle = page.locator('button[title*="Switch to"]').first();
+        const themeToggle = getThemeToggle(page);
 
         // Check button is keyboard accessible
         await themeToggle.focus();
@@ -215,7 +211,7 @@ test.describe('Theme Functionality', () => {
     });
 
     test('should handle theme transitions smoothly', async ({ page }) => {
-        const themeToggle = page.locator('button[title*="Switch to"]').first();
+        const themeToggle = getThemeToggle(page);
 
         // Click multiple times rapidly to test transition handling
         for (let i = 0; i < 3; i++) {
@@ -241,7 +237,7 @@ test.describe('Theme Functionality', () => {
     });
 
     test('should maintain theme across navigation', async ({ page }) => {
-        const themeToggle = page.locator('button[title*="Switch to"]').first();
+        const themeToggle = getThemeToggle(page);
         const html = page.locator('html');
 
         // Set dark mode
@@ -277,7 +273,7 @@ test.describe('Theme Functionality', () => {
     });
 
     test('should have proper theme toggle icon', async ({ page }) => {
-        const themeToggle = page.locator('button[title*="Switch to"]').first();
+        const themeToggle = getThemeToggle(page);
 
         // Should have an icon (SVG)
         const svg = themeToggle.locator('svg');
