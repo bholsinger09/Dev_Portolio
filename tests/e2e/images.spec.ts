@@ -206,9 +206,9 @@ test.describe('Image Handling', () => {
         // Image should not have click handlers (it's decorative)
         // Note: Our image has a floating animation so we test differently
         const hasClickHandler = await profileImage.evaluate((img) => {
-            const events = img.onclick || 
-                           img.getAttribute('onclick') || 
-                           img.style.cursor === 'pointer';
+            const events = img.onclick ||
+                img.getAttribute('onclick') ||
+                img.style.cursor === 'pointer';
             return !!events;
         });
         expect(hasClickHandler).toBe(false);

@@ -80,7 +80,7 @@ test.describe('Layout and Spacing', () => {
                     const buttonBox = await button.boundingBox();
                     if (buttonBox) {
                         expect(buttonBox.height).toBeGreaterThan(16); // More lenient for mobile Safari
-                        
+
                         // Be more lenient for mobile viewports 
                         const minWidth = viewport.width < 768 ? 50 : 70;
                         expect(buttonBox.width).toBeGreaterThan(minWidth); // Ensure buttons are appropriately sized

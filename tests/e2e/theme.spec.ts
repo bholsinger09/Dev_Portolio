@@ -88,7 +88,7 @@ test.describe('Theme Functionality', () => {
             // Try clicking again if first click didn't work
             await themeToggle.click();
             await page.waitForTimeout(500);
-            
+
             const retryTheme = await html.getAttribute('class');
             const isRetryDark = retryTheme?.includes('dark') || false;
             expect(isRetryDark).toBe(true); // Ensure dark mode is actually set
@@ -201,7 +201,7 @@ test.describe('Theme Functionality', () => {
     test('should respect system theme preference', async ({ page }) => {
         // Clear any existing theme preference first
         await page.evaluate(() => localStorage.removeItem('theme'));
-        
+
         // Set system to prefer dark mode
         await page.emulateMedia({ colorScheme: 'dark' });
 
@@ -218,7 +218,7 @@ test.describe('Theme Functionality', () => {
             expect(themeClass).toContain('dark');
         } else {
             // If no class attribute, check if dark mode detection works via media query
-            const matchesDark = await page.evaluate(() => 
+            const matchesDark = await page.evaluate(() =>
                 window.matchMedia('(prefers-color-scheme: dark)').matches
             );
             expect(matchesDark).toBe(true);
@@ -267,7 +267,7 @@ test.describe('Theme Functionality', () => {
     test('should maintain theme across navigation', async ({ page }) => {
         // Set desktop viewport to ensure navigation links are visible
         await page.setViewportSize({ width: 1280, height: 720 });
-        
+
         const themeToggle = getThemeToggle(page);
         const html = page.locator('html');
 

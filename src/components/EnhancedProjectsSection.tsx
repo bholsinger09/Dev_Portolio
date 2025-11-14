@@ -65,8 +65,8 @@ const EnhancedProjectsSection: React.FC = () => {
             <button
               onClick={() => setShowFeaturedOnly(false)}
               className={`px-6 py-3 rounded-l-lg font-medium transition-all duration-200 ${!showFeaturedOnly
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                 }`}
             >
               All Projects
@@ -74,8 +74,8 @@ const EnhancedProjectsSection: React.FC = () => {
             <button
               onClick={() => setShowFeaturedOnly(true)}
               className={`px-6 py-3 rounded-r-lg font-medium transition-all duration-200 ${showFeaturedOnly
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                ? 'bg-blue-600 text-white shadow-lg'
+                : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
                 }`}
             >
               Featured Only
@@ -398,8 +398,8 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${activeTab === tab.id
-                      ? 'bg-white text-blue-600'
-                      : 'text-blue-100 hover:text-white hover:bg-white/20'
+                    ? 'bg-white text-blue-600'
+                    : 'text-blue-100 hover:text-white hover:bg-white/20'
                     }`}
                 >
                   {tab.label}

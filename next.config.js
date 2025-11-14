@@ -8,12 +8,12 @@ const nextConfig = {
   },
   // Enable standalone output for Docker deployment
   output: 'standalone',
-  
+
   // Optimize for production
   experimental: {
     optimizeCss: true,
   },
-  
+
   // Security headers
   async headers() {
     return [

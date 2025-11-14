@@ -65,7 +65,7 @@ test.describe('Button Functionality', () => {
                 text: 'View my repositories'
             },
             {
-                href: 'https://www.linkedin.com/in/benjamin-holsinger-a1712a32', 
+                href: 'https://www.linkedin.com/in/benjamin-holsinger-a1712a32',
                 text: 'Connect with me'
             },
             {

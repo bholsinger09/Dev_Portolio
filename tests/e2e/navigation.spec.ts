@@ -167,7 +167,7 @@ test.describe('Navigation Components', () => {
 
     test('should have proper header background on scroll', async ({ page }) => {
         const header = page.locator('header');
-        
+
         // Initially header should have backdrop blur and semi-transparent background
         await expect(header).toHaveClass(/backdrop-blur-sm/);
         await expect(header).toHaveClass(/bg-white\/80|bg-gray-900\/80/);

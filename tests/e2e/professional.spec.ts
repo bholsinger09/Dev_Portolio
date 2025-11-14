@@ -171,12 +171,12 @@ test.describe('Professional Features', () => {
 
         // Check either about section or hero description 
         let professionalContent = '';
-        
+
         if (await aboutSection.count() > 0) {
             await expect(aboutSection.first()).toBeVisible();
             professionalContent = await aboutSection.first().textContent() || '';
         }
-        
+
         if (await heroDescription.count() > 0) {
             const heroText = await heroDescription.first().textContent() || '';
             professionalContent += ' ' + heroText;
@@ -230,21 +230,21 @@ test.describe('Professional Features', () => {
         if (await externalLinks.count() > 0) {
             // Instead of clicking animated elements, just verify they have correct attributes
             const firstLink = externalLinks.first();
-            
+
             // Verify the link is properly configured
             await expect(firstLink).toBeVisible();
-            
+
             const href = await firstLink.getAttribute('href');
             const target = await firstLink.getAttribute('target');
             const rel = await firstLink.getAttribute('rel');
-            
+
             expect(href).toMatch(/^https?:\/\//);
             expect(target).toBe('_blank');
             expect(rel).toContain('noopener');
-            
+
             // Verify clicking would work by checking if element is stable (but don't actually click)
             await expect(firstLink).toBeEnabled();
-            
+
             // Test that we're still on the original page (no unwanted navigation)
             expect(page.url()).toMatch(/localhost|127\.0\.0\.1/);
         }
