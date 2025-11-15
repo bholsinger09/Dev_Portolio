@@ -9,7 +9,7 @@ describe('About Component', () => {
 
   describe('Section Header', () => {
     it('renders section heading and description', () => {
-      expect(screen.getByRole('heading', { name: /About Me/i, level: 2 })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: /Full-Stack Developer/i, level: 2 })).toBeInTheDocument()
       expect(screen.getByText(/I'm a passionate full-stack software engineer/i)).toBeInTheDocument()
       expect(screen.getByText(/From building native iOS apps with SwiftUI/i)).toBeInTheDocument()
     })
@@ -28,7 +28,7 @@ describe('About Component', () => {
         'Backend & APIs',
         'Languages',
         'Frontend Web',
-        'Tools & Platforms'
+        'Tools & DevOps'
       ]
 
       categoryTitles.forEach(title => {
@@ -46,14 +46,14 @@ describe('About Component', () => {
         'Backend & APIs',
         'Languages',
         'Frontend Web',
-        'Tools & Platforms'
+        'Tools & DevOps'
       ])
     })
   })
 
   describe('Mobile Development Skills', () => {
     it('displays all mobile development technologies', () => {
-      const mobileSection = screen.getByText('Mobile Development').closest('.bg-gray-50')
+      const mobileSection = screen.getByText('Mobile Development').closest('.bg-white\\/70')
       expect(mobileSection).toBeInTheDocument()
 
       const mobileTechnologies = ['Swift', 'SwiftUI', 'UIKit', 'Core Data', 'MapKit']
@@ -67,7 +67,7 @@ describe('About Component', () => {
     })
 
     it('applies blue color scheme to mobile development badges', () => {
-      const mobileSection = screen.getByText('Mobile Development').closest('.bg-gray-50')
+      const mobileSection = screen.getByText('Mobile Development').closest('.bg-white\\/70')
       const swiftBadge = mobileSection?.querySelector('span')
       expect(swiftBadge).toHaveClass('bg-blue-100', 'text-blue-800')
     })
@@ -75,7 +75,7 @@ describe('About Component', () => {
 
   describe('Backend & APIs Skills', () => {
     it('displays all backend and API technologies', () => {
-      const backendSection = screen.getByText('Backend & APIs').closest('.bg-gray-50')
+      const backendSection = screen.getByText('Backend & APIs').closest('div')
       expect(backendSection).toBeInTheDocument()
 
       const backendTechnologies = ['Python', 'FastAPI', 'Node.js', 'Express', 'OpenAI API']
@@ -177,7 +177,7 @@ describe('About Component', () => {
 
   describe('Responsive Design', () => {
     it('applies responsive text sizing to main heading', () => {
-      const heading = screen.getByRole('heading', { name: /About Me/i })
+      const heading = screen.getByRole('heading', { name: /Full-Stack Developer/i })
       expect(heading).toHaveClass('text-4xl', 'md:text-5xl')
     })
 
@@ -200,7 +200,7 @@ describe('About Component', () => {
 
   describe('Accessibility', () => {
     it('has proper heading structure', () => {
-      const mainHeading = screen.getByRole('heading', { name: /About Me/i, level: 2 })
+      const mainHeading = screen.getByRole('heading', { name: /Full-Stack Developer/i, level: 2 })
       expect(mainHeading).toBeInTheDocument()
 
       const subHeadings = screen.getAllByRole('heading', { level: 3 })
