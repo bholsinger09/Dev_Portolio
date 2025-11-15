@@ -65,18 +65,20 @@ const About = () => {
           <div className="max-w-4xl mx-auto space-y-6">
             <ScrollReveal direction="up" delay={0.2}>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a passionate full-stack software engineer with hands-on experience developing applications
-                across mobile, web, and AI integration platforms. My portfolio includes iOS applications,
-                FastAPI services with LLM integration, Java desktop applications, and community-driven web platforms,
-                showcasing my versatility in tackling diverse technical challenges.
+                <strong className="text-blue-600 dark:text-blue-400">Top Firmware Test Lead</strong> with over 3 years of proven leadership 
+                experience in high-stakes technology environments, driving quality assurance initiatives and leading cross-functional 
+                teams to deliver mission-critical firmware solutions. My expertise in systematic testing methodologies and 
+                rigorous validation processes has consistently ensured product reliability and performance excellence.
               </p>
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.4}>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                From building native iOS apps with SwiftUI to creating robust Python APIs with AI capabilities,
-                I excel at selecting the right technology stack for each project. My experience spans real estate
-                applications, e-commerce platforms, task management systems, and identity verification solutions,
-                demonstrating my ability to deliver practical, user-focused applications.
+                As a proud <strong className="text-purple-600 dark:text-purple-400">Boise Code Works alumni</strong>, I've channeled my 
+                passion for community impact into developing innovative solutions from the ground up. I built a comprehensive 
+                <strong className="text-green-600 dark:text-green-400"> React.js portfolio</strong> showcasing modern web development practices, 
+                and created a powerful <strong className="text-orange-600 dark:text-orange-400">Chapter Manager application</strong> using 
+                Java and Vue.js to help communities easily locate Turning Point USA chapters, directly supporting civic engagement 
+                and grassroots organization efforts.
               </p>
             </ScrollReveal>
           </div>
