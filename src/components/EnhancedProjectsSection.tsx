@@ -389,14 +389,14 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
             {/* Tab Navigation */}
             <div className="flex gap-4 mt-6">
               {[
-                { id: 'overview', label: 'Overview' },
-                { id: 'technical', label: 'Technical' },
-                { id: 'metrics', label: 'Metrics' },
-                { id: 'results', label: 'Results' }
+                { id: 'overview' as const, label: 'Overview' },
+                { id: 'technical' as const, label: 'Technical' },
+                { id: 'metrics' as const, label: 'Metrics' },
+                { id: 'results' as const, label: 'Results' }
               ].map(tab => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
+                  onClick={() => setActiveTab(tab.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${activeTab === tab.id
                     ? 'bg-white text-blue-600'
                     : 'text-blue-100 hover:text-white hover:bg-white/20'

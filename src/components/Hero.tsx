@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ErrorBoundary, withErrorBoundary } from './ErrorBoundary';
-import { PulseLoader } from './LoadingStates';
 import { analytics } from './Analytics';
 import { ScrollReveal, StaggeredReveal } from './ScrollAnimations';
 import AnimatedButton from './AnimatedButton';
@@ -13,7 +12,6 @@ import AnimatedButton from './AnimatedButton';
 const ProfileImage = withErrorBoundary(() => {
   const [imageLoading, setImageLoading] = useState(true);
   const [imageError, setImageError] = useState(false);
-  const t = useTranslations('hero');
 
   const handleImageLoad = () => {
     setImageLoading(false);

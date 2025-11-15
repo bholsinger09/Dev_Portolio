@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface ParallaxProps {
@@ -24,21 +24,27 @@ const Parallax: React.FC<ParallaxProps> = ({
         offset: ["start end", "end start"]
     });
 
-    // Transform values based on direction
-    const getTransform = () => {
-        const range = [-offset - 100, offset + 100];
+    // Transform values based on direction - moved hooks to component level
+    const range = [-offset - 100, offset + 100];
+    
+    const transformUp = useTransform(scrollYProgress, [0, 1], [range[1] * speed, range[0] * speed]);
+    const transformDown = useTransform(scrollYProgress, [0, 1], [range[0] * speed, range[1] * speed]);
+    const transformLeft = useTransform(scrollYProgress, [0, 1], [range[1] * speed, range[0] * speed]);
+    const transformRight = useTransform(scrollYProgress, [0, 1], [range[0] * speed, range[1] * speed]);
 
+    // Select the appropriate transform based on direction
+    const getTransform = () => {
         switch (direction) {
             case 'up':
-                return useTransform(scrollYProgress, [0, 1], [range[1] * speed, range[0] * speed]);
+                return transformUp;
             case 'down':
-                return useTransform(scrollYProgress, [0, 1], [range[0] * speed, range[1] * speed]);
+                return transformDown;
             case 'left':
-                return useTransform(scrollYProgress, [0, 1], [range[1] * speed, range[0] * speed]);
+                return transformLeft;
             case 'right':
-                return useTransform(scrollYProgress, [0, 1], [range[0] * speed, range[1] * speed]);
+                return transformRight;
             default:
-                return useTransform(scrollYProgress, [0, 1], [range[1] * speed, range[0] * speed]);
+                return transformUp;
         }
     };
 

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { formatDistance } from 'date-fns'
 import { getBlogPostBySlug, getRelatedBlogPosts, formatBlogDate } from '@/lib/blog'
 import { BlogPost } from '@/types/blog'
@@ -111,9 +112,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Author Bio */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-12">
           <div className="flex items-start gap-4">
-            <img
+            <Image
               src={post.author.avatar}
               alt={post.author.name}
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-full object-cover"
             />
             <div>

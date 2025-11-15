@@ -3,6 +3,31 @@
 import { useEffect } from 'react';
 import { analytics } from './Analytics';
 
+// Web Vitals metric interface
+interface WebVitalsMetric {
+  name: string
+  value: number
+  rating: 'good' | 'needs-improvement' | 'poor'
+  delta?: number
+  entries?: PerformanceEntry[]
+  id?: string
+}
+
+// Network Information API interface
+interface NavigatorConnection {
+  effectiveType?: '2g' | '3g' | '4g' | 'slow-2g'
+  downlink?: number
+  rtt?: number
+  saveData?: boolean
+}
+
+// Extend Navigator interface for connection property
+declare global {
+  interface Navigator {
+    connection?: NavigatorConnection
+  }
+}
+
 /**
  * Performance Monitoring Component
  * Tracks Core Web Vitals and sends performance data for analysis
@@ -21,35 +46,35 @@ export const PerformanceMonitor: React.FC = () => {
                 const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
 
                 // Largest Contentful Paint
-                onLCP((metric: any) => {
+                onLCP((metric: WebVitalsMetric) => {
                     const rating = metric.value <= 2500 ? 'good' : metric.value <= 4000 ? 'needs-improvement' : 'poor';
                     console.log('LCP:', metric.value, rating);
                     analytics.performanceMetric('LCP', metric.value, rating);
                 });
 
                 // Interaction to Next Paint (replaces FID)
-                onINP((metric: any) => {
+                onINP((metric: WebVitalsMetric) => {
                     const rating = metric.value <= 200 ? 'good' : metric.value <= 500 ? 'needs-improvement' : 'poor';
                     console.log('INP:', metric.value, rating);
                     analytics.performanceMetric('INP', metric.value, rating);
                 });
 
                 // Cumulative Layout Shift
-                onCLS((metric: any) => {
+                onCLS((metric: WebVitalsMetric) => {
                     const rating = metric.value <= 0.1 ? 'good' : metric.value <= 0.25 ? 'needs-improvement' : 'poor';
                     console.log('CLS:', metric.value, rating);
                     analytics.performanceMetric('CLS', metric.value, rating);
                 });
 
                 // First Contentful Paint
-                onFCP((metric: any) => {
+                onFCP((metric: WebVitalsMetric) => {
                     const rating = metric.value <= 1800 ? 'good' : metric.value <= 3000 ? 'needs-improvement' : 'poor';
                     console.log('FCP:', metric.value, rating);
                     analytics.performanceMetric('FCP', metric.value, rating);
                 });
 
                 // Time to First Byte
-                onTTFB((metric: any) => {
+                onTTFB((metric: WebVitalsMetric) => {
                     const rating = metric.value <= 800 ? 'good' : metric.value <= 1800 ? 'needs-improvement' : 'poor';
                     console.log('TTFB:', metric.value, rating);
                     analytics.performanceMetric('TTFB', metric.value, rating);
@@ -97,8 +122,8 @@ export const PerformanceMonitor: React.FC = () => {
 
         // Network Information API
         const trackNetworkInfo = () => {
-            if ('connection' in navigator) {
-                const connection = (navigator as any).connection;
+            if ('connection' in navigator && navigator.connection) {
+                const connection = navigator.connection;
                 analytics.performanceMetric('network_effective_type', 0, connection.effectiveType || 'unknown');
             }
         };

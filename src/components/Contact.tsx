@@ -2,10 +2,9 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, AlertCircle } from 'lucide-react';
 import { useContactForm } from '@/hooks';
 import { ErrorBoundary, CompactErrorFallback } from './ErrorBoundary';
-import { InlineLoader } from './LoadingStates';
 import { analytics } from './Analytics';
 import { ScrollReveal } from './ScrollAnimations';
 import { StatusIndicator, PulseButton, FloatingActionButton } from './MicroInteractions';

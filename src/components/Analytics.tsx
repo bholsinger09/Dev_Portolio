@@ -8,8 +8,23 @@ import { useEffect } from 'react'
 // Analytics configuration
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''
 
+// Type definitions for analytics
+interface TrackingParameters {
+  method?: string
+  error_type?: string
+  project_name?: string
+  section?: string
+  skill?: string
+  theme?: string
+  language?: string
+  value?: number
+  custom_parameter_1?: string
+  custom_parameter_2?: string
+  [key: string]: string | number | boolean | undefined
+}
+
 // Custom events for portfolio tracking
-export const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+export const trackEvent = (eventName: string, parameters: TrackingParameters = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', eventName, parameters)
     }
@@ -105,12 +120,27 @@ export default function Analytics() {
 }
 
 // TypeScript declaration for gtag
+interface GtagConfig {
+  page_title?: string
+  page_location?: string
+  content_group1?: string
+  method?: string
+  error_type?: string
+  project_name?: string
+  section?: string
+  skill?: string
+  theme?: string
+  language?: string
+  value?: number
+  [key: string]: string | number | boolean | undefined
+}
+
 declare global {
     interface Window {
         gtag: (
             command: 'config' | 'event',
             targetId: string,
-            config?: Record<string, any>
+            config?: GtagConfig
         ) => void
     }
 }

@@ -10,14 +10,8 @@ import {
   heroContainer,
   heroItem,
   buttonHover,
-  floatingAnimation,
-  scrollFadeIn,
   staggerContainer,
-  fadeInUp,
-  cardHover,
-  skillCardVariants,
-  skillProgressVariants,
-  skillItemVariants
+  fadeInUp
 } from '@/utils/animations';
 
 export default function HomePage() {
