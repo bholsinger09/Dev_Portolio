@@ -170,19 +170,116 @@
             color: #667eea;
         }
 
+        /* Enhanced Mobile Responsiveness */
         @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .hero {
+                padding: 40px 10px;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+                line-height: 1.2;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
             }
 
             .content {
-                padding: 20px;
-                margin: 10px;
+                padding: 15px;
+                margin: 5px;
+                border-radius: 15px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .section p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .project-card {
+                padding: 15px;
+            }
+
+            .project-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .tech-stack {
+                margin: 10px 0;
+            }
+
+            .tech-tag {
+                font-size: 0.8rem;
+                padding: 4px 8px;
+                margin: 2px;
             }
 
             .contact-links {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
+            }
+
+            .contact-links a {
+                width: 100%;
+                max-width: 200px;
+                text-align: center;
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .content {
+                padding: 12px;
+                margin: 2px;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .section p {
+                font-size: 0.9rem;
+            }
+
+            .project-card {
+                padding: 12px;
+            }
+
+            .tech-tag {
+                font-size: 0.75rem;
+                padding: 3px 6px;
             }
         }
 
