@@ -4,6 +4,14 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { ErrorBoundary, CompactErrorFallback, withErrorBoundary, useErrorHandler } from '../ErrorBoundary';
 
+// Import the proper type for fallback components
+interface ErrorFallbackProps {
+  error: Error;
+  errorInfo?: React.ErrorInfo;
+  resetError: () => void;
+  className?: string;
+}
+
 // Mock console.error to avoid noise in test output
 const originalConsoleError = console.error;
 beforeAll(() => {
@@ -177,7 +185,7 @@ describe('ErrorBoundary', () => {
 
   describe('Custom Fallback', () => {
     it('uses custom fallback component when provided', () => {
-      const CustomFallback: React.FC<any> = ({ error }) => (
+      const CustomFallback: React.FC<ErrorFallbackProps> = ({ error }) => (
         <div>Custom error: {error.message}</div>
       );
 
@@ -264,7 +272,7 @@ describe('withErrorBoundary HOC', () => {
   });
 
   it('uses custom fallback when provided', () => {
-    const CustomFallback: React.FC<any> = () => (
+    const CustomFallback: React.FC<ErrorFallbackProps> = () => (
       <div>Custom HOC fallback</div>
     );
 

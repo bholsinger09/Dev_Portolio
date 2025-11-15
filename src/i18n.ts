@@ -7,7 +7,10 @@ export const defaultLocale = 'en' as const;
 
 export type Locale = typeof locales[number];
 
-export default getRequestConfig(async ({ locale }): Promise<{ locale: string; messages: any }> => {
+// Type for internationalization messages
+type Messages = Record<string, string | Record<string, string>>;
+
+export default getRequestConfig(async ({ locale }): Promise<{ locale: string; messages: Messages }> => {
     // Validate that the incoming `locale` parameter is valid
     if (!locale || !locales.includes(locale as Locale)) notFound();
 

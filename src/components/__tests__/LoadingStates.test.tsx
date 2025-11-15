@@ -281,7 +281,7 @@ describe('LazyLoader', () => {
   });
 
   it('renders children after intersection and loading', async () => {
-    let intersectionCallback: (entries: any[]) => void = () => { };
+    let intersectionCallback: (entries: IntersectionObserverEntry[]) => void = () => { };
 
     mockIntersectionObserver.mockImplementation((callback) => {
       intersectionCallback = callback;
@@ -299,7 +299,15 @@ describe('LazyLoader', () => {
     );
 
     // Simulate intersection
-    intersectionCallback([{ isIntersecting: true }]);
+    intersectionCallback([{ 
+      isIntersecting: true,
+      boundingClientRect: {} as DOMRectReadOnly,
+      intersectionRatio: 1,
+      intersectionRect: {} as DOMRectReadOnly,
+      rootBounds: null,
+      target: {} as Element,
+      time: Date.now()
+    } as IntersectionObserverEntry]);
 
     // Wait for loading timer
     await waitFor(

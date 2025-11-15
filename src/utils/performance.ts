@@ -65,10 +65,22 @@ export const hasHardwareAcceleration = () => {
     return !!gl;
 };
 
-// Memory usage monitoring
+// Memory usage monitoring interface
+interface PerformanceMemory {
+    usedJSMemory: number
+    totalJSMemory: number
+    jsHeapSizeLimit: number
+}
+
+declare global {
+    interface Performance {
+        memory?: PerformanceMemory
+    }
+}
+
 export const monitorMemoryUsage = () => {
-    if ('memory' in performance) {
-        const memory = (performance as any).memory;
+    if ('memory' in performance && performance.memory) {
+        const memory = performance.memory;
         return {
             usedJSMemory: Math.round(memory.usedJSMemory / 1048576 * 100) / 100,
             totalJSMemory: Math.round(memory.totalJSMemory / 1048576 * 100) / 100,

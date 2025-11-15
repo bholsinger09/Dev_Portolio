@@ -299,8 +299,8 @@ export const useContactForm = () => {
       setErrors({});
 
       // Track successful submission
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'contact_form_submit', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'contact_form_submit', {
           method: 'api',
           success: true,
         });
@@ -318,8 +318,8 @@ export const useContactForm = () => {
       setSubmitError(errorMessage);
 
       // Track failed submission
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'contact_form_error', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'contact_form_error', {
           error_type: errorMessage,
         });
       }
