@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const https = require('https');
+import https from 'https';
 
 const deployUrl = 'https://portfolio-ben.duckdns.org:3001/deploy';
 
