@@ -597,7 +597,7 @@ async def stream_chat(request: ChatRequest):
     image: '/project-capters.jpg',
     images: ['/project-capters-1.jpg', '/project-capters-2.jpg', '/project-capters-3.jpg'],
     github: 'https://github.com/bholsinger09/capters',
-    demo: 'https://testflight.apple.com/join/your-testflight-code',
+    demo: 'https://testflight.apple.com/join/75GkwEJk',
     category: 'Mobile Application',
     featured: true,
     status: 'in-progress',
