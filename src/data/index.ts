@@ -48,23 +48,30 @@ export const skillCategories: SkillCategory[] = [
         textColor: 'text-purple-600',
         shadowColor: 'shadow-purple-500/50'
       },
+      {
+        name: 'Dart',
+        level: 88,
+        color: 'from-teal-400 to-teal-600',
+        textColor: 'text-teal-600',
+        shadowColor: 'shadow-teal-500/50'
+      },
     ]
   },
   {
     title: 'Mobile & Frontend',
     skills: [
       {
+        name: 'Flutter',
+        level: 90,
+        color: 'from-blue-400 to-blue-600',
+        textColor: 'text-blue-600',
+        shadowColor: 'shadow-blue-500/50'
+      },
+      {
         name: 'SwiftUI',
         level: 90,
         color: 'from-blue-500 to-blue-700',
         textColor: 'text-blue-700',
-        shadowColor: 'shadow-blue-500/50'
-      },
-      {
-        name: 'UIKit',
-        level: 88,
-        color: 'from-blue-400 to-blue-600',
-        textColor: 'text-blue-600',
         shadowColor: 'shadow-blue-500/50'
       },
       {
@@ -75,11 +82,11 @@ export const skillCategories: SkillCategory[] = [
         shadowColor: 'shadow-cyan-500/50'
       },
       {
-        name: 'Core Data',
-        level: 82,
-        color: 'from-orange-400 to-orange-500',
-        textColor: 'text-orange-500',
-        shadowColor: 'shadow-orange-500/50'
+        name: 'UIKit',
+        level: 88,
+        color: 'from-blue-300 to-blue-500',
+        textColor: 'text-blue-500',
+        shadowColor: 'shadow-blue-500/50'
       },
       {
         name: 'Next.js',
@@ -93,6 +100,13 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'Backend & APIs',
     skills: [
+      {
+        name: 'Firebase',
+        level: 90,
+        color: 'from-yellow-500 to-orange-600',
+        textColor: 'text-orange-600',
+        shadowColor: 'shadow-orange-500/50'
+      },
       {
         name: 'FastAPI',
         level: 90,
@@ -120,13 +134,6 @@ export const skillCategories: SkillCategory[] = [
         color: 'from-purple-500 to-purple-700',
         textColor: 'text-purple-700',
         shadowColor: 'shadow-purple-500/50'
-      },
-      {
-        name: 'RESTful APIs',
-        level: 90,
-        color: 'from-blue-500 to-blue-700',
-        textColor: 'text-blue-700',
-        shadowColor: 'shadow-blue-500/50'
       },
     ]
   },
