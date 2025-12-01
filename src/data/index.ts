@@ -55,6 +55,13 @@ export const skillCategories: SkillCategory[] = [
         textColor: 'text-teal-600',
         shadowColor: 'shadow-teal-500/50'
       },
+      {
+        name: 'Ruby',
+        level: 85,
+        color: 'from-red-500 to-red-700',
+        textColor: 'text-red-700',
+        shadowColor: 'shadow-red-500/50'
+      },
     ]
   },
   {
@@ -134,6 +141,13 @@ export const skillCategories: SkillCategory[] = [
         color: 'from-purple-500 to-purple-700',
         textColor: 'text-purple-700',
         shadowColor: 'shadow-purple-500/50'
+      },
+      {
+        name: 'Ruby on Rails',
+        level: 85,
+        color: 'from-red-400 to-red-600',
+        textColor: 'text-red-600',
+        shadowColor: 'shadow-red-500/50'
       },
     ]
   },
