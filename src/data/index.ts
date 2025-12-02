@@ -184,10 +184,31 @@ export const skillCategories: SkillCategory[] = [
       },
       {
         name: 'iOS Development',
-        level: 90,
+        level: 92,
         color: 'from-gray-700 to-gray-900',
         textColor: 'text-gray-800',
         shadowColor: 'shadow-gray-500/50'
+      },
+      {
+        name: 'App Store Publishing',
+        level: 90,
+        color: 'from-blue-500 to-blue-700',
+        textColor: 'text-blue-700',
+        shadowColor: 'shadow-blue-500/50'
+      },
+      {
+        name: 'Core Data & CloudKit',
+        level: 88,
+        color: 'from-indigo-400 to-indigo-600',
+        textColor: 'text-indigo-600',
+        shadowColor: 'shadow-indigo-500/50'
+      },
+      {
+        name: 'MapKit',
+        level: 85,
+        color: 'from-green-500 to-green-700',
+        textColor: 'text-green-700',
+        shadowColor: 'shadow-green-500/50'
       },
     ]
   }
